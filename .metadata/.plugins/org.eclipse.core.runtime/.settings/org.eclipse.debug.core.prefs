@@ -1,0 +1,5 @@
+#Thu Sep 13 10:29:35 PDT 2012
+prefWatchExpressions=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<watchExpressions>\r\n<expression enabled\="true" text\="connection"/>\r\n<expression enabled\="true" text\="output"/>\r\n</watchExpressions>\r\n
+eclipse.preferences.version=1
+org.eclipse.debug.core.USE_STEP_FILTERS=false
+org.eclipse.debug.core.PREF_DELETE_CONFIGS_ON_PROJECT_DELETE=false

@@ -1,0 +1,78 @@
+package com.jaapsuter.niets.test.blackberry;
+
+import net.rim.device.api.ui.container.MainScreen;
+import java.io.*;
+
+import java.io.*;
+import javax.microedition.io.*;
+import net.rim.device.api.ui.*;
+
+/**
+ * A class extending the MainScreen class, which provides default standard
+ * behavior for BlackBerry GUI applications.
+ */
+public final class Screen extends MainScreen
+{
+	private InputStream _in;
+    private OutputStreamWriter _out;        
+    
+    
+    /**
+     * Creates a new MyScreen object
+     */
+    public MyScreen()
+    {        
+        // Set the displayed title of the screen       
+        setTitle("Woah... Foobar!");
+        
+        StreamConnection connection = null;
+        
+        try
+        {
+            String url = "socket://192.168.0.7:12346;deviceside=true;interface=wifi";                                    
+            connection = (StreamConnection)Connector.open(url);
+            
+            _in = connection.openInputStream();
+                        
+            _out = new OutputStreamWriter(connection.openOutputStream());            
+
+            // Send the HELLO string.
+            exchange("Hello");
+
+            // Execute further data exchange here...
+
+            // Send the GOODBYE string.
+            exchange("Goodbye and farewell");
+        }
+        catch(IOException e)
+        {
+            System.err.println(e.toString());
+        }
+    }
+    
+    private void exchange(String data) throws IOException
+    {
+        // Cache the length locally for better efficiency.
+        int length = data.length();
+        
+        // Create an input array just big enough to hold the data
+        // (we're expecting the same string back that we send).
+        char[] input = new char[length];
+        _out.write(data, 0, length);
+
+        // Read character by character into the input array.
+        for (int i = 0; i < length; ++i) 
+        {
+            input[i] = (char)_in.read();
+        }        
+
+        // Hand the data to the parent class for updating the GUI. By explicitly 
+        // creating the stringbuffer we can save a few object creations.
+        StringBuffer s = new StringBuffer();
+        s.append("Received: ") ;
+        s.append(input, 0, length);
+        
+        System.out.print(s.toString());
+    }
+
+}

@@ -1,0 +1,41 @@
+contactid
+firstname
+lastname
+nickname
+displayname
+title
+company
+notes
+groupnames_<n>  
+number_<type>_<n>
+defaultnumber_<type>
+defaultemail
+emails_<n>
+source
+pictureurl
+weburl
+ringtoneurl
+animatedtoneurl
+postaladdress_<type>
+otherAddress_<type>
+birthday
+anniversary
+imaddresses_<n>
+
+---------
+<n> can be any digit starting from 1
+---------
+<type>  can be:
+Unspecified
+Home
+Office
+Other
+Mobile
+Fax
+Video
+Assistant
+UnknownType
+
+
+Notes:
+The birthday and aniversary elements stored in the Hashtable are Date objects

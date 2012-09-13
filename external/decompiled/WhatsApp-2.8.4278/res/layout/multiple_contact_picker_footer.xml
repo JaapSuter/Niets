@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:background="@drawable/header_grey_gradient" android:paddingTop="4.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Button android:id="@id/cancel_btn" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/cancel" android:layout_weight="1.0" />
+    <Button android:enabled="false" android:ellipsize="end" android:id="@id/broadcast_btn" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/done" android:singleLine="true" android:layout_weight="1.0" />
+</LinearLayout>

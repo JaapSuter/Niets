@@ -1,0 +1,446 @@
+<?xml version="1.0"?>
+
+<!--
+   $Id: build.xml,v 1.6 2001/11/09 13:19:20 raif Exp $
+
+   Copyright (C) 2000-2001 The Cryptix Foundation Limited. All rights reserved.
+
+   Use, modification, copying and distribution of this software is subject to
+   the terms and conditions of the Cryptix General Licence. You should have
+   received a copy of the Cryptix General Licence along with this library; if
+   not, you can download a copy from http://www.cryptix.org/
+-->
+
+<project name="cryptix-sasl" default="jar" basedir=".">
+
+   <!--
+   global properties ..........................................................
+   -->
+   <property name="package" value="cryptix-sasl"/>
+   <property name="version" value="0.8.10"/>
+   <property name="oneliner" value="Cryptix SASL Library"/>
+
+   <!-- give user a chance to override with personal settings -->
+   <property file="${user.home}/.ant.properties"/>
+   <property file=".ant.properties"/>
+
+   <property name="package.name" value="${package}-${version}"/>
+   <property name="manifest" value="etc/javax-sasl.mf"/>
+   <property name="main.jar" value="lib/${package}.jar"/>
+   <property name="javax.jar" value="lib/javax-sasl.jar"/>
+   <property name="test.jar" value="lib/test.jar"/>
+   <property name="log4j.jar" value="lib/log4j.jar"/>
+   <property name="getopt.jar" value="lib/getopt.jar"/>
+   <property name="junit.jar" value="lib/junit.jar"/>
+
+   <property name="build.rmic" value="sun"/>
+
+   <property name="debug" value="true"/>
+   <property name="optimize" value="false"/>
+
+   <property name="getopt.version" value="1.0.8"/>
+   <property name="getopt.url"
+             value="ftp://ftp.urbanophile.com/pub/arenn/software/sources"/>
+   <property name="getopt.jar" value="lib/java-getopt.jar"/>
+
+   <property name="junit.version" value="3.7"/>
+   <property name="junit.url" value="http://download.sourceforge.net/junit"/>
+   <property name="junit.jar" value="lib/junit.jar"/>
+
+   <property name="log4j.version" value="1.1.3"/>
+   <property name="log4j.url" value="http://jakarta.apache.org/log4j"/>
+   <property name="log4j.jar" value="lib/log4j.jar"/>
+
+   <!-- JCA/JCE jars -->
+   <path id="jce_jars">
+      <pathelement location="lib/cryptix-jce-api.jar"/>
+      <pathelement location="lib/cryptix-jce-provider.jar"/>
+    </path>
+
+   <!--
+   configure ..................................................................
+   -->
+   <target name="configure"
+           depends="ensure-jce,config-getopt,config-log4j,config-junit"
+           description="Prepare the build environment">
+      <tstamp/>
+      <mkdir dir="classes"/>
+      <mkdir dir="lib"/>
+   </target>
+
+   <target name="ensure-jce" depends="check-jce" unless="jce.available">
+      <echo message="--------------------------------------------------------"/>
+      <echo message="WARNING"/>
+      <echo message="You need a JCA/JCE capable environment.  This build file"/>
+      <echo message="checks for the Cryptix JCA/JCE jars in lib/; namely the"/>
+      <echo message="files: cryptix-jce-api.jar and cryptix-jce-provider.jar"/>
+      <echo message="available from www.cryptix.org.  If you see this warning,"/>
+      <echo message="it means that no recognisable jars were found.  Download"/>
+      <echo message="and install those files in lib/.  Alternatively you may"/>
+      <echo message="want to change this file to suit another provider.  In"/>
+      <echo message="any case, this build process will now stop..."/>
+      <fail message="Missing JCA/JCE jars.  Download, install and start again."/>
+   </target>
+
+   <target name="check-jce">
+      <condition property="jce.available">
+         <and>
+            <available file="lib/cryptix-jce-api.jar"/>
+            <available file="lib/cryptix-jce-provider.jar"/>
+         </and>
+      </condition>
+   </target>
+
+   <!--
+   jar ........................................................................
+   -->
+   <target name="jar" depends="compile"
+           description="Generate the main project's jar file">
+      <jar jarfile="${main.jar}" basedir="classes" manifest="${manifest}">
+         <include name="cryptix/**"/>
+         <fileset dir="${basedir}"
+                  includes="AUTHORS,CGL.TXT,LGPL.TXT,LICENSE.SRP.TXT"/>
+      </jar>
+   </target>
+
+   <!--
+   compile ....................................................................
+   -->
+   <target name="compile" depends="javax">
+      <javac destdir="classes" debug="${debug}" optimize="${optimize}">
+         <classpath>
+            <pathelement location="${javax.jar}"/>
+            <pathelement location="${log4j.jar}"/>
+            <pathelement location="${getopt.jar}"/>
+            <path refid="jce_jars"/>
+         </classpath>
+         <src path="src"/>
+         <include name="cryptix/sasl/*.java"/>
+         <include name="cryptix/sasl/anonymous/**"/>
+         <include name="cryptix/sasl/crammd5/**"/>
+         <include name="cryptix/sasl/otp/**"/>
+         <include name="cryptix/sasl/plain/**"/>
+         <include name="cryptix/sasl/rmi/**"/>
+         <include name="cryptix/sasl/sm2/**"/>
+         <include name="cryptix/sasl/srp/**"/>
+      </javac>
+   </target>
+
+   <target name="javax" depends="compile-javax"
+           description="Generate the SASL javax extension">
+      <jar jarfile="${javax.jar}" basedir="classes" includes="javax/**"/>
+   </target>
+
+   <target name="compile-javax" depends="configure">
+      <javac destdir="classes" debug="${debug}" optimize="${optimize}">
+         <classpath>
+            <pathelement location="${log4j.jar}"/>
+            <pathelement location="${getopt.jar}"/>
+            <path refid="jce_jars"/>
+         </classpath>
+         <src path="src"/>
+         <include name="javax/security/auth/callback/**"/>
+         <include name="javax/security/sasl/**"/>
+      </javac>
+   </target>
+
+   <!--
+   test .......................................................................
+   -->
+   <target name="test" depends="jar-test,clean-tests"
+           description="Run JUnit test to ensure correctness of the release">
+      <java fork="yes"
+            classname="test.sasl.AllTests"
+            taskname="junit"
+            failonerror="true">
+         <sysproperty key="log4j.configuration" value="file:./log.properties"/>
+         <classpath>
+            <pathelement location="${test.jar}"/>
+            <pathelement location="${main.jar}"/>
+            <pathelement location="${javax.jar}"/>
+            <pathelement location="${junit.jar}"/>
+            <pathelement location="${log4j.jar}"/>
+            <pathelement location="${getopt.jar}"/>
+            <path refid="jce_jars"/>
+         </classpath>
+      </java>
+   </target>
+
+   <target name="jar-test" depends="rmic-test">
+      <jar jarfile="${test.jar}" basedir="classes" includes="test/**"/>
+   </target>
+
+   <target name="rmic-test" depends="compile-test">
+      <rmic base="classes" classname="test.HelloImpl">
+         <classpath>
+            <pathelement path="classes"/>
+         </classpath>
+      </rmic>
+   </target>
+
+   <target name="compile-test" depends="jar">
+      <mkdir dir="classes"/>
+      <javac destdir="classes" debug="${debug}" optimize="${optimize}">
+         <classpath>
+            <pathelement location="${junit.jar}"/>
+            <pathelement location="${main.jar}"/>
+            <pathelement location="${javax.jar}"/>
+            <pathelement location="${log4j.jar}"/>
+            <pathelement location="${getopt.jar}"/>
+            <path refid="jce_jars"/>
+         </classpath>
+         <src path="src"/>
+         <include name="test/**"/>
+      </javac>
+   </target>
+
+   <!--
+   docs .......................................................................
+   -->
+   <target name="docs" description="generate Javadoc HTML files">
+      <mkdir dir="docs/api"/>
+      <javadoc packagenames="cryptix.sasl.*,javax.security.*"
+               sourcepath="src"
+               destdir="docs/api"
+               defaultexcludes="yes"
+               package="true"
+               version="true"
+               windowtitle="${oneliner}, version ${version}">
+         <doctitle>
+            <![CDATA[<H1>${oneliner}<BR>Programmer's Documentation</H1>]]>
+         </doctitle>
+         <header>
+            <![CDATA[For the latest news and information visit the<BR>
+            <A HREF="http://www.cryptix.org">Cryptix web site</A>]]>
+         </header>
+         <bottom>
+            <![CDATA[Copyright &copy;1999-2001 <A HREF="http://www.cryptix.org">
+            The Cryptix Foundation Limited.</A> All Rights Reserved.]]>
+         </bottom>
+         <group title="Cryptix implementation of the Java SASL extension">
+            <package name="javax.security.*"/>
+         </group>
+         <group title="Cryptix SASL library">
+            <package name="cryptix.sasl.*"/>
+         </group>
+         <classpath>
+            <pathelement location="${javax.jar}"/>
+            <pathelement location="${main.jar}"/>
+            <pathelement location="${log4j.jar}"/>
+            <pathelement location="${junit.jar}"/>
+            <path refid="jce_jars"/>
+         </classpath>
+      </javadoc>
+   </target>
+
+   <!--
+   distribution ...............................................................
+   -->
+   <patternset id="toplevel.files" >
+      <include name="AUTHORS"/>
+      <include name="build.xml"/>
+      <include name="CGL.TXT"/>
+      <include name="ChangeLog"/>
+      <include name="LGPL.TXT"/>
+      <include name="LICENSE.SRP.TXT"/>
+      <include name="log.properties"/>
+      <include name="README.TXT"/>
+   </patternset>
+
+   <target name="dist" depends="test,clean"
+           description="Generate, test and package the project's deliverables">
+      <property name="build.dir" value="build/${package}"/>
+      <copy todir="${build.dir}">
+         <fileset dir="${basedir}">
+            <patternset refid="toplevel.files"/>
+         </fileset>
+      </copy>
+      <copy todir="${build.dir}/bin">
+         <fileset dir="bin"/>
+      </copy>
+      <copy todir="${build.dir}/lib">
+         <fileset dir="lib">
+            <include name="${package}.jar"/>
+            <include name="javax-sasl.jar"/>
+         </fileset>
+      </copy>
+      <copy todir="${build.dir}/docs">
+         <fileset dir="docs">
+            <include name="index.html"/>
+            <include name="rfc2222.txt"/>
+            <include name="rfc2245.txt"/>
+            <include name="rfc2195.txt"/>
+            <include name="rfc2595.txt"/>
+            <include name="rfc2444.txt"/>
+            <include name="draft-weltman-java-sasl-05.txt"/>
+            <include name="draft-burdis-cat-srp-sasl-05.txt"/>
+            <include name="draft-naffah-cat-sasl-sm2-01.txt"/>
+         </fileset>
+      </copy>
+      <copy todir="${build.dir}/src">
+         <fileset dir="src"/>
+      </copy>
+      <copy todir="${build.dir}/etc">
+         <fileset dir="etc"/>
+      </copy>
+      <zip basedir="build" zipfile="${package}-${version}.zip"/>
+      <tar basedir="build" tarfile="${package}-${version}.tar"/>
+      <gzip src="${package}-${version}.tar" zipfile="${package}-${version}.tar.gz"/>
+      <delete file="${package}-${version}.tar"/>
+      <delete dir="build"/>
+   </target>
+
+   <!--
+   install ....................................................................
+   -->
+   <target name="install" depends="test,check-install" if="install.dir"
+           description="Deploy the deliverable to your platform">
+      <copy todir="${install.dir}/bin" overwrite="yes">
+         <fileset dir="etc" includes="*tmpl"/>
+         <mapper type="glob" from="*.tmpl" to="*"/>
+         <filterset>
+            <filter token="install.dir" value="${install.dir}"/>
+         </filterset>
+      </copy>
+      <chmod file="${install.dir}/bin/*.sh" perm="ugo+x"/>
+      <copy todir="${install.dir}/etc" file="etc/tpasswd.conf"/>
+      <copy todir="${install.dir}/etc" file="etc/test.policy"/>
+      <copy todir="${install.dir}/lib" overwrite="yes">
+         <fileset dir="lib">
+            <include name="test.jar"/>
+            <include name="${package}.jar"/>
+            <include name="javax-sasl.jar"/>
+            <include name="java-getopt.jar"/>
+            <include name="cryptix-jce-api.jar"/>
+            <include name="cryptix-jce-provider.jar"/>
+            <include name="log4j.jar"/>
+         </fileset>
+      </copy>
+      <copy todir="${install.dir}" overwrite="yes" file="log.properties"/>
+      <echo message="--------------------------------------------------------"/>
+      <echo message="NOTE: Do not forget to add ${install.dir}${file.separator}bin to your PATH."/>
+      <echo message="For example:"/>
+      <echo message="   export PATH=&lt;install.dir>/bin:$$PATH   (on Linux)"/>
+      <echo message="or"/>
+      <echo message="   set PATH=&lt;install.dir>\bin;%PATH%     (on Windows)"/>
+   </target>
+
+   <target name="check-install" unless="install.dir">
+      <echo message="--------------------------------------------------------"/>
+      <echo message="Usage"/>
+      <echo message="   ant -Dinstall.dir=foo install"/>
+      <echo message="where"/>
+      <echo message="   foo"/>
+      <echo message="      The fully qualified pathname where you want to install"/>
+      <echo message="      this package."/>
+      <fail message="User error. Correct and try again..."/>
+   </target>
+
+   <!--
+   cleanup ....................................................................
+   -->
+   <target name="distclean" depends="clean,clean-tests,clean-docs"
+           description="Remove all generated classes and jars">
+      <delete file="${javax.jar}"/>
+      <delete file="${main.jar}"/>
+      <delete file="${test.jar}"/>
+   </target>
+
+   <target name="clean">
+      <delete dir="classes"/>
+   </target>
+
+   <target name="clean-tests">
+      <delete file="test2"/>
+      <delete>
+         <fileset dir="${basedir}" includes="t_srp_passwd*"/>
+      </delete>
+   </target>
+
+   <target name="clean-docs">
+      <delete dir="docs/api"/>
+   </target>
+
+   <!--
+   java-getopt distribution ...................................................
+   -->
+   <target name="config-getopt"
+           depends="check-getopt-ready,get-getopt"
+           unless="getopt.ready">
+      <copy file="java-getopt-${getopt.version}.jar" tofile="${getopt.jar}"/>
+   </target>
+
+   <target name="check-getopt-ready">
+      <available property="getopt.ready" file="${getopt.jar}"/>
+   </target>
+
+   <target name="get-getopt"
+           depends="check-getopt-available"
+           unless="getopt.available">
+      <get src="${getopt.url}/java-getopt-${getopt.version}.jar"
+           dest="java-getopt-${getopt.version}.jar"/>
+   </target>
+
+   <target name="check-getopt-available">
+      <available property="getopt.available"
+                 file="java-getopt-${getopt.version}.jar"/>
+   </target>
+
+   <!--
+   junit distribution .........................................................
+   -->
+   <target name="config-junit"
+           depends="check-junit-ready,get-junit"
+           unless="junit.ready">
+      <unzip src="junit${junit.version}.zip" dest="${basedir}"/>
+      <copy file="junit${junit.version}/junit.jar" todir="lib"/>
+      <delete dir="junit${junit.version}"/>
+   </target>
+
+   <target name="check-junit-ready">
+      <available property="junit.ready" file="${junit.jar}"/>
+   </target>
+
+   <target name="check-junit-available">
+      <available property="junit.available" file="junit${junit.version}.zip"/>
+   </target>
+
+   <target name="get-junit"
+           depends="check-junit-available"
+           unless="junit.available">
+      <get src="${junit.url}/junit${junit.version}.zip"
+           dest="junit${junit.version}.zip"/>
+   </target>
+
+   <!--
+   log4j distribution .........................................................
+   -->
+   <target name="config-log4j"
+           depends="check-log4j-ready,get-log4j"
+           unless="log4j.ready">
+      <gunzip src="jakarta-log4j-${log4j.version}.tar.gz"
+              dest="jakarta-log4j-${log4j.version}.tar"/>
+      <untar src="jakarta-log4j-${log4j.version}.tar" dest="${basedir}"/>
+      <copy file="jakarta-log4j-${log4j.version}/dist/lib/log4j.jar"
+            todir="lib"/>
+      <delete file="jakarta-log4j-${log4j.version}.tar"/>
+      <delete dir="jakarta-log4j-${log4j.version}"/>
+   </target>
+
+   <target name="check-log4j-ready">
+      <available property="log4j.ready" file="${log4j.jar}"/>
+   </target>
+
+   <target name="check-log4j-available">
+      <available property="log4j.available"
+                 file="jakarta-log4j-${log4j.version}.tar.gz"/>
+   </target>
+
+   <target name="get-log4j"
+           depends="check-log4j-available"
+           unless="log4j.available">
+      <get src="${log4j.url}/jakarta-log4j-${log4j.version}.tar.gz"
+           dest="jakarta-log4j-${log4j.version}.tar.gz"/>
+   </target>
+
+</project>

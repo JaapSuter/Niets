@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <EditText android:id="@id/advanced_xmpp_host" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                <TextView android:gravity="right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Host: " />
+            </LinearLayout>
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <EditText android:id="@id/advanced_dump_contacts_et" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="14085551212" android:layout_weight="1.0" android:inputType="text" />
+                <TextView android:gravity="right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="JID: " />
+                <EditText android:id="@id/advanced_xmpp_port" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <TextView android:gravity="right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Port: " />
+            </LinearLayout>
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:gravity="right" android:id="@id/advanced_reconnects" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <TextView android:gravity="right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Reconnects: " />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <Button android:id="@id/advanced_delete_me" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Del Registration" android:layout_weight="1.0" />
+                <Button android:id="@id/advanced_register_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Register Name" android:layout_weight="1.0" />
+                <Button android:id="@id/advanced_register" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Register" android:layout_weight="1.0" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <Button android:id="@id/advanced_backup_db" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Backup dbs" android:layout_weight="1.0" />
+                <Button android:id="@id/advanced_logout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Logout" android:layout_weight="1.0" />
+                <Button android:id="@id/advanced_reconnect" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Reconnect" android:layout_weight="1.0" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <Button android:id="@id/advanced_delete_android_contacts_cache" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Delete android_contacts" android:layout_weight="1.0" />
+                <Button android:id="@id/advanced_delete_xmpp_contacts_cache" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Delete xmpp contacts" android:layout_weight="1.0" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <Button android:id="@id/advanced_log_to_sd" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Log to SD" android:layout_weight="1.0" />
+                <Button android:id="@id/advanced_throw_exception" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Throw Exception" android:layout_weight="1.0" />
+                <Button android:id="@id/advanced_kill_process" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Kill Process" android:layout_weight="1.0" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <Button android:id="@id/advanced_eat_gc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Eat GC" android:layout_weight="1.0" />
+                <Button android:id="@id/advanced_eat_cpu" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Eat CPU" android:layout_weight="1.0" />
+                <Button android:id="@id/advanced_eat_memory" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Eat Memory" android:layout_weight="1.0" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <Button android:id="@id/advanced_io_test_external" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="External" android:layout_weight="1.0" />
+                <Button android:id="@id/advanced_io_test_internal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Internal" android:layout_weight="1.0" />
+                <EditText android:id="@id/advanced_io_test_count" android:layout_width="100.0sp" android:layout_height="wrap_content" android:text="100" android:layout_weight="1.0" />
+                <TextView android:gravity="right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="IO Test: " />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <Button android:id="@id/advanced_dump_wacontacts_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="WA" android:layout_weight="1.0" />
+                <Button android:id="@id/advanced_dump_raw_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Raw" android:layout_weight="1.0" />
+                <Button android:id="@id/advanced_dump_data_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Data" android:layout_weight="1.0" />
+                <Button android:id="@id/advanced_dump_contacts_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Contact" android:layout_weight="1.0" />
+                <Button android:id="@id/advanced_dump_phone_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Phone" android:layout_weight="1.0" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <Button android:id="@id/advanced_contact_restore" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Contact Restore" android:layout_weight="1.0" />
+                <Button android:id="@id/advanced_db_restore" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="DB Restore" android:layout_weight="1.0" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <Button android:id="@id/netstat_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Netstat" android:layout_weight="1.0" />
+                <Button android:id="@id/login_failed_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Login failed" />
+                <Button android:id="@id/reset_registration_state_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Reset reg state" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <Button android:id="@id/raw_data_fix_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="raw_data db fix" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

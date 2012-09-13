@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="notification_new_message_from_multiple_contacts_1">
+        <item quantity="other">%d通のメッセージ</item>
+    </plurals>
+    <plurals name="notification_new_message_from_multiple_contacts_2">
+        <item quantity="other">%2$d人から%1$s通のメッセージ</item>
+    </plurals>
+    <plurals name="notification_new_message">
+        <item quantity="other">新着メッセージ %d通</item>
+    </plurals>
+    <plurals name="service_expire_days">
+        <item quantity="other">%d日後にWhatsAppサービスの期限が切れます。サービスを更新しますか?</item>
+    </plurals>
+    <plurals name="unread_message_count">
+        <item quantity="other">%d 未読メッセージ</item>
+    </plurals>
+    <plurals name="network_usage_message_count">
+        <item quantity="other">%1$d 通のメッセージ</item>
+    </plurals>
+    <plurals name="network_usage_byte_count_bytes">
+        <item quantity="other">%1$d バイト</item>
+    </plurals>
+    <plurals name="error_image_dimensions_too_small">
+        <item quantity="other">画像が小さすぎます。高さと幅が最低 %d ピクセルのものをご使用下さい。</item>
+    </plurals>
+</resources>

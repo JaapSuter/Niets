@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.whatsapp.DividerView android:id="@id/date_divider" android:paddingLeft="2.0dip" android:paddingRight="5.0dip" style="@style/DateDivider" />
+    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/conversation_row_margin" android:layout_below="@id/date_divider" android:layout_alignParentLeft="true">
+        <Button android:ellipsize="end" android:id="@id/vcard_btn" android:clickable="true" android:layout_width="@dimen/conversation_contact_button_width" android:layout_height="wrap_content" android:drawableLeft="@drawable/shared_contact_btn" android:drawablePadding="2.0dip" />
+        <ImageView android:layout_gravity="bottom|left|center" android:id="@id/status" android:paddingRight="2.0dip" android:paddingBottom="3.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignBottom="@id/vcard_btn" android:layout_alignParentBottom="true" />
+        <TextView android:textSize="11.0sp" android:textStyle="italic" android:textColor="#ff666666" android:gravity="left" android:layout_gravity="bottom|left|center" android:id="@id/date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignBottom="@id/vcard_btn" android:layout_alignParentBottom="true" />
+    </LinearLayout>
+</merge>

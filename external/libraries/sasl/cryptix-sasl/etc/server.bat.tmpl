@@ -1,0 +1,14 @@
+@ REM COMMAND.COM
+@ ECHO OFF
+
+SET SASL_HOME=@install.dir@
+SET SASL_CP="%SASL_HOME%\lib\test.jar;%SASL_HOME%\lib\cryptix-sasl.jar;%SASL_HOME%\lib\javax-sasl.jar;%SASL_HOME%\lib\cryptix-jce-api.jar;%SASL_HOME%\lib\cryptix-jce-provider.jar;%SASL_HOME%\lib\java-getopt.jar;%SASL_HOME%\lib\log4j.jar"
+
+SET CMD_LINE_ARGS=%*
+PUSHD %SASL_HOME%
+java -showversion -Dlog4j.configuration="file:./log.properties" -Dcryptix.sasl.srp.password.file=%SASL_HOME%\etc\tpasswd -Dcryptix.sasl.plain.password.file=%SASL_HOME%\etc\tpasswd -cp %SASL_CP% test.Server %CMD_LINE_ARGS%
+
+SET SASL_CP=
+SET SASL_HOME=
+POPD
+

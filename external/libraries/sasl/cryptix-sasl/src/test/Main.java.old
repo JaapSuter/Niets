@@ -1,0 +1,265 @@
+package test;
+
+// $Id: Main.java,v 1.3 2001/06/16 09:04:00 raif Exp $
+//
+// Copyright (c) 2000-2001 The Cryptix Foundation. All rights reserved.
+//
+// Use, modification, copying and distribution of this software is subject to
+// the terms and conditions of the Cryptix General Licence. You should have
+// received a copy of the Cryptix General License along with this library; if
+// not, you can download a copy from <http://www.cryptix.org/>.
+
+import java.io.File;
+import java.io.InputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.math.BigInteger;
+import java.security.KeyPair;
+import java.security.MessageDigest;
+import java.util.Random;
+
+import cryptix.sasl.SaslUtil;
+import cryptix.sasl.srp.*;
+import org.apache.log4j.Category;
+import org.apache.log4j.PropertyConfigurator;
+
+import javax.crypto.SecretKey;
+import javax.security.sasl.*;
+
+/**
+ * A basic test class to exercise the SRP cryptographic primitives. It does that
+ * by first creating, if it is not there, a password file (called "test" in the
+ * current directory), adds a new user with a password for test purposes, and
+ * finally run the client-side and server- side SRP steps checking equality of
+ * returned results. The SRP N and g values are read from a .conf file in the
+ * ./etc/ directory (when the current directory is set to that of the project.<p>
+ *
+ * This version instantiates and exercises 2 SRP incarnations: one with the
+ * default message digest algorithm --which is SHA-- and another with MD5.
+ *
+ * @version $Revision: 1.3 $
+ * @since draft-burdis-cat-sasl-srp-04
+ */
+public class Main
+{
+	// Constants and variables
+	// -------------------------------------------------------------------------
+
+	private static Category cat = Category.getInstance(Main.class);
+
+   static Random prng = new Random();
+   static String user = "test";
+   static String password = "test";
+   static String pFile = "./test"; // dummy password file
+   static String cFile = "etc/tpasswd.conf";
+
+   SRP srp;
+
+	// Constructor(s)
+	// -------------------------------------------------------------------------
+
+   private Main(SRP algorithm) {
+      srp = algorithm;
+   }
+
+	// Class methods
+	// -------------------------------------------------------------------------
+
+	public static void main(String[] args) {
+		PropertyConfigurator.configure("log.properties");
+
+      String mdaName = null;
+
+      // try SRP with defaul digest; ie. SHA-1
+      SRP srp = SRP.instance(mdaName);
+      Main srp_sha_160 = new Main(srp);
+      srp_sha_160.runTest();
+
+      // try SRP with MD5
+      mdaName = "MD5";
+      srp = SRP.instance(mdaName);
+      Main srp_md5 = new Main(srp);
+      srp_md5.runTest();
+	}
+
+   // Instance methods
+   // -------------------------------------------------------------------------
+
+   void runTest() {
+      cat.info("Exercising SRP incarnation \""+srp.getSRPName()+"\"");
+      cat.info("=================================================");
+      cat.info("");
+		try {
+			cat.info("1. Updating 'test' user password info");
+			cat.info("Checking existence of password file. Creating it if new...");
+			File f = new File(pFile);
+			if (!f.exists()) {
+			   cat.info("Creating new file \""+f.getCanonicalPath()+"\"");
+			   f.createNewFile();
+			} else if (f.isFile()) {
+			   if (!f.canRead() || !f.canWrite())
+			      throw new RuntimeException("File (./test) exists but is not accessible");
+			} else
+			   throw new RuntimeException("File object (./test) exists but is not a file");
+
+			PasswordFile tpasswd = new PasswordFile(srp, pFile, cFile);
+			if (!tpasswd.contains(user)) {
+			   cat.info("Adding test user...");
+			   byte[] testSalt = new byte[10];
+			   prng.nextBytes(testSalt);
+			   tpasswd.add(user, password, testSalt, "1");
+			   cat.info("Added test user...");
+			} else {
+			   cat.info("Updating test user...");
+			   tpasswd.changePasswd(user, password);
+			   cat.info("Updated test user...");
+			}
+
+			cat.info("Yesss...");
+
+			// ===================================================================
+
+			cat.info("2. Testing cryptographic primitives");
+
+			String[] conf = tpasswd.lookupConfig("1");
+			BigInteger N = new BigInteger(1, SaslUtil.fromb64(conf[0]));
+			cat.info("N: "+SaslUtil.dump(N));
+			BigInteger g = new BigInteger(1, SaslUtil.fromb64(conf[1]));
+			cat.info("g: "+SaslUtil.dump(g));
+
+			String[] entry = tpasswd.lookup(user);
+			BigInteger v = new BigInteger(1, SaslUtil.fromb64(entry[1]));
+			cat.info("v: "+SaslUtil.dump(v));
+			byte[] salt = SaslUtil.fromb64(entry[2]);
+			cat.info("s: "+SaslUtil.dumpString(salt));
+
+			KeyPair serverKP = srp.generateServerKeyPair(N, g, v);
+			KeyPair clientKP = srp.generateClientKeyPair(N, g);
+
+			SecretKey K1 = srp.generateServerSecretKey(
+					serverKP, // b, B
+					((SRPPublicKey) clientKP.getPublic()).getExponent(), // A
+					v);
+			cat.info("K (server): "+SaslUtil.dumpString(K1.getEncoded()));
+
+			MessageDigest sha = srp.newDigest();
+			sha.update(salt);
+			sha.update(srp.userHash(user, password));
+
+			BigInteger x = new BigInteger(1, sha.digest());
+			cat.debug("x: "+SaslUtil.dump(x));
+			SecretKey K2 = srp.generateClientSecretKey(
+					clientKP, // a, A
+					((SRPPublicKey) serverKP.getPublic()).getExponent(), // B
+					x);
+			cat.info("K (client): "+SaslUtil.dumpString(K2.getEncoded()));
+
+			if (!SaslUtil.areEqual(K1.getEncoded(), K2.getEncoded()))
+				throw new RuntimeException("bugger...");
+
+			cat.info("Yesss...");
+
+			// ===================================================================
+
+			cat.info("3. Testing successive hashing of relevant values (server side)");
+
+			MessageDigest hash = srp.newDigest();
+			MessageDigest ckhash = srp.newDigest();
+
+			ckhash.update(
+				srp.xor(srp.digest(SaslUtil.trim(N)), srp.digest(SaslUtil.trim(g))));
+         cat.debug("=== hash --After N ^ g: "+SaslUtil.dump(ckhash));
+			ckhash.update(srp.digest(user));
+         cat.debug("=== hash --After U: "+SaslUtil.dump(ckhash));
+			ckhash.update(salt);
+         cat.debug("=== hash --After s: "+SaslUtil.dump(ckhash));
+
+			ckhash.update(srp.digest("integrity=hmac-md5,replay detection")); // available options
+         cat.debug("=== hash --After L: "+SaslUtil.dump(ckhash));
+			ckhash.update(((SRPPublicKey) clientKP.getPublic()).getExponentBytes()); // A
+         cat.debug("=== hash --After A: "+SaslUtil.dump(ckhash));
+			ckhash.update(((SRPPublicKey) serverKP.getPublic()).getExponentBytes()); // B
+         cat.debug("=== hash --After B: "+SaslUtil.dump(ckhash));
+			ckhash.update(K1.getEncoded());
+         cat.debug("=== hash --After k: "+SaslUtil.dump(ckhash));
+
+
+			hash.update(((SRPPublicKey) clientKP.getPublic()).getExponentBytes()); // A
+         cat.debug("=== hash --After A: "+SaslUtil.dump(hash));
+			hash.update(srp.digest(user));
+         cat.debug("=== hash --After U: "+SaslUtil.dump(hash));
+			hash.update(srp.digest(user)); // authorizationID
+         cat.debug("=== hash --After I: "+SaslUtil.dump(hash));
+			hash.update(srp.digest("integrity=hmac-md5,replay detection")); // chosen options
+         cat.debug("=== hash --After o: "+SaslUtil.dump(hash));
+
+			byte[] serverExpects = ckhash.digest();
+			cat.info("Server expects: "+SaslUtil.dumpString(serverExpects));
+
+			hash.update(serverExpects);
+         cat.debug("=== hash --After M1: "+SaslUtil.dump(hash));
+			hash.update(K1.getEncoded());
+         cat.debug("=== hash --After k: "+SaslUtil.dump(hash));
+
+			byte[] serverResult = hash.digest();
+			cat.info("Server outputs: "+SaslUtil.dumpString(serverResult));
+
+			// ===================================================================
+
+			cat.info("3. Testing successive hashing of relevant values (client side)");
+
+			hash = srp.newDigest();
+
+			hash.update(
+				srp.xor(srp.digest(SaslUtil.trim(N)), srp.digest(SaslUtil.trim(g))));
+         cat.debug("=== hash --After N ^ g: "+SaslUtil.dump(hash));
+			hash.update(srp.digest(user));
+         cat.debug("=== hash --After U: "+SaslUtil.dump(hash));
+
+			hash.update(salt);
+         cat.debug("=== hash --After s: "+SaslUtil.dump(hash));
+			hash.update(srp.digest("integrity=hmac-md5,replay detection")); // available options
+         cat.debug("=== hash --After L: "+SaslUtil.dump(hash));
+			hash.update(((SRPPublicKey) clientKP.getPublic()).getExponentBytes()); // A
+         cat.debug("=== hash --After A: "+SaslUtil.dump(hash));
+
+			hash.update(((SRPPublicKey) serverKP.getPublic()).getExponentBytes()); // B
+         cat.debug("=== hash --After B: "+SaslUtil.dump(hash));
+			hash.update(K2.getEncoded());
+         cat.debug("=== hash --After k: "+SaslUtil.dump(hash));
+
+			byte[] clientResult = hash.digest();
+			cat.info("Client outputs: "+SaslUtil.dumpString(clientResult));
+
+
+			ckhash = srp.newDigest();
+			ckhash.update(((SRPPublicKey) clientKP.getPublic()).getExponentBytes()); // A
+         cat.debug("=== hash --After A: "+SaslUtil.dump(ckhash));
+			ckhash.update(srp.digest(user));
+         cat.debug("=== hash --After U: "+SaslUtil.dump(ckhash));
+			ckhash.update(srp.digest(user)); // authorizationID
+         cat.debug("=== hash --After I: "+SaslUtil.dump(ckhash));
+			ckhash.update(srp.digest("integrity=hmac-md5,replay detection")); // chosen options
+         cat.debug("=== hash --After o: "+SaslUtil.dump(ckhash));
+			ckhash.update(clientResult);
+         cat.debug("=== hash --After M1: "+SaslUtil.dump(ckhash));
+			ckhash.update(K2.getEncoded());
+         cat.debug("=== hash --After k: "+SaslUtil.dump(ckhash));
+
+			byte[] clientExpects = ckhash.digest();
+			cat.info("Client expects: "+SaslUtil.dumpString(clientExpects));
+
+			if (!SaslUtil.areEqual(clientResult, serverExpects))
+				throw new RuntimeException("bugger...");
+
+			if (!SaslUtil.areEqual(serverResult, clientExpects))
+				throw new RuntimeException("bugger...");
+
+			cat.info("Yesss...");
+			cat.info("");
+
+		} catch (Throwable x) {
+			cat.fatal("Fatal: ", x);
+		}
+	}
+}

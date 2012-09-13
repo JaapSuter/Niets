@@ -1,0 +1,13 @@
+ >  <stream:stream resource="iPhone-2.8.2-5222" to="s.whatsapp.net" />
+ >  <stream:features><receipt_acks /></stream:features>
+ >  <auth xmlns="urn:ietf:params:xml:ns:xmpp-sasl" mechanism="DIGEST-MD5-1" />
+ <  <stream:stream from="s.whatsapp.net">
+ <  <stream:features><receipt_acks /></stream:features>
+CONNECTED!
+ <  <challenge xmlns="urn:ietf:params:xml:ns:xmpp-sasl">bm9uY2U9IjEzNTc0NzA0MjAwOSIscW9wPSJhdXRoIixjaGFyc2V0PXV0Zi04LGFsZ29yaXRobT1tZDUtc2Vzcw==</challenge>
+SASL CHALLENGE: bm9uY2U9IjEzNTc0NzA0MjAwOSIscW9wPSJhdXRoIixjaGFyc2V0PXV0Zi04LGFsZ29yaXRobT1tZDUtc2Vzcw==
+nonce="135747042009",qop="auth",charset=utf-8,algorithm=md5-sess
+ >  <response xmlns="urn:ietf:params:xml:ns:xmpp-sasl">dXNlcm5hbWU9NjE0MTY5MDU2MTIsbm9uY2U9MTM1NzQ3MDQyMDA5LGRpZ2VzdC11cmk9eG1wcC9zLndoYXRzYXBwLm5ldCxyZWFsbT1zLndoYXRzYXBwLm5ldCxxb3A9YXV0aCxjbm9uY2U9MjYzN2JjNjktODQyMS00N2QxLWFhODItMTJhZDk2MzgxMTBiLG5jPTAwMDAwMDAxLHJlc3BvbnNlPTliYTNlN2NmOWM1ZDVhMmJkNTg1YmZhZDA0ZTE3ZmU4</response>
+THREAD START
+ <  <failure xmlns="urn:ietf:params:xml:ns:xmpp-sasl"><not-authorized /></failure>
+LOGIN FAILED

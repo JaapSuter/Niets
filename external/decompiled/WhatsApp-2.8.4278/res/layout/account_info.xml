@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/background_repeat" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout style="@style/Header">
+        <TextView android:text="@string/settings_payment_info" android:layout_alignParentLeft="true" style="@style/Text.Header" />
+    </RelativeLayout>
+    <View android:background="@color/black" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:background="@drawable/background_repeat" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:id="@id/account_status_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_centerVertical="true">
+                    <TextView android:gravity="left" android:paddingLeft="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/account_info_status_title" style="@style/Text.Description" />
+                    <TextView android:textSize="14.0sp" android:gravity="left" android:id="@id/account_info_status" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="-4.0dip" android:text="Free Trial" style="@style/Text.FieldHeader" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+                    <ImageView android:gravity="center" android:id="@id/account_info_image" android:padding="9.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/account_present" />
+                </LinearLayout>
+            </RelativeLayout>
+            <TextView android:gravity="left" android:id="@id/group_media_tv" android:text="@string/account_info_details" style="@style/TextGrayDivider" />
+            <LinearLayout android:orientation="vertical" android:background="@color/group_chat_info_gray" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="17.0sp" android:gravity="left" android:paddingLeft="16.0dip" android:paddingTop="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/account_info_account_num" style="@style/Text.Description" />
+                <TextView android:textSize="14.0sp" android:gravity="left" android:id="@id/account_info_phone_num" android:paddingLeft="16.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="-4.0dip" android:text="15555551212" android:lineSpacingMultiplier="1.0" style="@style/Text.FieldHeader" />
+                <View android:background="@color/divider_gray" android:layout_width="fill_parent" android:layout_height="1.0px" />
+                <TextView android:textSize="17.0sp" android:gravity="left" android:id="@id/account_info_expiration" android:paddingLeft="16.0dip" android:paddingTop="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/account_info_expiration" style="@style/Text.Description" />
+                <TextView android:textSize="14.0sp" android:gravity="left" android:id="@id/account_info_exp_date" android:paddingLeft="16.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="-4.0dip" android:text="09 September 2011" style="@style/Text.Field" />
+                <View android:background="@color/divider_gray" android:layout_width="fill_parent" android:layout_height="1.0px" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:background="@drawable/background_repeat" android:paddingLeft="16.0dip" android:paddingTop="10.0dip" android:paddingRight="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <Button android:textStyle="bold" android:id="@id/purchase_btn" android:layout_width="fill_parent" android:layout_height="@dimen/account_info_btn_height" android:layout_marginTop="6.0dip" android:text="@string/account_info_purchase" />
+                <Button android:textStyle="bold" android:id="@id/send_addr_btn" android:layout_width="fill_parent" android:layout_height="@dimen/account_info_btn_height" android:layout_marginTop="7.0dip" android:text="@string/account_info_send_addr" android:drawableLeft="@drawable/envelope" />
+                <TextView android:textSize="14.299988dip" android:paddingTop="7.0dip" android:paddingBottom="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/account_info_desc" android:lineSpacingMultiplier="1.0" style="@style/Text.Field" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

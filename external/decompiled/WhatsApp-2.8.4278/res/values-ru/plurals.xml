@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="hours">
+        <item quantity="other">%d часов</item>
+        <item quantity="one">%d час</item>
+        <item quantity="few">%d часа</item>
+    </plurals>
+    <plurals name="minutes">
+        <item quantity="other">%d минут</item>
+        <item quantity="one">%d минута</item>
+        <item quantity="few">%d минуты</item>
+    </plurals>
+    <plurals name="notification_new_message_from_multiple_contacts_1">
+        <item quantity="other">%d сообщений</item>
+        <item quantity="one">%d сообщение</item>
+        <item quantity="few">%d сообщения</item>
+    </plurals>
+    <plurals name="notification_new_message_from_multiple_contacts_2">
+        <item quantity="other">%1$s от %2$d контактов.</item>
+        <item quantity="one">%1$s от %2$d контакта.</item>
+        <item quantity="few">%1$s от %2$d контактов.</item>
+    </plurals>
+    <plurals name="notification_new_message">
+        <item quantity="other">%d новых сообщений.</item>
+        <item quantity="one">%d новое сообщение.</item>
+        <item quantity="few">%d новых сообщения.</item>
+    </plurals>
+    <plurals name="service_expire_days">
+        <item quantity="other">Ваш сервис WhatsApp истечет через %d дней. Хотите продлить сейчас?</item>
+        <item quantity="one">Ваш сервис WhatsApp истечет через %d день. Хотите продлить сейчас?</item>
+        <item quantity="few">Ваш сервис WhatsApp истечет через %d дня. Хотите продлить сейчас?</item>
+    </plurals>
+    <plurals name="unread_message_count">
+        <item quantity="other">%d непрочитанных сообщений</item>
+        <item quantity="one">%d непрочитанное сообщение</item>
+        <item quantity="few">%d непрочитанных сообщения</item>
+    </plurals>
+    <plurals name="confirm_sharing_multiple_title">
+        <item quantity="other">Поделиться %1$d файлами с %2$s?</item>
+        <item quantity="one">Поделиться %1$d файлом с %2$s?</item>
+        <item quantity="few">Поделиться %1$d файлами с %2$s?</item>
+    </plurals>
+    <plurals name="group_confirm_sharing_multiple_title">
+        <item quantity="other">Поделиться %1$d файлами с “%2$s”?</item>
+        <item quantity="one">Поделиться %1$d файлом с “%2$s”?</item>
+        <item quantity="few">Поделиться %1$d файлами с “%2$s”?</item>
+    </plurals>
+    <plurals name="software_about_to_expire">
+        <item quantity="other">Ваша версия WhatsApp истекает через %d дней. Обновить до последней версии?</item>
+        <item quantity="one">Ваша версия WhatsApp истекает через %d день. Обновить до последней версии?</item>
+        <item quantity="few">Ваша версия WhatsApp истекает через %d дня. Обновить до последней версии?</item>
+    </plurals>
+    <plurals name="network_usage_message_count">
+        <item quantity="other">%1$d сообщений</item>
+        <item quantity="one">%1$d сообщение</item>
+        <item quantity="few">%1$d сообщения</item>
+    </plurals>
+    <plurals name="network_usage_byte_count_bytes">
+        <item quantity="other">%1$d байтов</item>
+        <item quantity="one">%1$d байт</item>
+        <item quantity="few">%1$d байта</item>
+    </plurals>
+</resources>

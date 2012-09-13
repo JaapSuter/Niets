@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="hours">
+        <item quantity="other">%d saat</item>
+        <item quantity="one">%d saat</item>
+    </plurals>
+    <plurals name="minutes">
+        <item quantity="other">%d dakika</item>
+        <item quantity="one">%d dakika</item>
+    </plurals>
+    <plurals name="notification_new_message_from_multiple_contacts_1">
+        <item quantity="other">%d mesaj</item>
+        <item quantity="one">%d mesaj</item>
+    </plurals>
+    <plurals name="notification_new_message_from_multiple_contacts_2">
+        <item quantity="other">%2$d kişiden %1$s tanesi.</item>
+        <item quantity="one">%2$d kişiden %1$s tanesi.</item>
+    </plurals>
+    <plurals name="confirm_sharing_multiple_title">
+        <item quantity="other">%1$d öğeyi %2$s aracılığıyla paylaş?</item>
+        <item quantity="one">%1$d öğeyi %2$s aracılığıyla paylaş?</item>
+    </plurals>
+    <plurals name="group_confirm_sharing_multiple_title">
+        <item quantity="other">%1$d öğeyi “%2$s” aracılığıyla paylaş?</item>
+        <item quantity="one">%1$d öğeyi “%2$s” aracılığıyla paylaş?</item>
+    </plurals>
+    <plurals name="network_usage_message_count">
+        <item quantity="other">%1$d mesaj</item>
+        <item quantity="one">%1$d mesaj</item>
+    </plurals>
+    <plurals name="network_usage_byte_count_bytes">
+        <item quantity="other">%1$d bit</item>
+        <item quantity="one">%1$d bit</item>
+    </plurals>
+</resources>

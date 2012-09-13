@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/group_chat_info_gray" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout style="@style/Header">
+        <LinearLayout android:gravity="left|center" android:id="@id/header_ll" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:layout_gravity="left|center" android:text="@string/group_info" style="@style/Text.HeaderCentered" />
+            <ImageView android:layout_gravity="top|right|center" android:id="@id/divider1" android:background="@drawable/divider" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+            <ImageButton android:layout_gravity="right|center" android:id="@id/add_participant_btn" android:background="@drawable/selector_orange_gradient" android:visibility="invisible" android:layout_width="@dimen/header_image_btn_width" android:layout_height="@dimen/header_height" android:src="@drawable/add_person_white" android:scaleType="center" />
+        </LinearLayout>
+    </RelativeLayout>
+    <ListView android:id="@android:id/list" android:layout_width="fill_parent" android:layout_height="0.0dip" android:listSelector="@drawable/selector_orange_gradient" android:cacheColorHint="@color/group_chat_info_gray" android:divider="@color/divider_gray" android:dividerHeight="1.0px" android:choiceMode="none" android:layout_weight="1.0" />
+</LinearLayout>

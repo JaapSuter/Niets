@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Thats Up</title>
+  <style>
+    body {
+      font-family: Verdana, sans-serif;
+      width: 100%;
+      max-width: 80em;
+      margin: 2em auto;
+      background: url(/bg.gif) top center no-repeat #F8F5F5;
+    }
+
+    h2 {
+      font-size: 1.2em;
+    }
+    
+    iframe {
+      display: block;
+      width: 60em;
+      height: 20em;      
+    }
+    .aside {
+      float: right;
+      margin: 2em;
+      font-size: 0.8em;
+      background-color: #eef;
+      border: 1px solid #000;
+      width: 30em;
+      padding: 2em;      
+    }
+    input, textarea { border: 1px solid #200; }
+    
+    .button {
+      font-size: 1.2em;
+      padding: 0.3em;
+      border-radius: 0.2em;
+      background-color: #dfe;
+      cursor: pointer;
+      background-image: -webkit-linear-gradient(top, #dfe 0%, #cec);
+      background-image: -moz-linear-gradient(top, #dfe 0%, #cec);
+      background-image: -ms-linear-gradient(top, #dfe 0%, #cec);
+    }
+
+    .waiting {
+      background-color: #ffd;
+    }
+  </style>
+</head>
+<body>
+  <h1>That's Up</h1>
+  ...for sending messages to users of a popular mobile messaging service.
+  <div class="aside">
+    <h2>Helpful test numbers:</h2>
+    <ul>
+      <li>Blackberry Phone: +1 6045646511
+      <li>Blackberry IMEI: 353489042760783
+      <li>iPhone 3G Phone: +1 6043135227
+      <li>iPhone 3G UDID: 3a65f5bd7256642f90efe085190c038a
+      <li>Android Bluestacks Phone: +61 416905612
+      <li>Android Bluestacks IMEI: 603938931484000
+      <li>Daniel's Number: 1xxx3069210
+      <li>Diana's Number: 1xxx7812794
+    </ul>
+  </div>
+  <h2>Fill out:</h2>
+  <form action="index.html" method="post">      
+    <ul>
+      <li>Your <b>Country Code</b> (no leading zeroes, probably just 1): <input type="text" name="cc" value="1" size="4"/>
+      <li>Your <b>Phone Number</b> (no country code): <input type="text" name="src" value="6043135227" size="12"/>
+      <br /><br />
+      <li>Your phone's <b>IMEI</b> (decimal, for Androids, etc.): <input type="text" name="imei" size="16"/><br />
+          <b>...or</b> the known <b>UDID-based digest</b> (for iPhones): <input type="text" name="udid" value="3a65f5bd7256642f90efe085190c038a" size="32"/>
+      <br /><br />
+      <li><b>Recipient's</b> Phone Number (with country code, no leading zeroes): <input type="text" name="dst" value="61416905612" size="14"/>
+      <br /><br />
+      <li><b>Message Body</b>:<br /> <textarea name="msg" rows="5" cols="80">This is a test message; that's what'll be up... :)</textarea>
+    </ul>    
+    <input type="submit" class="button" value="Click here to send, or at least try..." />
+  </form>  
+  <h2>Most recent stdout</h2>
+  <iframe src="/stdout.log" title="stdout"></iframe>
+  <h2>Most recent stderr</h2>
+  <iframe src="/stderr.log" title="stderr"></iframe>
+  <p>
+    Questions go to <a href="mailto://thatsup@jaapsuter.com">thatsup@jaapsuter.com</a>.
+  </p>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+  <script type="text/javascript" src="/jquery.lockSubmit.js"></script>
+  <script type="text/javascript">
+    jQuery(document).ready(function() {
+      jQuery(':submit').lockSubmit({
+        submitText: "Trying to send, please wait...",
+        onClickCSS: "button waiting"
+      });
+    });
+</script>
+</body>
+</html>

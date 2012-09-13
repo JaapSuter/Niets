@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/conversations_row_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.whatsapp.LoadPhotoImageView android:id="@id/contact_photo" android:layout_width="@dimen/imageview_size" android:layout_height="@dimen/imageview_size" android:layout_marginRight="@dimen/list_row_padding" android:scaleType="fitCenter" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    <LinearLayout android:orientation="vertical" android:paddingLeft="3.0dip" android:paddingRight="@dimen/list_row_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_toLeftOf="@id/contact_photo">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/conversation_date_size" android:textColor="#ff7b7d7b" android:ellipsize="end" android:gravity="left" android:layout_gravity="center_vertical" android:id="@id/conversations_row_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:singleLine="true" android:shadowDx="-1.0" style="@style/Text" />
+            <com.whatsapp.TextEmojiLabel android:textSize="18.0sp" android:textStyle="bold" android:textColor="@color/listview_large_bold" android:ellipsize="end" android:gravity="top|right|center" android:layout_gravity="right" android:id="@id/conversations_row_contact_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:layout_weight="1.0" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="36.0dip">
+            <com.whatsapp.UnreadMsgIndicator android:layout_gravity="center_vertical" android:id="@id/conversations_row_message_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:minWidth="60.0dip" android:shadowDx="-1.0" style="@style/Text" />
+            <ProgressBar android:layout_gravity="center" android:id="@id/progressbar_small" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" style="?android:attr/progressBarStyleSmallInverse" />
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/mute_indicator" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:src="@drawable/ic_muted" android:scaleType="fitStart" />
+            <LinearLayout android:gravity="right" android:layout_gravity="right|center" android:orientation="horizontal" android:layout_width="0.0dip" android:layout_height="36.0dip" android:layout_weight="1.0">
+                <com.whatsapp.TextEmojiLabel android:textSize="13.329987sp" android:textColor="@color/conversations_text_gray" android:ellipsize="end" android:gravity="right" android:layout_gravity="right|center" android:id="@id/single_msg_tv" android:paddingLeft="7.0dip" android:paddingBottom="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+                <ImageView android:gravity="right" android:layout_gravity="right|center" android:id="@id/media_indicator" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:layout_marginRight="1.0dip" android:scaleType="fitStart" />
+                <com.whatsapp.TextEmojiLabel android:textSize="13.329987sp" android:textColor="@color/conversations_text_gray" android:ellipsize="end" android:gravity="right" android:layout_gravity="right|center" android:id="@id/msg_from_tv" android:paddingLeft="1.0dip" android:paddingBottom="2.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+            </LinearLayout>
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/status_indicator" android:layout_width="17.0dip" android:layout_height="wrap_content" android:layout_marginLeft="1.0dip" android:scaleType="fitStart" />
+        </LinearLayout>
+    </LinearLayout>
+    <View android:background="@color/divider_row_lower" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignParentBottom="true" />
+    <View android:background="@color/divider_row_upper" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignParentTop="true" />
+</RelativeLayout>

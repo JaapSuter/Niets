@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="notification_new_message_from_multiple_contacts_1">
+        <item quantity="other">%d mensaxes</item>
+        <item quantity="one">%d mensaxe</item>
+    </plurals>
+    <plurals name="notification_new_message_from_multiple_contacts_2">
+        <item quantity="other">%1$s de %2$d contactos.</item>
+        <item quantity="one">%1$s de %2$d contacto.</item>
+    </plurals>
+    <plurals name="notification_new_message">
+        <item quantity="other">%d mensaxes novas.</item>
+        <item quantity="one">%d mensaxe nova.</item>
+    </plurals>
+    <plurals name="service_expire_days">
+        <item quantity="other">Quedan %d días para que o teu servizo de WhatsApp caduque. Queres compralo agora?</item>
+        <item quantity="one">Queda %d día para que o teu servizo de WhatsApp caduque. Queres compralo agora?</item>
+    </plurals>
+    <plurals name="unread_message_count">
+        <item quantity="other">%d Mensaxes sen ler</item>
+        <item quantity="one">%d Mensaxe sen ler</item>
+    </plurals>
+    <plurals name="network_usage_message_count">
+        <item quantity="other">%1$d mensaxes</item>
+        <item quantity="one">%1$d mensaxe</item>
+    </plurals>
+    <plurals name="network_usage_byte_count_bytes">
+        <item quantity="other">%1$d bytes</item>
+        <item quantity="one">%1$d byte</item>
+    </plurals>
+</resources>

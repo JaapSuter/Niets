@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="notification_new_message_from_multiple_contacts_1">
+        <item quantity="other">%d missatges</item>
+        <item quantity="one">%d missatges</item>
+    </plurals>
+    <plurals name="notification_new_message_from_multiple_contacts_2">
+        <item quantity="other">%1$s de %2$d contactes.</item>
+        <item quantity="one">%1$s de %2$d contactes.</item>
+    </plurals>
+    <plurals name="notification_new_message">
+        <item quantity="other">%d missatges nous.</item>
+        <item quantity="one">%d missatge nou.</item>
+    </plurals>
+    <plurals name="service_expire_days">
+        <item quantity="other">Falten %d dies perquè caduqui la teva subscripció de WhatsApp. Vols comprar una extensió?</item>
+        <item quantity="one">Falta %d dia perquè caduqui la teva subscripció de WhatsApp. Vols comprar una extensió?</item>
+    </plurals>
+    <plurals name="unread_message_count">
+        <item quantity="other">%d missatges sense llegir</item>
+        <item quantity="one">%d missatge no llegit</item>
+    </plurals>
+    <plurals name="network_usage_message_count">
+        <item quantity="other">%1$d missatges</item>
+        <item quantity="one">%1$d missatge</item>
+    </plurals>
+</resources>

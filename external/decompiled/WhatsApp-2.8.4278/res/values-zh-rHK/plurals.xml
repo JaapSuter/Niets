@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="hours">
+        <item quantity="other">%d 小時</item>
+    </plurals>
+    <plurals name="minutes">
+        <item quantity="other">%d 分鐘</item>
+    </plurals>
+    <plurals name="notification_new_message_from_multiple_contacts_1">
+        <item quantity="other">%d個訊息</item>
+    </plurals>
+    <plurals name="notification_new_message_from_multiple_contacts_2">
+        <item quantity="other">%2$d個聯絡人傳出%1$s個未讀訊息。</item>
+    </plurals>
+    <plurals name="notification_new_message">
+        <item quantity="other">%d個新訊息</item>
+    </plurals>
+    <plurals name="service_expire_days">
+        <item quantity="other">您的WhatsApp服務將會在 %d 天內過期. 需要購買延期嗎?</item>
+    </plurals>
+    <plurals name="unread_message_count">
+        <item quantity="other">%d個未讀訊息</item>
+    </plurals>
+    <plurals name="confirm_sharing_multiple_title">
+        <item quantity="other">是否與%2$s分享%1$d個項目？</item>
+    </plurals>
+    <plurals name="group_confirm_sharing_multiple_title">
+        <item quantity="other">是否與“%2$s”分享%1$d個項目？</item>
+    </plurals>
+    <plurals name="software_about_to_expire">
+        <item quantity="other">這個版本的WhatsApp將會在%d天后過期。是否升級至最新版本？</item>
+    </plurals>
+    <plurals name="network_usage_message_count">
+        <item quantity="other">%1$d個訊息</item>
+    </plurals>
+    <plurals name="network_usage_byte_count_bytes">
+        <item quantity="other">%1$d bytes</item>
+    </plurals>
+</resources>

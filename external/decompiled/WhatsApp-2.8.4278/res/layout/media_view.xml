@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@null" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.whatsapp.GalleryView android:id="@id/gallery" android:background="#ff000000" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <TextView android:textColor="@color/white" android:gravity="center_horizontal" android:id="@id/media_info_tv" android:background="#772d2d2d" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/header_layout" />
+    <RelativeLayout android:id="@id/header_layout" android:background="#772d2d2d" android:layout_height="40.0dip" style="@style/Header">
+        <com.whatsapp.TextEmojiLabel android:ellipsize="end" android:gravity="left" android:id="@id/header_tv" android:layout_marginLeft="4.0dip" android:layout_marginTop="-2.0dip" android:lines="1" android:scrollHorizontally="true" android:singleLine="true" android:layout_toLeftOf="@id/pos_indicator_tv" android:layout_alignParentLeft="true" android:layout_centerVertical="true" style="@style/Text.Header" />
+        <TextView android:textStyle="bold" android:textColor="@color/white" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/pos_indicator_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:layout_marginRight="4.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <ProgressBar android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/spinner" android:visibility="gone" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginTop="6.0dip" android:layout_marginRight="4.0dip" android:indeterminate="true" android:layout_alignParentRight="true" />
+        <View android:background="#ffdedede" android:layout_width="fill_parent" android:layout_height="0.5px" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/audio_panel" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/menu_layout">
+        <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="@color/white" android:id="@id/progress_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="-5.0dip" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/menu_layout">
+            <View android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_weight="0.02" />
+            <SeekBar android:id="@id/audio_seekbar" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="0.73" style="?android:attr/progressBarStyleHorizontal" />
+            <View android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_weight="0.02" />
+            <Button android:textSize="16.0dip" android:textStyle="bold" android:id="@id/audio_control_btn" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/play" android:layout_weight="0.23" />
+        </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout android:id="@id/menu_layout" android:background="#771d1d1d" android:layout_width="wrap_content" android:layout_height="40.0dip" android:layout_alignParentBottom="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="45.0dip">
+            <View android:background="#ffdedede" android:layout_width="wrap_content" android:layout_height="0.5px" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <ImageView android:id="@id/prev_btn" android:layout_width="0.0dip" android:layout_height="wrap_content" android:src="@drawable/selector_media_prev" android:layout_weight="0.2" />
+                <View android:background="#ffdedede" android:layout_width="0.5px" android:layout_height="fill_parent" />
+                <ImageView android:gravity="center" android:layout_gravity="center" android:id="@id/share_btn" android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="@drawable/btn_share_48" android:layout_weight="0.3" />
+                <View android:background="#ffdedede" android:layout_width="0.5px" android:layout_height="fill_parent" />
+                <ImageView android:gravity="center" android:layout_gravity="center" android:id="@id/more_btn" android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="@drawable/btn_show_all_60" android:layout_weight="0.3" />
+                <View android:background="#ffdedede" android:layout_width="0.5px" android:layout_height="fill_parent" />
+                <ImageView android:id="@id/next_btn" android:layout_width="0.0dip" android:layout_height="wrap_content" android:src="@drawable/selector_media_next" android:layout_weight="0.2" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

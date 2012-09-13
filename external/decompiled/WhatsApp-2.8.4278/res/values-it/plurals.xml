@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="hours">
+        <item quantity="other">%d ore</item>
+        <item quantity="one">%d ora</item>
+    </plurals>
+    <plurals name="minutes">
+        <item quantity="other">%d minuti</item>
+        <item quantity="one">%d minuto</item>
+    </plurals>
+    <plurals name="notification_new_message_from_multiple_contacts_1">
+        <item quantity="other">%d messaggi</item>
+        <item quantity="one">%d messaggio</item>
+    </plurals>
+    <plurals name="notification_new_message_from_multiple_contacts_2">
+        <item quantity="other">%1$s di %2$d contatti.</item>
+        <item quantity="one">%1$s di %2$d contatti.</item>
+    </plurals>
+    <plurals name="notification_new_message">
+        <item quantity="other">%d nuovi messaggi.</item>
+        <item quantity="one">%d nuovo messaggio.</item>
+    </plurals>
+    <plurals name="service_expire_days">
+        <item quantity="other">Il tuo servizio WhatsApp scadrà tra %d giorni. Vuoi rinnovarlo adesso?</item>
+        <item quantity="one">Il tuo servizio WhatsApp scadrà tra %d giorno. Vuoi rinnovarlo adesso?</item>
+    </plurals>
+    <plurals name="unread_message_count">
+        <item quantity="other">%d messaggi non letti</item>
+        <item quantity="one">%d messaggio non letto</item>
+    </plurals>
+    <plurals name="confirm_sharing_multiple_title">
+        <item quantity="other">Vuoi condividere gli oggetti %1$d con %2$s?</item>
+        <item quantity="one">"Vuoi condividere l'oggetto %1$d con %2$s?"</item>
+    </plurals>
+    <plurals name="group_confirm_sharing_multiple_title">
+        <item quantity="other">Condividere gli oggetti %1$d con “%2$s”?</item>
+        <item quantity="one">"Condividere l'oggetto %1$d con “%2$s”?"</item>
+    </plurals>
+    <plurals name="software_about_to_expire">
+        <item quantity="other">"Questa versione di WhatsApp scadrà tra %d giorni. Vuoi aggiornare all'ultima versione?"</item>
+        <item quantity="one">"Questa versione di WhatsApp scadrà tra %d giorno. Vuoi aggiornare all'ultima versione?"</item>
+    </plurals>
+    <plurals name="network_usage_message_count">
+        <item quantity="other">%1$d messaggi</item>
+        <item quantity="one">%1$d messaggio</item>
+    </plurals>
+    <plurals name="network_usage_byte_count_bytes">
+        <item quantity="other">%1$d byte</item>
+        <item quantity="one">%1$d byte</item>
+    </plurals>
+    <plurals name="error_image_dimensions_too_small">
+        <item quantity="other">Queste immagini sono troppo piccole. Per favore seleziona delle foto con altezza e larghezza di almeno %d pixel</item>
+        <item quantity="one">Questa immagine è troppo piccola. Per favore seleziona una foto con altezza e larghezza di almeno %d pixel</item>
+    </plurals>
+</resources>

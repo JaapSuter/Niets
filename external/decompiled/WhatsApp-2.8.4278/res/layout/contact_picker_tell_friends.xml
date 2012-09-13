@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/tell_friend_header" android:layout_alignParentTop="true" style="@style/TextGrayDivider" />
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="@dimen/contactpicker_help_row_height" android:layout_below="@id/tell_friend_header">
+        <ImageView android:gravity="left|center" android:layout_gravity="left|center" android:id="@id/image" android:layout_width="@dimen/imageview_size" android:layout_height="@dimen/imageview_size" android:layout_margin="@dimen/imageview_padding" android:src="@drawable/ic_menu_share" android:scaleType="center" />
+        <TextView android:textSize="17.0sp" android:textStyle="bold" android:textColor="@color/description_gray" android:ellipsize="end" android:gravity="left|center" android:id="@id/text_tv" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/tell_friends" android:singleLine="true" android:layout_weight="1.0" />
+    </LinearLayout>
+    <View android:background="@color/divider_row_lower" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignParentBottom="true" />
+</RelativeLayout>

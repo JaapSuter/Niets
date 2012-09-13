@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="hours">
+        <item quantity="other">%d horas</item>
+        <item quantity="one">%d hora</item>
+    </plurals>
+    <plurals name="minutes">
+        <item quantity="other">%d minutos</item>
+        <item quantity="one">%d minuto</item>
+    </plurals>
+    <plurals name="notification_new_message_from_multiple_contacts_1">
+        <item quantity="other">%d mensajes</item>
+        <item quantity="one">%d mensaje</item>
+    </plurals>
+    <plurals name="notification_new_message_from_multiple_contacts_2">
+        <item quantity="other">%1$s de %2$d contactos.</item>
+        <item quantity="one">%1$s de %2$d contactos.</item>
+    </plurals>
+    <plurals name="notification_new_message">
+        <item quantity="other">%d mensajes nuevos.</item>
+        <item quantity="one">%d nuevo mensaje.</item>
+    </plurals>
+    <plurals name="service_expire_days">
+        <item quantity="other">Su servicio de WhatsApp expirará en %d días. ¿Comprar la extensión ahora?</item>
+        <item quantity="one">Su servicio de WhatsApp expirará en %d día. ¿Comprar la extensión ahora?</item>
+    </plurals>
+    <plurals name="unread_message_count">
+        <item quantity="other">%d mensajes no leídos</item>
+        <item quantity="one">%d mensaje no leído</item>
+    </plurals>
+    <plurals name="confirm_sharing_multiple_title">
+        <item quantity="other">¿Compartir %1$d artículos con %2$s?</item>
+        <item quantity="one">¿Compartir %1$d artículo con %2$s?</item>
+    </plurals>
+    <plurals name="group_confirm_sharing_multiple_title">
+        <item quantity="other">¿Compartir %1$d artículos con “%2$s”?</item>
+        <item quantity="one">¿Compartir %1$d artículo con “%2$s”?</item>
+    </plurals>
+    <plurals name="software_about_to_expire">
+        <item quantity="other">Esta versión de WhatsApp caducará dentro de %d días. ¿Quiere actualizarla a la versión más reciente?</item>
+        <item quantity="one">Esta versión de WhatsApp caducará dentro de %d día. ¿Quiere actualizarla a la versión más reciente?</item>
+    </plurals>
+    <plurals name="network_usage_message_count">
+        <item quantity="other">%1$d mensajes</item>
+        <item quantity="one">%1$d mensaje</item>
+    </plurals>
+    <plurals name="network_usage_byte_count_bytes">
+        <item quantity="other">%1$d bytes</item>
+        <item quantity="one">%1$d byte</item>
+    </plurals>
+    <plurals name="error_image_dimensions_too_small">
+        <item quantity="other">Esta imagen es demasiado pequeña. Elija una foto con una altura y anchura de al menos %d píxeles.</item>
+        <item quantity="one">Esta imagen es demasiado pequeña. Elija una foto con una altura y anchura de al menos %d píxel.</item>
+    </plurals>
+</resources>

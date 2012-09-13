@@ -1,0 +1,87 @@
+
+<H1>Cryptix SASL Library</H1>
+<P>
+
+The Simple Authentication and Security Layer (SASL), described in <A
+HREF="rfc2222.txt">RFC-2222</A>,
+is a method for adding authentication support to connection-based protocols.
+It is used with popular Internet protocols such as POP3, IMAP, SMTP and LDAP.</P>
+<H2>Description</H2>
+<P>
+
+This library includes an implementation of the <A
+HREF="draft-weltman-java-sasl-05.txt"> Java SASL API</A> which is
+currently specified in draft-weltman-java-sasl-05.txt, an Internet Draft. It
+also includes an implementation of some SASL mechanisms:</P>
+<UL>
+   <LI><A HREF="rfc2245.txt">ANONYMOUS</A> (RFC2245),</LI>
+   <LI><A HREF="rfc2195.txt">
+  CRAM-MD5</A> (RFC2195),</LI>
+   <LI><A HREF="rfc2444.txt">
+  OTP</A> (RFC 2444, obsoletes S/KEY in RFC 2222)
+  PLAIN (RFC2595),</LI>
+   <LI><A HREF="draft-burdis-cat-srp-sasl-05.txt">
+  SRP</A> (draft-burdis-cat-srp-sasl-05.txt),</LI>
+   <LI><A HREF="draft-naffah-cat-sasl-sm2-01.txt">
+  SM2</A> (draft-naffah-cat-sasl-sm2-01.txt).</LI>
+</UL>
+<H2>Javadoc pages</H2>
+<P>The Javadoc HTML pages are available <A HREF="api/index.html">here</A>.</P>
+<H2>
+Limitations</H2>
+<P>Currently the following SASL mechanisms are not implemented, but there are
+plans to implement these in the future:</P>
+<UL>
+   <LI>DIGEST-MD5 (RFC 2831),</LI>
+   <LI>GSSAPI (draft-ietf-cat-sasl-gssapi-01.txt, updates RFC 2222).</LI>
+</UL>
+<P>There are currently no plans to implement:</P>
+<UL>
+   <LI>KERBEROS_V4 (RFC2222).</LI>
+</UL>
+<H2>Licenses</H2>
+<P>This software is distributed under the Cryptix General License. Please read <A
+HREF="../Cgl.txt">
+CGL.TXT</A>.
+
+This product uses the 'Secure Remote Password' cryptographic authentication
+system developed by Tom Wu (tjw@CS.Stanford.EDU), and includes software
+developed by Tom Wu and Eugene Jhong for the SRP Distribution
+(http://srp.stanford.edu/srp/). See <A HREF="../LICENSE.SRP.TXT"> LICENSE.SRP.TXT</A> for details.
+
+The sample client and sample server make use of the GNU Java Getopt library
+which is licensed under the <A HREF="../Lgpl.txt"> LGPL</A>.&nbsp;</P>
+<H2>Requirements</H2>
+<P>
+
+Before you can use this library you'll need to make sure that you have:</P>
+<UL TYPE="circle">
+   <LI>A JCE-1.2 compatible library, such as Cryptix JCE: <A
+      HREF="http://www.cryptix.org/products/jce12/index.html">
+
+  http://www.cryptix.org/products/jce12/index.html</A>.</LI>
+   <LI>To use the samples you will also need the GNU Java getopt library, which you
+can get from: <A HREF="http://www.urbanophile.com/arenn/hacking/download.html">
+
+  http://www.urbanophile.com/arenn/hacking/download.html</A>&nbsp;</LI>
+   <LI>
+
+JDK-1.1 has some missing classes that we need for this library, so it will
+currently only work with JDK-1.2 or later.</LI>
+</UL>
+<H2>Compiling</H2>
+<P>Starting from 0.8.10, you need the <A HREF="http://jakarta.apache.org/ant/"> Apache ANT</A>
+tool.</P>
+<P>run:</P>
+<BLOCKQUOTE>
+   <PRE>$ ant -projecthelp</PRE>
+</BLOCKQUOTE>
+<P>to view the available options; or just:</P>
+<BLOCKQUOTE>
+   <PRE>$ ant</PRE>
+</BLOCKQUOTE>
+<P>to compile and jar the binaries.</P>
+<H2>Home</H2>
+<P>The project is hosted on SourceForge. Visit <A
+HREF="http://sourceforge.net/projects/cryptix-sasl/">http://sourceforge.net/projects/cryptix-sasl/</A>
+for latest news and releases.</P>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="hours">
+        <item quantity="other">%d horas</item>
+        <item quantity="one">%d hora</item>
+    </plurals>
+    <plurals name="minutes">
+        <item quantity="other">%d minutos</item>
+        <item quantity="one">%d minuto</item>
+    </plurals>
+    <plurals name="notification_new_message_from_multiple_contacts_1">
+        <item quantity="other">%d mensagens</item>
+        <item quantity="one">%d mensagens</item>
+    </plurals>
+    <plurals name="notification_new_message_from_multiple_contacts_2">
+        <item quantity="other">%1$s de %2$d contatos.</item>
+        <item quantity="one">%1$s de %2$d contatos.</item>
+    </plurals>
+    <plurals name="notification_new_message">
+        <item quantity="other">%d mensagens novas.</item>
+        <item quantity="one">%d mensagem nova.</item>
+    </plurals>
+    <plurals name="service_expire_days">
+        <item quantity="other">Seu serviço do WhatsApp expirará em %d dias. Comprar uma estensão agora?</item>
+        <item quantity="one">Seu serviço do WhatsApp expirará em %d dia. Comprar uma estensão agora?</item>
+    </plurals>
+    <plurals name="unread_message_count">
+        <item quantity="other">%d mensagens não lidas</item>
+        <item quantity="one">%d mensagens não lidas</item>
+    </plurals>
+    <plurals name="software_about_to_expire">
+        <item quantity="other">Esta versão do WhatsApp irá expirar em %d dias. Atualizar para a versão mais recente?</item>
+        <item quantity="one">Esta versão do WhatsApp irá expirar em %d dia. Atualizar para a versão mais recente?</item>
+    </plurals>
+    <plurals name="network_usage_message_count">
+        <item quantity="other">%1$d mensagens</item>
+        <item quantity="one">%1$d mensagem</item>
+    </plurals>
+    <plurals name="network_usage_byte_count_bytes">
+        <item quantity="other">%1$d bytes</item>
+        <item quantity="one">%1$d byte</item>
+    </plurals>
+</resources>

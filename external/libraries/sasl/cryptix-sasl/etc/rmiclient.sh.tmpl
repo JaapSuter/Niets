@@ -1,0 +1,7 @@
+#!/bin/sh
+
+cd @install.dir@
+SASL_CP="lib/test.jar:lib/cryptix-sasl.jar:lib/javax-sasl.jar:lib/cryptix-jce-api.jar:lib/cryptix-jce-provider.jar:lib/java-getopt.jar:lib/log4j.jar"
+java -showversion -Djava.security.policy=etc/test.policy -Dlog4j.configuration=file:./log.properties -cp "$SASL_CP" test.HelloClient $@
+unset SASL_CP
+

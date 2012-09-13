@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="notification_new_message_from_multiple_contacts_1">
+        <item quantity="other">%d mensagens</item>
+        <item quantity="one">%d mensagens</item>
+    </plurals>
+    <plurals name="notification_new_message_from_multiple_contacts_2">
+        <item quantity="other">%1$s de %2$d contactos.</item>
+        <item quantity="one">%1$s de %2$d contactos.</item>
+    </plurals>
+    <plurals name="notification_new_message">
+        <item quantity="other">%d mensagens novas.</item>
+        <item quantity="one">%d mensagem nova.</item>
+    </plurals>
+    <plurals name="unread_message_count">
+        <item quantity="other">%d mensagens não lidas</item>
+        <item quantity="one">%d mensagem não lida</item>
+    </plurals>
+    <plurals name="network_usage_message_count">
+        <item quantity="other">%1$d mensagens</item>
+        <item quantity="one">%1$d mensagem</item>
+    </plurals>
+</resources>

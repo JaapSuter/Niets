@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="hours">
+        <item quantity="other">%d heures</item>
+        <item quantity="one">%d heure</item>
+    </plurals>
+    <plurals name="minutes">
+        <item quantity="other">%d minutes</item>
+        <item quantity="one">%d minute</item>
+    </plurals>
+    <plurals name="notification_new_message_from_multiple_contacts_1">
+        <item quantity="other">%d messages</item>
+        <item quantity="one">%d messages</item>
+    </plurals>
+    <plurals name="notification_new_message_from_multiple_contacts_2">
+        <item quantity="other">%1$s de %2$d contacts.</item>
+        <item quantity="one">%1$s de %2$d contacts.</item>
+    </plurals>
+    <plurals name="notification_new_message">
+        <item quantity="other">%d nouveaux messages.</item>
+        <item quantity="one">%d nouveau message.</item>
+    </plurals>
+    <plurals name="service_expire_days">
+        <item quantity="other">"Votre service WhatsApp expire dans %d jours. Acheter l'extension maintenant?"</item>
+        <item quantity="one">"Votre service WhatsApp expire dans %d jours.Acheter l'extension maintenant?"</item>
+    </plurals>
+    <plurals name="unread_message_count">
+        <item quantity="other">%d messages non lus</item>
+        <item quantity="one">%d message non lu</item>
+    </plurals>
+    <plurals name="software_about_to_expire">
+        <item quantity="other">"Cette version de WhatsApp expire dans %d jour. Voulez vous mettre à jour l'application à sa dernière version?"</item>
+        <item quantity="one">"Cette version de WhatsApp expire dans %d jour. Voulez vous mettre à jour l'application à sa dernière version?"</item>
+    </plurals>
+    <plurals name="network_usage_message_count">
+        <item quantity="other">%1$d messages</item>
+        <item quantity="one">%1$d message</item>
+    </plurals>
+    <plurals name="network_usage_byte_count_bytes">
+        <item quantity="other">%1$d bytes</item>
+        <item quantity="one">%1$d byte</item>
+    </plurals>
+</resources>

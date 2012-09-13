@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<Deployment xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" AppPlatformVersion="7.1" xmlns="http://schemas.microsoft.com/windowsphone/2009/deployment">
+  <App Author="WhatsApp Inc." Description="" Genre="apps.normal" ProductID="{218a0ebb-1585-4c7e-a9ec-054cf4569a79}" Publisher="WhatsApp Inc." RuntimeType="Silverlight" Title="WhatsApp" Version="1.1.0.0" xmlns="">
+    <IconPath IsRelative="true" IsResource="false">Icon1.png</IconPath>
+    <Capabilities>
+      <Capability Name="ID_CAP_LOCATION" />
+      <Capability Name="ID_CAP_NETWORKING" />
+      <Capability Name="ID_CAP_MEDIALIB" />
+      <Capability Name="ID_CAP_PUSH_NOTIFICATION" />
+      <Capability Name="ID_CAP_IDENTITY_DEVICE" />
+      <Capability Name="ID_CAP_CONTACTS" />
+    </Capabilities>
+    <Tasks>
+      <DefaultTask Name="_default" NavigationPage="PageSelect" />
+    </Tasks>
+    <Tokens>
+      <PrimaryToken TokenID="PivotApp2Token" TaskName="_default">
+        <TemplateType5>
+          <BackgroundImageURI IsRelative="true" IsResource="false">Tile1.png</BackgroundImageURI>
+          <Count>0</Count>
+          <Title>WhatsApp</Title>
+        </TemplateType5>
+      </PrimaryToken>
+    </Tokens>
+    <Extensions>
+      <Extension ExtensionName="Photos_Extra_Share" ConsumerID="{5B04B775-356B-4AA0-AAF8-6491FFEA5632}" TaskID="_default" />
+    </Extensions>
+  </App>
+</Deployment>

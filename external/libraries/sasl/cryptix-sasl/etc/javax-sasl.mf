@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Extension-Name: javax.security.sasl
+Implementation-Title: Java SASL Extension
+Implementation-Version: ver. 0.8.8
+Implementation-Vendor: The Cryptix Foundation Limited
+Implementation-Vendor-Id: cryptix
+Implementation-URL: http://www.cryptix.org/products/sasl
+
+Name: javax/security/sasl
+Specification-Title: draft-weltman-java-sasl-04.txt
+Specification-Version: November, 2000
+Specification-Vendor: IETF
+
+Name: javax/security/auth/callback
+Specification-Title: draft-weltman-java-sasl-04.txt
+Specification-Version: November, 2000
+Specification-Vendor: IETF

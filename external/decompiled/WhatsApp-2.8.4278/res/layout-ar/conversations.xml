@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/chats_layout" android:background="@drawable/background_repeat" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center_vertical" style="@style/Header">
+        <RelativeLayout android:gravity="center_vertical" android:id="@id/search" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:id="@id/icon" android:background="@drawable/button_search" android:layout_width="@dimen/header_height" android:layout_height="@dimen/header_height" android:layout_marginRight="9.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            <EditText android:id="@id/search_et" android:paddingLeft="37.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="5.0dip" android:layout_marginBottom="-2.0dip" android:hint="@string/search_hint" android:scrollHorizontally="true" android:singleLine="true" android:autoText="false" android:layout_toLeftOf="@id/icon" android:layout_centerInParent="true" />
+            <ImageButton android:id="@id/clear_search_btn" android:background="@drawable/clear_search_btn" android:padding="5.0dip" android:visibility="gone" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_marginLeft="8.0dip" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <LinearLayout android:gravity="right|center" android:id="@id/header_ll" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageButton android:layout_gravity="left|center" android:id="@id/button_compose_chat" android:background="@drawable/selector_orange_gradient" android:layout_width="@dimen/header_height" android:layout_height="@dimen/header_height" android:src="@drawable/button_pen" android:scaleType="center" style="@style/HeaderButton" />
+            <ImageView android:layout_gravity="top|left|center" android:id="@id/divider1" android:background="@drawable/divider" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+            <ImageButton android:layout_gravity="left|center" android:id="@id/button_search" android:background="@drawable/selector_orange_gradient" android:layout_width="@dimen/header_height" android:layout_height="@dimen/header_height" android:src="@drawable/button_search" android:scaleType="center" style="@style/HeaderButton" />
+            <ImageView android:layout_gravity="top|left|center" android:id="@id/divider1" android:background="@drawable/divider" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+            <TextView android:gravity="right" android:layout_gravity="right|center" android:paddingRight="16.0dip" android:text="@string/chats" android:shadowDx="-0.0" style="@style/Text.HeaderCentered" />
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/conversations_search_empty" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="67.0dip">
+        <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="@color/black" android:gravity="center" android:id="@id/tv" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/search_no_matches" />
+        <View android:background="@color/divider_row_lower" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <ListView android:id="@android:id/list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@drawable/selector_orange_gradient" android:drawSelectorOnTop="false" android:textFilterEnabled="true" android:cacheColorHint="@color/background" android:layout_weight="1.0" />
+    <ScrollView android:id="@id/conversations_empty" android:background="@drawable/background_repeat" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/horizontal_padding" android:paddingRight="@dimen/horizontal_padding" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:layout_gravity="center" android:paddingTop="50.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/circlepenicon" />
+            <TextView android:textSize="22.0sp" android:textStyle="bold" android:gravity="right" android:paddingTop="20.0dip" android:paddingBottom="3.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/welcome" android:shadowDx="-1.0" style="@style/Text" />
+            <TextView android:textSize="14.0sp" android:gravity="right" android:id="@id/welcome_message" android:paddingBottom="50.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/welcome_message" android:shadowDx="-1.0" style="@style/Text" />
+        </LinearLayout>
+    </ScrollView>
+    <include android:id="@id/conversations_empty_no_contacts" layout="@layout/empty_tell_a_friend" />
+</LinearLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="hours">
+        <item quantity="other">%d שעות</item>
+        <item quantity="one">שעה %d</item>
+    </plurals>
+    <plurals name="minutes">
+        <item quantity="other">%d דקות</item>
+        <item quantity="one">דקה %d</item>
+    </plurals>
+    <plurals name="notification_new_message_from_multiple_contacts_1">
+        <item quantity="other">%d הודעות</item>
+        <item quantity="one">%d הודעות</item>
+    </plurals>
+    <plurals name="notification_new_message_from_multiple_contacts_2">
+        <item quantity="other">%1$s מ- %2$d אנשי קשר.</item>
+        <item quantity="one">%1$s מ- %2$d אנשי קשר.</item>
+    </plurals>
+    <plurals name="notification_new_message">
+        <item quantity="other">%d הודעות חדשות.</item>
+        <item quantity="one">%d הודעה חדשה.</item>
+    </plurals>
+    <plurals name="service_expire_days">
+        <item quantity="other">שירות הWhatsApp שלך יפוג תוך %d ימים. לרכוש הארכה עכשיו?</item>
+        <item quantity="one">שירות הWhatsApp שלך יפוג תוך יום %d. לרכוש הארכה עכשיו?</item>
+    </plurals>
+    <plurals name="unread_message_count">
+        <item quantity="other">%d הודעות שלא נקראו</item>
+        <item quantity="one">הודעה שלא נקראה</item>
+    </plurals>
+    <plurals name="confirm_sharing_multiple_title">
+        <item quantity="other">שתף %1$d פריטים עם %2$s?</item>
+        <item quantity="one">שתף פריט %1$d עם %2$s?</item>
+    </plurals>
+    <plurals name="group_confirm_sharing_multiple_title">
+        <item quantity="other">שתף %1$d פריטים עם “%2$s”?</item>
+        <item quantity="one">שתף פריט %1$d עם “%2$s”?</item>
+    </plurals>
+    <plurals name="software_about_to_expire">
+        <item quantity="other">תוקפה של גירסה זו של WhatsApp יפוג בעוד %d ימים. לשדרג לגירסה האחרונה כעת?</item>
+        <item quantity="one">תוקפה של גירסה זו של WhatsApp יפוג בעוד יום %d. לשדרג לגירסה האחרונה כעת?</item>
+    </plurals>
+    <plurals name="network_usage_message_count">
+        <item quantity="other">%1$d הודעות</item>
+        <item quantity="one">%1$d הודעה</item>
+    </plurals>
+    <plurals name="network_usage_byte_count_bytes">
+        <item quantity="other">%1$d בתים</item>
+        <item quantity="one">%1$d בית</item>
+    </plurals>
+</resources>

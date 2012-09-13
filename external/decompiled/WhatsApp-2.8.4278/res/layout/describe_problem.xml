@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout style="@style/Header">
+        <LinearLayout android:gravity="left|center" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:layout_gravity="left|center" android:id="@id/describe_problem_header" android:text="@string/describe_problem_contact_support" style="@style/Text.HeaderCentered" />
+            <LinearLayout android:gravity="right|center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="6.0dip">
+                <Button android:enabled="false" android:gravity="center" android:layout_gravity="center" android:id="@id/describe_problem_next" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="73.29999dip" android:text="@string/done" style="@style/BlueButton" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <View style="@style/HeaderDivider" />
+    <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/horizontal_padding" android:paddingTop="6.0dip" android:paddingRight="@dimen/horizontal_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <EditText android:scrollbarAlwaysDrawVerticalTrack="true" android:scrollbarStyle="outsideOverlay" android:textColor="#ff000000" android:textColorHint="#ff888888" android:gravity="top" android:id="@id/describe_problem_description_et" android:scrollbars="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:hint="@string/describe_problem_description" android:maxLines="4" android:minLines="4" android:selectAllOnFocus="true" android:capitalize="sentences" android:autoText="true" android:layout_weight="1.0" android:imeOptions="actionDone" android:scrollbarFadeDuration="300" android:scrollbarDefaultDelayBeforeFade="200" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip">
+            <Button android:textStyle="bold" android:layout_gravity="center" android:id="@id/describe_problem_help" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/faq" />
+        </LinearLayout>
+        <View android:layout_width="fill_parent" android:layout_height="16.0dip" />
+    </LinearLayout>
+</LinearLayout>

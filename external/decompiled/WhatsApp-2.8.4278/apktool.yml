@@ -1,0 +1,6 @@
+version: 1.4.3
+apkFileName: WhatsApp-2.8.4278.apk
+isFrameworkApk: false
+usesFramework:
+  ids:
+  - 1

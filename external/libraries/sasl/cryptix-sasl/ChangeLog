@@ -1,0 +1,268 @@
+0.8.10:
+   + added an index.html in docs to act as the toplevel index page.
+   + added relevant drafts and rfcs to the docs folder and included in
+     dist (distribution creation section in the build file).
+   + aligned the SM2 implementation to draft-naffah-cat-sasl-sm2-01.txt.
+   + aligned the SRP implementation to draft-burdis-cat-srp-sasl-05.txt.
+   + made the SM2 implementation more robust when either client or server
+     completes the exchange without sending any data to the peer.
+   + constrained the example client/server to work with buffered mechanisms;
+     ie. SRP and SM2.
+   + added a new install section in the build.xml to ease installation.
+   + (Yuri): fixed another bug in the password files that was causing them
+     to be corrupt when adding/updating info.
+   + fixed the RMI exchange to cater for mechanisms whose client side has no
+     initial response.  this has been achieved by forcing the server side to
+     always start reading, and by the client writing a 0-byte message that
+     gets discarded.
+   + Fixed the PasswordFile implementations.  their save...() methods use a
+     PrintWriter instance. the PrintWriter was not flush()-ed before being
+     closed, which meant that everything in their internal buffer was
+     getting lost.  ensured those PrintWriters get flushed and closed.
+   + Added default wrapping behaviour to the Client & Server Mechanism base
+     classes, which is to just return the data.
+   + ANONYMOUS now accepts the legal tokens defined in the spec (RFC 2245)
+     which can be the empty string, an email address or an ascii printable
+     string up to 255 length not including the @ symbol.
+   + SaslClientSocketFactory and SaslServerSocket now listen to the
+     isFinished() method and dont wait for another message. This was causing
+     problems with ANONYMOUS.
+   + SaslClientSocketFactory and SaslServerSocket now send length+value
+     messages which mean we don't rely on InputStream.available(). The
+     latter method (available()) would cause problems if the client sent the
+     last message directly followed by the application data or only read
+     half way through a message. In either of these cases the wrong amount
+     of data is assumed to be the message and its too late to do anything
+     about it.
+   + added build.xml for use with Jakarta ANT tool.
+   + added an AuthInfo provider API around the password files to facilitate
+     use of mechanisms with other than password files for a source of
+     authentication information --eg. LDAP.
+   + added a test case for the SRP implementation of the AuthInfoServices
+     provider.
+
+0.8.9
+   + implemented the Java API as per Weltman's latest draft (05), and added
+     it to the docs section.
+   + added cryptix.sasl.rmi package to do SASL-ified RMI calls.
+   + re-factored code to make clients and servers use/inherit from
+     cryptix.sasl.ClientMechanism and cryptix.sasl.ServerMechanism.
+     mechanism client and server implementations is now much lighter and
+     should be easier to maintain.
+   + added cryptix.sasl.SaslInputStream and cryptix.sasl.SaslOutputStream.
+   + added OTP mechanism implementation.
+   + updated ancillary files accordingly.
+   + added a new exception cryptix.sasl.IllegalMechanismStateException to
+     denote the situation when the mechanism is not yet complete but an
+     operation that should only be invoked when it is has occured or v/v.
+   + made (in all edited files) the reference to org.apache.log4j.Category
+     private rather than package-private.
+   + consistent use of property names as constants rather than hard-wired
+     strings throughout the mechanisms.  use USERNAME and PASSWORD from
+     cryptix.sasl rather than individual mechanisms since they are/should be
+     common across'em all.  all other mechanism specific constants use the
+     usual cryptix.sasl.xxx.CCC where xxx is the string identifying the
+     mechanism sub-package and CCC is the dotty name of the constant; eg.
+     cryptix.sasl.srp.password.file.
+   + added the following documents in preparation for the next version of
+     the SRP darft: (a) http://www-cse.ucsd.edu/users/mihir/papers/oem.pdf,
+     and (b) http://eprint.iacr.org/2001/045.ps
+   + modified all mechanisms, as well as ClientFactory and ServerFactory, to
+     use CONSTANTS for mechanism canonical names.
+   + added a cryptix.sasl.plain.PlainParams to harmonise with other
+     mechanisms.
+   + modified the xxx.passwordfile constant names in all mechanims to be
+     xxx.password.file for coherence with naming scheme.
+   + removed obsolete methods and code in cryptix.sasl.SaslUtil.
+   + renamed createMsgId() to createMsgID() and moved it to CramMD5Util.
+   + made all the methods in xxxUtil classes in mechanism packages package-
+     private and not public.
+   + fixed a bug in ClientFactory and ServerFactory in getMechanismNames().
+   + removed exceptions from 'throws' clauses when they extend others
+     already listed.
+   + removed a dependency on srp classes from ClientFactory and
+     ServerFactory.
+   + started using JUnit (version 3.7). obtain from <http://www.junit.org>.
+   + added junit regression test classes starting with client and server
+     factory tests in test/sasl.
+   + replace test.Main with test cases in test.sasl.srp package.
+   + added formal support in the SRP package for multiple message digest
+     algorithms.  updated other dependent classes accordingly.
+   + fixed a latent bug in the security layer code of the SRP mechanism.
+   + added an RMIRegistry class in the RMI package to start the RMI
+     registry.
+   + removed all references to org.apache.log4j.PropertyConfigurator and now
+     rely on the presnece and syntax of a java interpreter option:
+     -Dlog4j.configuration=...  for details read the log4j documentation
+     ("Default Initialization Procedure" section in "Short introduction to
+     log4j").  this makes configuring logging independant from working code,
+     and thus easier to integrate with higher-level application/buisness
+     code.
+   + modified the SRP implementation to align with the upcoming version of
+     the draft including the 'mandatory' option.
+   + fixed several bugs in the confidentiality protection layer of the SRP
+     implementation.  all (current) tests pass with SM2 and SRP even when
+     confidentiality protection is activated.
+   + added 2 new classes in the SRP package: CALG and IALG to encapsulate
+     both the confidentiality protection and integrity protection algorithms
+     respectively.  the former helps shielding the handling of the
+     underlying cipher/mode/padding from the SRP (per se) code.
+   + added support for the 'maxbuffersize' option in SRP's L and o srings as
+     well as in SaslInputStream and SaslOutputStream.
+
+0.8.8
+   + updated the reference to the SM2 draft.
+   + added a cryptix.sasl.sm2.SM2SessionModifiedException to signal
+     concurrent modification(s) of a session by another thread.
+   + use HashMaps in both SM2ClientStore and SM2ServerStore
+     (cryptix.sasl.sm2).
+   + changed the implementation in the above classes when updating a mapping
+     between a sid (Session ID) and an ssc (SASLSecurity Context) object.
+     used to be: get/compute/put, now remove/compute/put.
+   + added tests for null sid and uid values in the above classes.
+   + added a method to the SRPContext class to return a signature of the
+     current context parameters.
+   + modified the test.Client to do multi-threaded tests.
+   + updated version (to 0.8.8) and build (15) numbers.
+   + updated the javax-sasl.jar manifest file to reflect new version number.
+   + added John Elias to the list of AUTHORS.
+   + added sm2 relevant logging root in log.properties.
+   + improved the dist section in the Makefile.
+   + removed cryptix.sasl.SaslProperties and incorporated the constants in
+     javax.security.sasl.Sasl since these constants are javax-dependent.
+
+0.8.7
+   + corrected a bug in the cryptix.sasl.ClientFactory. Instantiating
+     clients for mechanisms other than SM2 and SRP was not using the correct
+     parameters.
+
+0.8.6
+   + corrected a bug in the SRPInputStream.
+   + removed the implementation of the skip() method in SRPInputStream.  the
+     default one in InputStream should suffice.
+   + changed the signatures of the SRPxxxStream constructors so they can be
+     used as usual, as well as for SRP as an underlying mechanism for SM2.
+     in the process removed some superfluous boolean variables.
+   + added support for the proposed SM2 SASL mechanism and amended the SRP
+     code so it can be used as an underlying mechanism to SM2.
+   + changed the parameters to the constructors of SRPClient and SRPServer
+     to (a) make it similar to the SM2 ones, and (b) to use all parameters
+     passed to the corresponding Factory.  there is no reason why the
+     client/server should not see the parameters that its factory recieves
+     anyway.
+   + added a new class to the srp package: SRPContext to wrap the SRP-
+     specific SASL Security Context parameters.
+   + implemented the proposed additional specifications to the proposed
+     javax.security.sasl package.
+   + added support for constructing SM2 clients and servers in the
+     xxxFactory classes (package cryptix.sasl).  [TODO] we still need to
+     find a clean way of allowing different providers (other than Cryptix)
+     for different mechanisms.
+   + updated the documentation and included all relevant RFCs and DRAFTs to
+     the docs folder.
+
+0.8.5
+   + updated requirements for compiling versions >= 0.84 in README.TXT
+   + updates for draft-weltman-java-sasl-04:
+      + javax.security.sasl
+         + implemented getClientFactories() and getServerFactories() in Sasl
+         + added getNegotiatedQop() and getNegotiatedStrength() to
+           SaslClient and SaslServer.
+         + modified getMechanismNames() in SaslClientFactory and
+           SaslServerFactory to take properties.
+         + implemented AuthorizeCallback, RealmCallback and
+           RealmChoiceCallback
+      + cryptix.sasl
+         + changed getMechanismNames() in ClientFactory and ServerFactory
+           to use properties to determine which mechanisms to return
+      + added getNegotiatedQop() and getNegotiatedStrength() methods
+        to all client and server classes
+   + fixed javax.security.sasl.Sasl -- package names are |-delimited, not
+     space-delimited, in the properties for client and server factories.
+   + added cryptix.sasl.SaslProperties which contains descriptions and
+     aliases for standard SASL properties.
+   + changed Makefile to reflect version 0.8.5 build 1
+
+0.8.4
+   + modified the implementation of cryptix.sasl.srp.SRPInputStream so it
+     does not indiscriminentaly read the underlying source.
+   + removed from both SRPInputStream and SRPOutputStream in
+     ryptix.sasl.srp methods inherited from InputStream but not semantically
+     overriding any action already done in the superclass.
+   + added new Exceptions in cryptix.sasl.srp to signal errors when doing
+     Integrity Protection and Confidentiality Protection.
+   + upgraded to version to 0.8.4 build 12.
+   + documented the changes.
+
+0.8.3
+   + fixed a bug in cryptix.sasl.ServerFactory and ClientFactory.
+   + updated README.TXT to reflect latest changes.
+   + added make-ing bin section including auto-generation of test scripts.
+     only .bat files are tested not the .sh strain.
+   + fixed a bug in the cryptix.sasl.srp.PasswordFile -- was not flushing.
+   + added code in test.Server to create a new 'test' user and password.
+   + test.Client and test.Server now work.
+
+0.8.2:
+   + moved InputFrame and OutputFrame drom cryptix.sasl.srp to cryptix.sasl;
+   + renamed both to InputBuffer and OutputBuffer;
+   + use ByteArrayInputStream and ByteArrayOutputStream as temporary data
+     holders for SASL buffers.  this reduces byte arrays creation and copy
+     operations and improves performance.
+   + moved SASL specific bytes-to-length conversion utilities from
+     cryptix.sasl.srp.SRPUtil to cryptix.sasl.SaslUtil.  the hope is that
+     those methods will not be SRP-specific;
+   + added SaslParams to cryptix.sasl;
+   + added SaslEncodingException;
+   + moved the trim() methods from cryptix.sasl.srp.SRPUtil to
+     cryptix.sasl.SaslUtil;
+   + added size limit checks to encoding and decoding SASL data elements
+     to/from buffers;
+   + renamed n to N in cryptix.sasl.srp.SRPClient to use same nomenclature
+     as the draft.  also renamed username to U, authorizationID to I,
+     availableOptionsList to L, chosenOptionsList to o for the same reason.
+   + did the same in cryptix.sasl.srp.SRPServer.  in addition renamed salt
+     to s.
+   + moved the fromb64() and tob64() methods from
+     cryptix.sasl.srp.PasswordFile to SaslUtil.
+   + removed extraneous exceptions from constructors and method
+     declarations; eg. FileNotFoundException when IOException is already
+     declared.
+   + made UserAlreadyExistsException and NoSuchUserException, in
+     cryptix.sasl extend SaslException.
+   + moved the constants defined in cryptix.sasl.srp.SRPAlgorithm to
+     SRPParams.  they are not used anywhere!!!
+   + moved the test classes to a new package outside the cryptix hierarchy.
+     makes it easier for jarring distributions.
+   + added test.Main class to test the SRP cryptographic primitives.
+   + added test.Client, test.Server and test.SaslConnection to exercise
+     SASL with a very simple protocol over sockets.
+   + removed the cryptix.sasl.srp.PasswordDatabase interface because it is
+     not general enough to be useful outside the srp hierarchy.  inside the
+     srp hierarchy it is only used by PasswordFile (the only class that
+     implements that interface).
+   + made the same change for all other PasswordFile classes in other
+     mechanisms because of the same rationale.
+   + removed all mentions of authors and centralised in AUTHORS file.
+   + fixed some bugs.
+   + started this ChangeLog file to record changes.
+   + use the latest (1.0.4) release of log4j.
+   + removed dependencies on cryptix.util.core classes.
+   + removed java.security and java.security.spec classes.
+   + use int for sequence numbers (in cryptix.sasl.srp.SRPInputStream and
+     cryptix.sasl.srp.SRPOutputStream) to guarrantee conformance to the
+     specs.
+   + added javadoc to the javax package classes.  used
+     draft-weltman-java-sasl-04.
+   + removed all modifiers from method signatures and attributes in all
+     defined interfaces  --silences jikes.
+   + changed cryptix.sasl.srp.SRPAlgorithm to SRP and added code to support
+     families of SRP mechanisms using different underlying digest algorithms
+     (SRPDigest class).
+   + added code in cryptix.sasl.srp.PasswordFile for the same reason.
+   + moved code from cryptix.sasl.srp.SRPUtil back to SRP. it should be
+     there since it's simple to keep the semantic operations consistent when
+     more than one digest algorithm is used.
+   + added more code in test.Main to exercise 2 SRP incarnations: one with
+     SHA the other with MD5.
+   + formatting.

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="hours">
+        <item quantity="other">%d hours</item>
+        <item quantity="one">%d hour</item>
+    </plurals>
+    <plurals name="minutes">
+        <item quantity="other">%d minutes</item>
+        <item quantity="one">%d minute</item>
+    </plurals>
+    <plurals name="notification_new_message_from_multiple_contacts_1">
+        <item quantity="other">%d messages</item>
+        <item quantity="one">%d message</item>
+    </plurals>
+    <plurals name="notification_new_message_from_multiple_contacts_2">
+        <item quantity="other">%1$s from %2$d contacts.</item>
+        <item quantity="one">%1$s from %2$d contacts.</item>
+    </plurals>
+    <plurals name="notification_new_message">
+        <item quantity="other">%d new messages.</item>
+        <item quantity="one">%d new message.</item>
+    </plurals>
+    <plurals name="service_expire_days">
+        <item quantity="other">Your WhatsApp service will expire in %d days. Purchase extension now?</item>
+        <item quantity="one">Your WhatsApp service will expire in %d day. Purchase extension now?</item>
+    </plurals>
+    <plurals name="unread_message_count">
+        <item quantity="other">%d Unread messages</item>
+        <item quantity="one">%d Unread message</item>
+    </plurals>
+    <plurals name="confirm_sharing_multiple_title">
+        <item quantity="other">Share %1$d items with %2$s?</item>
+        <item quantity="one">Share %1$d item with %2$s?</item>
+    </plurals>
+    <plurals name="group_confirm_sharing_multiple_title">
+        <item quantity="other">Share %1$d items with “%2$s”?</item>
+        <item quantity="one">Share %1$d item with “%2$s”?</item>
+    </plurals>
+    <plurals name="software_about_to_expire">
+        <item quantity="other">This version of WhatsApp will expire in %d days. Upgrade to the latest version?</item>
+        <item quantity="one">This version of WhatsApp will expire in %d day. Upgrade to the latest version?</item>
+    </plurals>
+    <plurals name="network_usage_message_count">
+        <item quantity="other">%1$d messages</item>
+        <item quantity="one">%1$d message</item>
+    </plurals>
+    <plurals name="network_usage_byte_count_bytes">
+        <item quantity="other">%1$d bytes</item>
+        <item quantity="one">%1$d byte</item>
+    </plurals>
+    <plurals name="error_image_dimensions_too_small">
+        <item quantity="other">This image is too small. Please select a photo with height and width of at least %d pixels.</item>
+        <item quantity="one">This image is too small. Please select a photo with height and width of at least %d pixel.</item>
+    </plurals>
+</resources>

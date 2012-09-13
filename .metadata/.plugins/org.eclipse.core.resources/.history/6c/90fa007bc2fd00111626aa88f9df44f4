@@ -1,0 +1,22 @@
+package com.jaapsuter.niets.test.blackberry;
+
+import net.rim.device.api.ui.container.MainScreen;
+import java.io.*;
+
+import com.jaapsuter.niets.Niets;
+
+public final class Screen extends MainScreen
+{
+	private InputStream _in;
+    private OutputStreamWriter _out;        
+    
+    public Screen()
+    {        
+        // Set the displayed title of the screen       
+        setTitle("Niets");
+        
+        
+        Niets.run();
+    }
+
+}

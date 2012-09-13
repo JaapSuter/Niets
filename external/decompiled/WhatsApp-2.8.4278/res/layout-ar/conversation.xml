@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/conversation_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:gravity="center_vertical" android:id="@id/conversation_header" style="@style/Header">
+            <FrameLayout android:id="@id/conversation_contact_photo_frame" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="0.0dip" android:layout_marginRight="1.0dip" android:layout_marginBottom="1.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+                <ImageView android:id="@id/conversation_contact_photo" android:visibility="gone" android:layout_width="@dimen/conversation_imageview_size" android:layout_height="@dimen/conversation_imageview_size" android:scaleType="fitCenter" />
+                <ProgressBar android:layout_gravity="center" android:id="@id/change_photo_progress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?android:attr/progressBarStyleSmallInverse" />
+            </FrameLayout>
+            <LinearLayout android:gravity="right" android:orientation="vertical" android:id="@id/conversation_contact" android:background="@drawable/selector_orange_gradient" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_toLeftOf="@id/conversation_contact_photo_frame" android:layout_toRightOf="@id/divider1" android:layout_centerVertical="true">
+                <com.whatsapp.TextEmojiLabel android:textSize="16.0dip" android:ellipsize="end" android:gravity="right" android:layout_gravity="right" android:id="@id/conversation_contact_name" android:paddingLeft="4.0dip" android:paddingTop="1.0dip" android:paddingRight="4.0dip" android:paddingBottom="0.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lines="1" android:scrollHorizontally="true" android:singleLine="true" android:shadowDx="-0.0" android:lineSpacingMultiplier="1.0" style="@style/Text.Header" />
+                <HorizontalScrollView android:layout_gravity="right" android:id="@id/conversation_contact_status_scroll" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scrollHorizontally="true">
+                    <TextView android:textSize="12.0dip" android:textStyle="italic" android:textColor="@color/white" android:gravity="right" android:layout_gravity="right" android:id="@id/conversation_contact_status" android:paddingRight="4.0dip" android:paddingBottom="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:shadowDx="-1.0" style="@style/Text" />
+                </HorizontalScrollView>
+            </LinearLayout>
+            <ImageView android:id="@id/divider1" android:background="@drawable/divider" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_toRightOf="@id/paperclip_btn" />
+            <ImageButton android:id="@id/paperclip_btn" android:background="@drawable/selector_orange_gradient" android:layout_width="@dimen/header_height" android:layout_height="@dimen/header_height" android:src="@drawable/button_attach" android:layout_toRightOf="@id/divider2" style="@style/HeaderButton" />
+            <ImageView android:id="@id/divider2" android:background="@drawable/divider" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_toRightOf="@id/emoji_btn" />
+            <ImageButton android:id="@id/emoji_btn" android:background="@drawable/selector_orange_gradient" android:layout_width="@dimen/header_height" android:layout_height="@dimen/header_height" android:src="@drawable/button_emoji" android:layout_alignParentLeft="true" style="@style/HeaderButton" />
+        </RelativeLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/conversation_searcher" android:visibility="gone" style="@style/Header">
+            <EditText android:id="@id/search_field" android:layout_width="0.0dip" android:layout_height="fill_parent" android:maxLines="1" android:lines="1" android:singleLine="true" android:selectAllOnFocus="true" android:layout_weight="1.0" android:inputType="text" android:imeOptions="actionSearch" />
+        </LinearLayout>
+        <com.whatsapp.wallpaper.WallPaperView android:id="@id/conversation_background" android:background="@null" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="center" android:layout_below="@id/conversation_header" />
+        <ListView android:id="@android:id/list" android:background="@null" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@drawable/selector_orange_gradient" android:transcriptMode="disabled" android:cacheColorHint="#00000000" android:layout_weight="1.0" android:layout_above="@id/list_separator" android:layout_below="@id/conversation_header" android:fastScrollEnabled="false" style="@style/List" />
+        <View android:id="@id/list_separator" android:background="@color/light_gray" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_above="@id/footer" />
+        <LinearLayout android:orientation="vertical" android:id="@id/footer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+            <LinearLayout android:id="@id/edit_layout" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+                <Button android:textSize="15.329987sp" android:textStyle="bold" android:layout_gravity="center_vertical" android:id="@id/send" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="-2.0dip" android:layout_marginRight="-1.0dip" android:layout_marginBottom="-2.5dip" android:minWidth="72.0dip" android:text="@string/send_button" android:maxLines="1" android:lines="1" android:singleLine="true" />
+                <com.whatsapp.ConversationTextEntry android:scrollbarAlwaysDrawVerticalTrack="true" android:scrollbarStyle="outsideOverlay" android:layout_gravity="center_vertical" android:id="@id/entry" android:scrollbars="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="-1.0dip" android:layout_marginRight="1.0dip" android:layout_marginBottom="-2.5dip" android:maxLines="6" android:capitalize="sentences" android:autoText="true" android:layout_weight="1.0" android:imeOptions="actionSend" android:scrollbarFadeDuration="300" android:scrollbarDefaultDelayBeforeFade="200" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/search_footer" android:visibility="gone" style="@style/Header">
+                <ImageButton android:id="@id/search_clear" android:background="@drawable/selector_orange_gradient" android:layout_width="@dimen/header_height" android:layout_height="@dimen/header_height" android:src="@drawable/button_clear" style="@style/HeaderButton" />
+                <ImageView android:background="@drawable/divider" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+                <RelativeLayout android:id="@id/search_down" android:background="@drawable/selector_orange_gradient" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                    <TextView android:textColor="@color/white" android:gravity="right" android:id="@id/search_down_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/search_later" android:layout_centerInParent="true" />
+                </RelativeLayout>
+                <ImageView android:background="@drawable/divider" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+                <RelativeLayout android:id="@id/search_up" android:background="@drawable/selector_orange_gradient" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                    <TextView android:textColor="@color/white" android:gravity="right" android:id="@id/search_up_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/search_earlier" android:layout_centerInParent="true" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <RelativeLayout android:gravity="center" android:layout_gravity="top" android:id="@id/emoji_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="1.0dip" android:layout_marginTop="@dimen/emoji_panel_margin_top" android:layout_marginRight="1.0dip">
+            <LinearLayout android:gravity="left" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:src="@drawable/emoji_triangle" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_alignParentTop="true">
+                <LinearLayout android:orientation="horizontal" android:background="@drawable/emoji_border" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="vertical" android:id="@id/emoji_group_layout" android:background="@null" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                        <ImageView android:gravity="center" android:id="@id/emoji_smile_btn" android:layout_width="@dimen/emoji_grouping_btn_width" android:layout_height="wrap_content" android:src="@drawable/selector_emoji_smile" android:layout_weight="0.25" />
+                        <ImageView android:id="@id/divider" android:background="@color/black" android:layout_width="fill_parent" android:layout_height="1.0px" />
+                        <ImageView android:gravity="center" android:id="@id/emoji_flower_btn" android:layout_width="@dimen/emoji_grouping_btn_width" android:layout_height="wrap_content" android:src="@drawable/selector_emoji_flower" android:layout_weight="0.25" />
+                        <ImageView android:id="@id/divider" android:background="@color/black" android:layout_width="fill_parent" android:layout_height="1.0px" />
+                        <ImageView android:gravity="center" android:id="@id/emoji_bell_btn" android:layout_width="@dimen/emoji_grouping_btn_width" android:layout_height="wrap_content" android:src="@drawable/selector_emoji_bell" android:layout_weight="0.25" />
+                        <ImageView android:id="@id/divider" android:background="@color/black" android:layout_width="fill_parent" android:layout_height="1.0px" />
+                        <ImageView android:gravity="center" android:id="@id/emoji_car_btn" android:layout_width="@dimen/emoji_grouping_btn_width" android:layout_height="wrap_content" android:src="@drawable/selector_emoji_car" android:layout_weight="0.25" />
+                    </LinearLayout>
+                    <View android:background="@color/black" android:layout_width="1.0px" android:layout_height="fill_parent" />
+                    <com.whatsapp.SaferViewFlipper android:gravity="right" android:id="@id/viewflipper" android:background="@null" android:layout_width="0.0dip" android:layout_height="150.0dip" android:layout_weight="1.0">
+                        <ListView android:gravity="center" android:id="@id/emoji_smile_list" android:background="@null" android:layout_width="fill_parent" android:layout_height="150.0dip" android:cacheColorHint="#00000000" />
+                        <ListView android:id="@id/emoji_flower_list" android:background="@null" android:persistentDrawingCache="scrolling" android:alwaysDrawnWithCache="true" android:layout_width="fill_parent" android:layout_height="150.0dip" android:cacheColorHint="#00000000" />
+                        <ListView android:id="@id/emoji_bell_list" android:background="@null" android:persistentDrawingCache="scrolling" android:alwaysDrawnWithCache="true" android:layout_width="fill_parent" android:layout_height="150.0dip" android:cacheColorHint="#00000000" />
+                        <ListView android:id="@id/emoji_car_list" android:background="@null" android:persistentDrawingCache="scrolling" android:alwaysDrawnWithCache="true" android:layout_width="fill_parent" android:layout_height="150.0dip" android:cacheColorHint="#00000000" />
+                    </com.whatsapp.SaferViewFlipper>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+        <LinearLayout android:gravity="right|center" android:orientation="vertical" android:id="@id/paper_clip_layout" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="1.0dip" android:layout_marginTop="@dimen/emoji_panel_margin_top" android:layout_marginRight="1.0dip" android:layout_alignParentLeft="true">
+            <ImageView android:background="@drawable/dropdown_top" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/dropdown_middle" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:gravity="center" android:id="@id/pickfiletype_contact" android:background="@drawable/selector_orange_gradient" android:layout_width="@dimen/quickaction_button" android:layout_height="@dimen/quickaction_button" android:src="@drawable/attach_contact" android:scaleType="center" />
+                <ImageView android:background="@drawable/divider" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+                <ImageView android:gravity="center" android:id="@id/pickfiletype_location" android:background="@drawable/selector_orange_gradient" android:layout_width="@dimen/quickaction_button" android:layout_height="@dimen/quickaction_button" android:src="@drawable/attach_location" android:scaleType="center" />
+                <ImageView android:background="@drawable/divider" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+                <ImageView android:gravity="center" android:id="@id/pickfiletype_audio" android:background="@drawable/selector_orange_gradient" android:layout_width="@dimen/quickaction_button" android:layout_height="@dimen/quickaction_button" android:src="@drawable/attach_audio" android:scaleType="center" />
+                <ImageView android:background="@drawable/divider" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+                <ImageView android:gravity="center" android:id="@id/pickfiletype_gallery_video" android:background="@drawable/selector_orange_gradient" android:layout_width="@dimen/quickaction_button" android:layout_height="@dimen/quickaction_button" android:src="@drawable/attach_video" android:scaleType="center" />
+                <ImageView android:background="@drawable/divider" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+                <ImageView android:gravity="center" android:id="@id/pickfiletype_gallery_image" android:background="@drawable/selector_orange_gradient" android:layout_width="@dimen/quickaction_button" android:layout_height="@dimen/quickaction_button" android:src="@drawable/attach_gallery" android:scaleType="center" />
+            </LinearLayout>
+            <ImageView android:background="@drawable/dropdown_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <RelativeLayout android:id="@id/preview_layout" android:background="#ee000000" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:id="@id/preview_iv" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitCenter" android:layout_centerVertical="true" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/btn_layout" android:background="@drawable/header_grey_gradient" android:paddingLeft="2.0dip" android:paddingTop="3.0dip" android:paddingRight="2.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+                <Button android:id="@id/ok_btn" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/ok" android:layout_weight="0.5" />
+                <TextView android:textSize="20.0sp" android:textColor="@color/white" android:gravity="right" android:paddingRight="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="2.0dip" android:text="@string/preview_msg" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                <Button android:ellipsize="end" android:id="@id/cancel_btn" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/cancel" android:layout_weight="0.5" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</merge>

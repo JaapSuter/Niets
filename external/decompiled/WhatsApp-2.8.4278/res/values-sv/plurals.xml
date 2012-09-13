@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="hours">
+        <item quantity="other">%d timmar</item>
+        <item quantity="one">%d timma</item>
+    </plurals>
+    <plurals name="minutes">
+        <item quantity="other">%d minuter</item>
+        <item quantity="one">%d minut</item>
+    </plurals>
+    <plurals name="notification_new_message_from_multiple_contacts_1">
+        <item quantity="other">%d meddelanden</item>
+        <item quantity="one">%d meddelande</item>
+    </plurals>
+    <plurals name="notification_new_message_from_multiple_contacts_2">
+        <item quantity="other">%1$s från %2$d kontakter.</item>
+        <item quantity="one">%1$s från %2$d kontakter.</item>
+    </plurals>
+    <plurals name="notification_new_message">
+        <item quantity="other">%d nya meddelanden.</item>
+        <item quantity="one">%d nytt meddelande.</item>
+    </plurals>
+    <plurals name="service_expire_days">
+        <item quantity="other">Din WhatsApp-tjänst upphör om %d dagar. Vill du köpa förlängning nu?</item>
+        <item quantity="one">Din WhatsApp-tjänst upphör om %d dag. Vill du köpa förlängning nu?</item>
+    </plurals>
+    <plurals name="unread_message_count">
+        <item quantity="other">%d olästa meddelanden</item>
+        <item quantity="one">%d oläst meddelande</item>
+    </plurals>
+    <plurals name="confirm_sharing_multiple_title">
+        <item quantity="other">Dela %1$d filer med %2$s?</item>
+        <item quantity="one">Dela %1$d fil med %2$s?</item>
+    </plurals>
+    <plurals name="group_confirm_sharing_multiple_title">
+        <item quantity="other">Dela %1$d filer med “%2$s”?</item>
+        <item quantity="one">Dela %1$d fil med “%2$s”?</item>
+    </plurals>
+    <plurals name="software_about_to_expire">
+        <item quantity="other">Denna version av WhatsApp upphör att fungera om %d dagar. Vill du uppgradera till senaste version?</item>
+        <item quantity="one">Denna version av WhatsApp upphör att fungera om %d dag. Vill du uppgradera till senaste version?</item>
+    </plurals>
+    <plurals name="network_usage_message_count">
+        <item quantity="other">%1$d meddelanden</item>
+        <item quantity="one">%1$d meddelande</item>
+    </plurals>
+    <plurals name="network_usage_byte_count_bytes">
+        <item quantity="other">%1$d byte</item>
+        <item quantity="one">%1$d byte</item>
+    </plurals>
+    <plurals name="error_image_dimensions_too_small">
+        <item quantity="other">Bilden är för liten. Välj en bild som är minst %d pixlar på både höjden och bredden.</item>
+        <item quantity="one">Bilden är för liten. Välj en bild som är minst %d pixel på både höjden och bredden.</item>
+    </plurals>
+</resources>

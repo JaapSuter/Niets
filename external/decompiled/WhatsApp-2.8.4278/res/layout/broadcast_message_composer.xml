@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/background_repeat" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/conversation_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:gravity="center_vertical" android:id="@id/conversation_header" style="@style/Header">
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_toLeftOf="@id/paperclip_btn" android:layout_above="@id/conversation_contact_status" android:layout_alignParentTop="true" android:layout_centerVertical="true">
+                <TextView android:gravity="center_vertical" android:layout_gravity="left|center" android:id="@id/conversation_contact_name" android:layout_height="fill_parent" android:text="@string/broadcast_msg" style="@style/Text.HeaderCentered" />
+            </LinearLayout>
+            <ImageView android:id="@id/divider1" android:background="@drawable/divider" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_toLeftOf="@id/paperclip_btn" />
+            <ImageButton android:id="@id/paperclip_btn" android:background="@drawable/selector_orange_gradient" android:layout_width="@dimen/header_height" android:layout_height="@dimen/header_height" android:src="@drawable/button_attach" android:layout_toLeftOf="@id/divider2" style="@style/HeaderButton" />
+            <ImageView android:id="@id/divider2" android:background="@drawable/divider" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_toLeftOf="@id/emoji_btn" />
+            <ImageButton android:id="@id/emoji_btn" android:background="@drawable/selector_orange_gradient" android:layout_width="@dimen/header_height" android:layout_height="@dimen/header_height" android:src="@drawable/button_emoji" android:layout_alignParentRight="true" style="@style/HeaderButton" />
+        </RelativeLayout>
+        <RelativeLayout android:gravity="center" android:layout_gravity="top" android:id="@id/emoji_view_wrapper" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="1.0dip" android:layout_marginTop="@dimen/emoji_panel_margin_top" android:layout_marginRight="1.0dip">
+            <RelativeLayout android:id="@id/emoji_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:gravity="right" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="12.0dip" android:src="@drawable/emoji_triangle" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_alignParentTop="true">
+                    <LinearLayout android:orientation="horizontal" android:background="@drawable/emoji_border" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <com.whatsapp.SaferViewFlipper android:gravity="left" android:id="@id/viewflipper" android:background="@null" android:layout_width="0.0dip" android:layout_height="150.0dip" android:layout_weight="1.0">
+                            <ListView android:gravity="center" android:id="@id/emoji_smile_list" android:background="@null" android:layout_width="fill_parent" android:layout_height="150.0dip" android:cacheColorHint="#00000000" />
+                            <ListView android:id="@id/emoji_flower_list" android:background="@null" android:persistentDrawingCache="scrolling" android:alwaysDrawnWithCache="true" android:layout_width="fill_parent" android:layout_height="150.0dip" android:cacheColorHint="#00000000" />
+                            <ListView android:id="@id/emoji_bell_list" android:background="@null" android:persistentDrawingCache="scrolling" android:alwaysDrawnWithCache="true" android:layout_width="fill_parent" android:layout_height="150.0dip" android:cacheColorHint="#00000000" />
+                            <ListView android:id="@id/emoji_car_list" android:background="@null" android:persistentDrawingCache="scrolling" android:alwaysDrawnWithCache="true" android:layout_width="fill_parent" android:layout_height="150.0dip" android:cacheColorHint="#00000000" />
+                        </com.whatsapp.SaferViewFlipper>
+                        <View android:background="@color/black" android:layout_width="1.0px" android:layout_height="fill_parent" />
+                        <LinearLayout android:orientation="vertical" android:id="@id/emoji_group_layout" android:background="@null" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                            <ImageView android:gravity="center" android:id="@id/emoji_smile_btn" android:layout_width="@dimen/emoji_grouping_btn_width" android:layout_height="wrap_content" android:src="@drawable/selector_emoji_smile" android:layout_weight="0.25" />
+                            <ImageView android:id="@id/divider" android:background="@color/black" android:layout_width="fill_parent" android:layout_height="1.0px" />
+                            <ImageView android:gravity="center" android:id="@id/emoji_flower_btn" android:layout_width="@dimen/emoji_grouping_btn_width" android:layout_height="wrap_content" android:src="@drawable/selector_emoji_flower" android:layout_weight="0.25" />
+                            <ImageView android:id="@id/divider" android:background="@color/black" android:layout_width="fill_parent" android:layout_height="1.0px" />
+                            <ImageView android:gravity="center" android:id="@id/emoji_bell_btn" android:layout_width="@dimen/emoji_grouping_btn_width" android:layout_height="wrap_content" android:src="@drawable/selector_emoji_bell" android:layout_weight="0.25" />
+                            <ImageView android:id="@id/divider" android:background="@color/black" android:layout_width="fill_parent" android:layout_height="1.0px" />
+                            <ImageView android:gravity="center" android:id="@id/emoji_car_btn" android:layout_width="@dimen/emoji_grouping_btn_width" android:layout_height="wrap_content" android:src="@drawable/selector_emoji_car" android:layout_weight="0.25" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+        <EditText android:gravity="top" android:id="@id/broadcast_msg_et" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/horizontal_padding" android:layout_marginTop="10.0dip" android:layout_marginRight="@dimen/horizontal_padding" android:layout_marginBottom="5.0dip" android:hint="@string/broadcast_msg_hint" android:maxLines="5" android:minLines="2" android:layout_below="@id/emoji_view_wrapper" android:inputType="textCapSentences|textMultiLine" android:imeOptions="actionDone" />
+        <Button android:enabled="false" android:textStyle="bold" android:id="@id/send_btn" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/horizontal_padding" android:layout_marginRight="@dimen/horizontal_padding" android:layout_marginBottom="1.0dip" android:text="@string/send" android:layout_below="@id/share_media_ll" android:layout_centerHorizontal="true" />
+        <LinearLayout android:gravity="center_vertical" android:id="@id/share_media_ll" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/horizontal_padding" android:layout_marginRight="@dimen/horizontal_padding" android:layout_marginBottom="10.0dip" android:layout_below="@id/broadcast_msg_et">
+            <FrameLayout android:gravity="left" android:id="@id/map_frame" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:layout_alignParentRight="true">
+                <ImageView android:id="@id/media_iv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="fitCenter" />
+                <Button android:enabled="false" android:ellipsize="end" android:id="@id/vcard_btn" android:padding="5.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </FrameLayout>
+            <LinearLayout android:gravity="center_vertical" android:id="@id/description_and_progress_ll" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <TextView android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/media_description" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" style="@style/Text.Description" />
+                <ProgressBar android:id="@id/progress_bar" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_centerVertical="true" style="?android:attr/progressBarStyleHorizontal" />
+            </LinearLayout>
+            <LinearLayout android:layout_gravity="right|center" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                <ImageButton android:layout_gravity="right|center" android:id="@id/remove_btn" android:background="@drawable/selector_orange_gradient" android:layout_width="32.0dip" android:layout_height="32.0dip" android:src="@drawable/broadcast_cross" />
+            </LinearLayout>
+            <TextView android:id="@id/landscape_padding_view" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="2.0" />
+            <LinearLayout android:layout_gravity="right|center" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                <Button android:enabled="false" android:textStyle="bold" android:gravity="center" android:layout_gravity="right|center" android:id="@id/send_btn_with_attachment" android:paddingLeft="20.0dip" android:paddingTop="4.0dip" android:paddingRight="20.0dip" android:paddingBottom="4.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/send" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <TextView android:layout_marginTop="6.0dip" android:text="@string/broadcast_to_recipients" style="@style/TextGrayDivider" />
+    <ListView android:id="@android:id/list" android:layout_width="fill_parent" android:layout_height="0.0dip" android:cacheColorHint="@color/group_chat_info_gray" android:divider="@color/divider_gray" android:dividerHeight="1.0px" android:choiceMode="none" android:layout_weight="1.0" />
+</LinearLayout>

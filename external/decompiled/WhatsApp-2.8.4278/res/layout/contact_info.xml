@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/group_chat_info_gray" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout style="@style/Header">
+        <LinearLayout android:gravity="left|center" android:id="@id/header_ll" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:layout_gravity="left|center" android:text="@string/contact_info" style="@style/Text.HeaderCentered" />
+            <ProgressBar android:id="@id/progress_bar" android:visibility="gone" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginRight="8.0dip" />
+        </LinearLayout>
+    </RelativeLayout>
+    <ListView android:id="@android:id/list" android:layout_width="fill_parent" android:layout_height="0.0dip" android:listSelector="@drawable/selector_orange_gradient" android:cacheColorHint="@color/group_chat_info_gray" android:divider="@color/divider_gray" android:dividerHeight="1.0px" android:choiceMode="none" android:layout_weight="1.0" />
+</LinearLayout>

@@ -1,0 +1,50 @@
+Version = 1
+
+BEGIN_RULE
+BEGIN_FILTER_TEXT
+Source == "WhatsApp Server"
+END_FILTER_TEXT
+	Active = 1
+	Foreground = 0, 0, 128
+	Background = 255, 255, 255
+	Bold = 1
+	Italic = 0
+	Underline = 0
+END_RULE
+
+BEGIN_RULE
+BEGIN_FILTER_TEXT
+Destination == "WhatsApp Server"
+END_FILTER_TEXT
+	Active = 1
+	Foreground = 0, 64, 0
+	Background = 255, 255, 255
+	Bold = 1
+	Italic = 0
+	Underline = 0
+END_RULE
+
+BEGIN_RULE
+BEGIN_FILTER_TEXT
+Destination == "WhatsApp Auth"
+END_FILTER_TEXT
+	Active = 1
+	Foreground = 0, 0, 64
+	Background = 255, 255, 255
+	Bold = 1
+	Italic = 0
+	Underline = 0
+END_RULE
+
+BEGIN_RULE
+BEGIN_FILTER_TEXT
+Source == "WhatsApp Auth"
+END_FILTER_TEXT
+	Active = 1
+	Foreground = 128, 64, 0
+	Background = 255, 255, 255
+	Bold = 1
+	Italic = 0
+	Underline = 0
+END_RULE
+

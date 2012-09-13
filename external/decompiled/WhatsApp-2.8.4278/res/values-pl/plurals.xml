@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="hours">
+        <item quantity="other">%d godzin</item>
+        <item quantity="one">%d godzina</item>
+        <item quantity="few">%d godziny</item>
+    </plurals>
+    <plurals name="minutes">
+        <item quantity="other">%d minut</item>
+        <item quantity="one">%d minuta</item>
+        <item quantity="few">%d minuty</item>
+    </plurals>
+    <plurals name="notification_new_message_from_multiple_contacts_1">
+        <item quantity="other">%d wiadomości</item>
+        <item quantity="one">%d wiadomość</item>
+        <item quantity="few">%d wiadomości</item>
+    </plurals>
+    <plurals name="notification_new_message_from_multiple_contacts_2">
+        <item quantity="other">%1$s od %2$d kontaktów.</item>
+        <item quantity="one">%1$s od %2$d kontaktu.</item>
+        <item quantity="few">%1$s od %2$d kontaktów.</item>
+    </plurals>
+    <plurals name="notification_new_message">
+        <item quantity="other">%d nowych wiadomości.</item>
+        <item quantity="one">%d nowa wiadomość.</item>
+        <item quantity="few">%d nowe wiadomości.</item>
+    </plurals>
+    <plurals name="service_expire_days">
+        <item quantity="other">Ważność aplikacji WhatsApp wygasa za %d dni. Chcesz teraz kupić przedłużenie?</item>
+        <item quantity="one">Ważność aplikacji WhatsApp wygasa za %d dzień. Chcesz teraz kupić przedłużenie?</item>
+        <item quantity="few">Ważność aplikacji WhatsApp wygasa za %d dni. Chcesz teraz kupić przedłużenie?</item>
+    </plurals>
+    <plurals name="unread_message_count">
+        <item quantity="other">%d nieprzeczytanych wiadomości</item>
+        <item quantity="one">%d nieprzeczytana wiadomość</item>
+        <item quantity="few">%d nieprzeczytane wiadomości</item>
+    </plurals>
+    <plurals name="confirm_sharing_multiple_title">
+        <item quantity="other">Udostępnij %1$d dla %2$s</item>
+        <item quantity="one">Udostępnij %1$d dla %2$s</item>
+        <item quantity="few">Udostępnij %1$d dla %2$s</item>
+    </plurals>
+    <plurals name="group_confirm_sharing_multiple_title">
+        <item quantity="other">Udostępnij %1$d dla “%2$s”</item>
+        <item quantity="one">Udostępnij %1$d dla “%2$s”</item>
+        <item quantity="few">Udostępnij %1$d dla “%2$s”</item>
+    </plurals>
+    <plurals name="software_about_to_expire">
+        <item quantity="other">Licencja programuWhatsApp skończy się za %d dni. Aktualizować licencję?</item>
+        <item quantity="one">Ta wersja WhatsApp wygaśnie za %d dni. Aktualizować do najnowszej wersji?</item>
+        <item quantity="few">Licencja tej wersji WhatsApp wygaśnie po %d dniach. Aktualizować program?</item>
+    </plurals>
+    <plurals name="network_usage_message_count">
+        <item quantity="other">%1$d wiadomości</item>
+        <item quantity="one">%1$d wiadomość</item>
+        <item quantity="few">%1$d wiadomości</item>
+    </plurals>
+    <plurals name="network_usage_byte_count_bytes">
+        <item quantity="other">%1$d bajtów</item>
+        <item quantity="one">%1$d bajt</item>
+        <item quantity="few">%1$d bajty</item>
+    </plurals>
+</resources>

@@ -1,0 +1,8 @@
+#!/bin/sh
+
+SASL_HOME=@install.dir@
+CP="$SASL_HOME/lib/test.jar:$SASL_HOME/lib/cryptix-sasl.jar:$SASL_HOME/lib/javax-sasl.jar:$SASL_HOME/lib/cryptix-jce-api.jar:$SASL_HOME/lib/cryptix-jce-provider.jar:$SASL_HOME/lib/java-getopt.jar:$SASL_HOME/lib/log4j.jar"
+cd $SASL_HOME
+java -showversion -Dlog4j.configuration=file:./log.properties -cp "$CP" test.Client $@
+unset CP SASL_HOME
+

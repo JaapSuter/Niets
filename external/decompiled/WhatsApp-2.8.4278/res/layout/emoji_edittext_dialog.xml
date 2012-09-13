@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/emoji_edittext_layout" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="52.0dip">
+        <TextView android:textSize="20.0sp" android:textColor="@color/white" android:id="@id/dialog_title" android:paddingLeft="6.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <ImageView android:id="@id/divider2" android:background="@drawable/divider" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_toLeftOf="@id/emoji_btn" />
+        <ImageButton android:id="@id/emoji_btn" android:background="@drawable/selector_orange_gradient" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/button_emoji" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <View android:background="@color/divider_gray" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <RelativeLayout android:gravity="center" android:layout_gravity="top" android:id="@id/emoji_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:background="@color/emoji_flipper_translucent_black" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.whatsapp.SaferViewFlipper android:gravity="left" android:id="@id/viewflipper" android:background="@null" android:layout_width="0.0dip" android:layout_height="150.0dip" android:layout_weight="1.0">
+                <ListView android:gravity="center" android:id="@id/emoji_smile_list" android:background="@null" android:layout_width="fill_parent" android:layout_height="150.0dip" android:cacheColorHint="#00000000" />
+                <ListView android:id="@id/emoji_flower_list" android:background="@null" android:persistentDrawingCache="scrolling" android:alwaysDrawnWithCache="true" android:layout_width="fill_parent" android:layout_height="150.0dip" android:cacheColorHint="#00000000" />
+                <ListView android:id="@id/emoji_bell_list" android:background="@null" android:persistentDrawingCache="scrolling" android:alwaysDrawnWithCache="true" android:layout_width="fill_parent" android:layout_height="150.0dip" android:cacheColorHint="#00000000" />
+                <ListView android:id="@id/emoji_car_list" android:background="@null" android:persistentDrawingCache="scrolling" android:alwaysDrawnWithCache="true" android:layout_width="fill_parent" android:layout_height="150.0dip" android:cacheColorHint="#00000000" />
+            </com.whatsapp.SaferViewFlipper>
+            <View android:background="@color/black" android:layout_width="1.0px" android:layout_height="fill_parent" />
+            <LinearLayout android:orientation="vertical" android:id="@id/emoji_group_layout" android:background="@null" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                <ImageView android:gravity="center" android:id="@id/emoji_smile_btn" android:layout_width="@dimen/emoji_grouping_btn_width" android:layout_height="wrap_content" android:src="@drawable/selector_emoji_smile" android:layout_weight="0.25" />
+                <ImageView android:id="@id/divider" android:background="@color/black" android:layout_width="fill_parent" android:layout_height="1.0px" />
+                <ImageView android:gravity="center" android:id="@id/emoji_flower_btn" android:layout_width="@dimen/emoji_grouping_btn_width" android:layout_height="wrap_content" android:src="@drawable/selector_emoji_flower" android:layout_weight="0.25" />
+                <ImageView android:id="@id/divider" android:background="@color/black" android:layout_width="fill_parent" android:layout_height="1.0px" />
+                <ImageView android:gravity="center" android:id="@id/emoji_bell_btn" android:layout_width="@dimen/emoji_grouping_btn_width" android:layout_height="wrap_content" android:src="@drawable/selector_emoji_bell" android:layout_weight="0.25" />
+                <ImageView android:id="@id/divider" android:background="@color/black" android:layout_width="fill_parent" android:layout_height="1.0px" />
+                <ImageView android:gravity="center" android:id="@id/emoji_car_btn" android:layout_width="@dimen/emoji_grouping_btn_width" android:layout_height="wrap_content" android:src="@drawable/selector_emoji_car" android:layout_weight="0.25" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/subject_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <EditText android:id="@id/no_countdown_et" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:layout_marginTop="4.0dip" android:layout_marginRight="2.0dip" android:layout_marginBottom="2.0dip" android:maxLines="1" android:singleLine="true" android:inputType="textCapSentences" />
+        <EditText android:id="@id/has_countdown_et" android:paddingRight="30.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:layout_marginTop="4.0dip" android:layout_marginRight="2.0dip" android:layout_marginBottom="2.0dip" android:maxLines="1" android:singleLine="true" android:inputType="textCapSentences" />
+        <TextView android:textSize="14.0sp" android:textColor="@color/contact_phone_type" android:gravity="right" android:id="@id/counter_tv" android:visibility="gone" android:layout_width="25.0dip" android:layout_height="wrap_content" android:layout_marginRight="11.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="horizontal" android:background="@drawable/header_grey_gradient" android:paddingLeft="2.0dip" android:paddingTop="3.0dip" android:paddingRight="2.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:id="@id/ok_btn" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/ok" android:layout_weight="0.5" />
+        <Button android:ellipsize="end" android:id="@id/cancel_btn" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/cancel" android:layout_weight="0.5" />
+    </LinearLayout>
+</LinearLayout>

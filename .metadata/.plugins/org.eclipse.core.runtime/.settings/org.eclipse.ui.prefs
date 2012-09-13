@@ -1,0 +1,6 @@
+#Mon Sep 10 09:53:00 PDT 2012
+SHOW_TRADITIONAL_STYLE_TABS=true
+eclipse.preferences.version=1
+showIntro=false
+ENABLE_ANIMATIONS=false
+defaultPerspectiveId=net.rim.ejde.ui.perspective.BlackBerryPerspective

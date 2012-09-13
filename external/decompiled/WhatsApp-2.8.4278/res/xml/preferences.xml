@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/settings_general"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceScreen android:title="@string/settings_help" android:key="settings_help">
+        <Preference android:title="@string/settings_faq" android:key="help" />
+        <PreferenceScreen android:title="@string/settings_network_system_status" android:key="system_status" />
+        <Preference android:title="@string/contact1" android:key="contact_us" android:summary="@string/contact2" />
+    </PreferenceScreen>
+    <Preference android:title="@string/settings_about" android:key="about" />
+    <PreferenceScreen android:title="@string/menuitem_contacts" android:key="contact_info">
+        <Preference android:title="@string/tell_a_friend" android:key="tell_a_friend" />
+        <Preference android:title="@string/settings_block_list" android:key="block_list" android:summary="@string/settings_block_list_summary" />
+        <CheckBoxPreference android:title="@string/settings_use_all_contacts" android:key="show_all_contacts" android:summary="@string/settings_use_all_contacts_summary" android:defaultValue="false" />
+    </PreferenceScreen>
+    <Preference android:title="@string/settings_profile_info" android:key="profile_info" />
+    <PreferenceScreen android:title="@string/settings_account_info" android:key="account_info_screen">
+        <Preference android:title="@string/settings_payment_info" android:key="account_info" />
+        <PreferenceScreen android:title="@string/settings_network_usage" android:key="network_usage">
+            <Preference android:title="@string/network_usage_messages_sent" android:key="network_usage_messages_sent" android:summary="@string/unknown" />
+            <Preference android:title="@string/network_usage_messages_received" android:key="network_usage_messages_received" android:summary="@string/unknown" />
+            <Preference android:title="@string/network_usage_media_bytes_sent" android:key="network_usage_media_bytes_sent" android:summary="@string/unknown" />
+            <Preference android:title="@string/network_usage_media_bytes_received" android:key="network_usage_media_bytes_received" android:summary="@string/unknown" />
+            <Preference android:title="@string/network_usage_message_bytes_sent" android:key="network_usage_message_bytes_sent" android:summary="@string/unknown" />
+            <Preference android:title="@string/network_usage_message_bytes_received" android:key="network_usage_message_bytes_received" android:summary="@string/unknown" />
+            <Preference android:title="@string/network_usage_total_bytes_sent" android:key="network_usage_total_bytes_sent" android:summary="@string/unknown" />
+            <Preference android:title="@string/network_usage_total_bytes_received" android:key="network_usage_total_bytes_received" android:summary="@string/unknown" />
+            <com.whatsapp.DialogPreference android:title="@string/network_usage_reset" android:key="network_usage_reset" android:dialogMessage="@string/network_usage_ask_reset_message" android:positiveButtonText="@string/reset" android:negativeButtonText="@string/cancel" />
+        </PreferenceScreen>
+        <Preference android:title="@string/settings_delete_account" android:key="delete_account" />
+    </PreferenceScreen>
+    <PreferenceScreen android:title="@string/settings_chat" android:key="settings_chat">
+        <com.whatsapp.PushNamePreference android:title="@string/settings_push_name" android:key="push_name" android:summary="@string/settings_push_name_summary" android:defaultValue="*" />
+        <CheckBoxPreference android:title="@string/settings_input_enter_send" android:key="input_enter_send" android:defaultValue="true" android:summaryOn="@string/settings_input_enter_send_summary_on" android:summaryOff="@string/settings_input_enter_send_summary_off" />
+        <CheckBoxPreference android:title="@string/settings_autodownload_images" android:key="autodownload_images" android:defaultValue="true" />
+        <com.whatsapp.FontListPreference android:entries="@array/font_size" android:title="@string/settings_font_size" android:key="interface_font_size" android:summary="@string/settings_font_size_summary" android:defaultValue="0" android:entryValues="@array/font_size_values" />
+        <Preference android:title="@string/wallpaper" android:key="settings_wallpaper" />
+        <Preference android:title="@string/settings_email_chat_history" android:key="email_chat_history" />
+        <Preference android:title="@string/settings_msg_store_backup_now" android:key="msgstore_backup_now" android:summary="@string/settings_msg_store_last_backup" />
+    </PreferenceScreen>
+    <PreferenceScreen android:title="@string/settings_notifications" android:key="notifications">
+        <CheckBoxPreference android:title="@string/settings_chat_sound" android:key="conversation_sound" android:summary="@string/settings_chat_sound_summary" android:defaultValue="true" />
+        <PreferenceCategory android:title="@string/settings_notification" android:key="notification">
+            <RingtonePreference android:title="@string/settings_notification_sound" android:key="notify_ringtone" android:summary="@string/settings_notification_sound_summary" android:defaultValue="content://settings/system/notification_sound" android:ringtoneType="all" android:showDefault="true" android:showSilent="true" />
+            <CheckBoxPreference android:title="@string/settings_custom_conversation_sound" android:key="custom_ringtone" android:summary="@string/settings_custom_conversation_sound_summary" android:defaultValue="true" />
+            <ListPreference android:entries="@array/vibrate_lengths" android:title="@string/settings_notification_vibrate" android:key="notify_vibrate_length" android:summary="@string/settings_notification_vibrate_summary" android:defaultValue="1" android:entryValues="@array/vibrate_values" />
+            <ListPreference android:entries="@array/popup_mode" android:title="@string/settings_notification_popup" android:key="notify_popup_mode" android:summary="@string/settings_notification_popup_summary" android:defaultValue="0" android:entryValues="@array/popup_mode_values" />
+            <ListPreference android:entries="@array/led_colors" android:title="@string/settings_notification_light" android:key="notify_light_color" android:summary="@string/settings_notification_light_summary" android:defaultValue="FFFFFF" android:entryValues="@array/led_color_values" />
+        </PreferenceCategory>
+        <PreferenceCategory android:title="@string/settings_group_notification" android:key="group_notification">
+            <RingtonePreference android:title="@string/settings_notification_sound" android:key="group_notify_tone" android:summary="@string/settings_notification_sound_summary" android:defaultValue="content://settings/system/notification_sound" android:ringtoneType="all" android:showDefault="true" android:showSilent="true" />
+            <ListPreference android:entries="@array/vibrate_lengths" android:title="@string/settings_notification_vibrate" android:key="group_notify_vibrate_length" android:summary="@string/settings_notification_vibrate_summary" android:defaultValue="1" android:entryValues="@array/vibrate_values" />
+            <ListPreference android:entries="@array/popup_mode" android:title="@string/settings_notification_popup" android:key="group_notify_popup_mode" android:summary="@string/settings_notification_popup_summary" android:defaultValue="0" android:entryValues="@array/popup_mode_values" />
+            <ListPreference android:entries="@array/led_colors" android:title="@string/settings_notification_light" android:key="group_notify_light_color" android:summary="@string/settings_notification_light_summary" android:defaultValue="FFFFFF" android:entryValues="@array/led_color_values" />
+        </PreferenceCategory>
+    </PreferenceScreen>
+</PreferenceScreen>

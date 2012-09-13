@@ -1,0 +1,261 @@
+Manifest-Version: 1.0
+MIDlet-Jar-Size: 10456848
+MicroEdition-Configuration: CLDC-1.1
+MIDlet-Version: 2.8.1914
+RIM-MIDlet-Flags-2: 3
+RIM-MIDlet-Flags-1: 0
+MIDlet-Name: WhatsApp
+MicroEdition-Profile: MIDP-2.0
+RIM-COD-Module-Dependencies: net_rim_cldc,net_rim_bb_lbs_api_2,net_rim_pdap,net_rim_bbapi_mailv2,net_rim_bbapi_menuitem,net_rim_ui_api,net_rim_networkapi,net_rim_os,net_rim_crypto,net_rim_bbapi_messagelist,net_rim_bbapi_invoke,net_rim_bbapi_browser,net_rim_ui_extension,net_rim_locationapi,net_rim_bb_maps_api,net_rim_bbapi_unifiedsearch,net_rim_database,net_rim_bbapi_blackberrymessenger
+MIDlet-Vendor: WhatsApp Inc.
+MIDlet-Description: WhatsApp will be installed in your Downloads folder by default. To move WhatsApp to your Home page, highlight WhatsApp in your Downloads folder, press on the Menu key and choose 'Move To Folder'
+RIM-COD-Module-Name: WhatsApp
+RIM-MIDlet-NameResourceId-1: 0
+MIDlet-2: WhatsApp,../../../res/com/whatsapp/client/images/Icon-64x64.png,-launcher=autostartup
+MIDlet-1: WhatsApp,../../../res/com/whatsapp/client/images/Icon-64x64.png,
+MIDlet-Jar-URL: WhatsApp.jar
+RIM-MIDlet-NameResourceBundle-1: com.whatsapp.client.resources.WhatsApp
+RIM-COD-Creation-Time: 1344280122
+RIM-COD-URL: WhatsApp.cod
+RIM-COD-SHA1:  73 8e 69 4e f8 ab bb 16 d0 e6 b8 ee b3 9a df ef 77 9e b8 9f
+RIM-COD-Size: 73044
+RIM-COD-URL-1: WhatsApp-1.cod
+RIM-COD-SHA1-1:  84 cf c8 83 b4 b6 dd 92 65 a1 a0 a7 1f e9 e4 03 85 70 7a bb
+RIM-COD-Size-1: 64464
+RIM-COD-URL-2: WhatsApp-10.cod
+RIM-COD-SHA1-2:  82 2d 1a 54 ed e5 8a f9 5d f3 a9 cc 8c 33 d0 a7 01 b4 96 ef
+RIM-COD-Size-2: 65484
+RIM-COD-URL-3: WhatsApp-11.cod
+RIM-COD-SHA1-3:  e9 49 04 cf 8e 8c 30 69 22 d0 6b df df 5d 3b 0d 7c 9b 70 9d
+RIM-COD-Size-3: 66344
+RIM-COD-URL-4: WhatsApp-12.cod
+RIM-COD-SHA1-4:  b6 e9 9b e6 91 28 b9 9d 1d 2d b0 37 a3 50 de 72 db a2 da ce
+RIM-COD-Size-4: 65732
+RIM-COD-URL-5: WhatsApp-13.cod
+RIM-COD-SHA1-5:  27 91 39 ee 05 44 18 af 20 03 8a be de 5f b1 c3 c7 83 fa 60
+RIM-COD-Size-5: 64924
+RIM-COD-URL-6: WhatsApp-14.cod
+RIM-COD-SHA1-6:  77 75 1e 9f ff 22 33 fb 6b 1b 27 c8 58 6f 61 a7 22 a8 0f 97
+RIM-COD-Size-6: 67652
+RIM-COD-URL-7: WhatsApp-15.cod
+RIM-COD-SHA1-7:  29 11 bb c6 c6 f0 95 d8 d0 4c 80 16 1b 90 7d 97 77 94 64 a8
+RIM-COD-Size-7: 70176
+RIM-COD-URL-8: WhatsApp-16.cod
+RIM-COD-SHA1-8:  cb 06 b7 5b de 6c cb 3d 37 1c a5 de f5 17 e8 db af 36 f6 c0
+RIM-COD-Size-8: 63804
+RIM-COD-URL-9: WhatsApp-17.cod
+RIM-COD-SHA1-9:  71 74 6c b7 69 02 3a a2 8c a4 c2 11 11 56 18 4b 90 23 49 c7
+RIM-COD-Size-9: 67440
+RIM-COD-URL-10: WhatsApp-18.cod
+RIM-COD-SHA1-10:  3c 71 7c e4 8c e9 bd 07 e3 0d fc f6 40 03 40 58 49 a4 c8 c2
+RIM-COD-Size-10: 65968
+RIM-COD-URL-11: WhatsApp-19.cod
+RIM-COD-SHA1-11:  2e c9 0a f2 32 4e f3 e0 31 a6 93 f4 2d 5b e0 f1 a1 bf 0a 02
+RIM-COD-Size-11: 66800
+RIM-COD-URL-12: WhatsApp-2.cod
+RIM-COD-SHA1-12:  7a f0 88 3e 94 af e0 98 81 cf 74 30 0d 2e 51 40 b1 24 07 25
+RIM-COD-Size-12: 64080
+RIM-COD-URL-13: WhatsApp-20.cod
+RIM-COD-SHA1-13:  04 b4 5d 48 3a a5 5a fa 59 a3 04 c9 ce 2d 69 c8 06 fc 16 b0
+RIM-COD-Size-13: 63376
+RIM-COD-URL-14: WhatsApp-21.cod
+RIM-COD-SHA1-14:  6e e5 bd 43 39 00 6d 2a 5e 28 f7 ed 38 eb 10 58 75 d1 a6 dc
+RIM-COD-Size-14: 67456
+RIM-COD-URL-15: WhatsApp-22.cod
+RIM-COD-SHA1-15:  90 3c 6c 25 fe 9f 6b 82 dd ae 12 03 5a 1e da 43 5e 67 e0 e7
+RIM-COD-Size-15: 63532
+RIM-COD-URL-16: WhatsApp-23.cod
+RIM-COD-SHA1-16:  ac d3 36 aa 85 55 19 41 14 3e 6f 1d b0 c8 ff f3 81 e3 48 aa
+RIM-COD-Size-16: 80872
+RIM-COD-URL-17: WhatsApp-24.cod
+RIM-COD-SHA1-17:  7c a8 4b d9 f8 cb d8 22 74 35 2c 75 a7 73 0f 90 a4 2c f9 f1
+RIM-COD-Size-17: 86032
+RIM-COD-URL-18: WhatsApp-25.cod
+RIM-COD-SHA1-18:  89 dc 41 f6 ee aa 31 16 a8 54 6f 5e 41 47 5c dc b3 ec 85 90
+RIM-COD-Size-18: 68520
+RIM-COD-URL-19: WhatsApp-26.cod
+RIM-COD-SHA1-19:  cd fa c3 41 56 51 da 8e d2 b5 c4 22 7c e6 3e 19 4e ff 58 72
+RIM-COD-Size-19: 68752
+RIM-COD-URL-20: WhatsApp-27.cod
+RIM-COD-SHA1-20:  5e a1 94 37 be cc 18 84 e8 90 7b e1 72 33 40 d6 35 bf c9 7e
+RIM-COD-Size-20: 70400
+RIM-COD-URL-21: WhatsApp-28.cod
+RIM-COD-SHA1-21:  22 fd a7 b4 97 b2 b5 d0 64 33 56 d0 ef cf b1 5c ce 63 86 9f
+RIM-COD-Size-21: 68976
+RIM-COD-URL-22: WhatsApp-29.cod
+RIM-COD-SHA1-22:  45 16 76 43 e7 bb a2 e7 e5 f5 ee 2b 77 69 3f 07 8c 08 cc 0c
+RIM-COD-Size-22: 66392
+RIM-COD-URL-23: WhatsApp-3.cod
+RIM-COD-SHA1-23:  e3 57 6c 82 0d ac ca c5 93 a8 0a 01 7c 1c 6d 05 59 05 d9 a7
+RIM-COD-Size-23: 67928
+RIM-COD-URL-24: WhatsApp-30.cod
+RIM-COD-SHA1-24:  2e f3 71 33 ad ac d2 23 68 a3 32 5f 7c fb 65 e1 fb 51 1d d6
+RIM-COD-Size-24: 68640
+RIM-COD-URL-25: WhatsApp-31.cod
+RIM-COD-SHA1-25:  37 62 2a d3 90 68 ab 5c 27 a0 8a c5 28 34 d4 53 d0 97 b0 15
+RIM-COD-Size-25: 66848
+RIM-COD-URL-26: WhatsApp-32.cod
+RIM-COD-SHA1-26:  24 df d9 0b c7 ec 1e 51 04 d4 09 e1 cb cc ec 8a ce d2 b0 3b
+RIM-COD-Size-26: 65412
+RIM-COD-URL-27: WhatsApp-33.cod
+RIM-COD-SHA1-27:  58 11 ba 1a 70 e7 24 2f 2a 80 59 23 6f 1c ba fa 03 11 21 00
+RIM-COD-Size-27: 66200
+RIM-COD-URL-28: WhatsApp-34.cod
+RIM-COD-SHA1-28:  1a 85 9d 8d 38 77 4d 68 37 50 61 6d 29 34 2e f4 1c cf a7 2b
+RIM-COD-Size-28: 65160
+RIM-COD-URL-29: WhatsApp-35.cod
+RIM-COD-SHA1-29:  50 c6 1b e5 c9 23 a2 14 ad 63 4e c4 f9 b2 b3 9e 90 95 63 1c
+RIM-COD-Size-29: 68096
+RIM-COD-URL-30: WhatsApp-36.cod
+RIM-COD-SHA1-30:  1c 0e 88 84 72 24 4d ca d5 18 b5 9a 8a 33 0a 8e 2e 11 0d f6
+RIM-COD-Size-30: 66928
+RIM-COD-URL-31: WhatsApp-37.cod
+RIM-COD-SHA1-31:  33 57 59 81 45 28 71 d6 36 67 6b a4 81 71 4e 0c b6 21 80 a5
+RIM-COD-Size-31: 66588
+RIM-COD-URL-32: WhatsApp-38.cod
+RIM-COD-SHA1-32:  84 ed c5 22 af 16 9c 84 39 4f 44 0f b0 1e 0a a4 bf 64 c4 7a
+RIM-COD-Size-32: 69488
+RIM-COD-URL-33: WhatsApp-39.cod
+RIM-COD-SHA1-33:  7a 0a 69 2e f4 30 2d 5e ae 8e d1 f8 a6 60 46 81 e2 33 60 d0
+RIM-COD-Size-33: 67356
+RIM-COD-URL-34: WhatsApp-4.cod
+RIM-COD-SHA1-34:  06 3e f9 00 35 24 e9 fe 74 a4 b0 1b 1c 6d 4a 26 4f e0 51 79
+RIM-COD-Size-34: 65132
+RIM-COD-URL-35: WhatsApp-40.cod
+RIM-COD-SHA1-35:  28 7d 1d 7d 7c 54 b2 f7 d9 1d 39 67 53 eb 1e 94 45 90 4b c7
+RIM-COD-Size-35: 68940
+RIM-COD-URL-36: WhatsApp-41.cod
+RIM-COD-SHA1-36:  1d c0 6a 67 54 d1 ee bc af f9 18 6f 80 3e 9f 24 92 35 ca 33
+RIM-COD-Size-36: 69864
+RIM-COD-URL-37: WhatsApp-42.cod
+RIM-COD-SHA1-37:  8c b4 e3 3e 7e 8b 42 52 3a 5f ee fa 67 75 f6 a3 3b 79 79 d0
+RIM-COD-Size-37: 73312
+RIM-COD-URL-38: WhatsApp-43.cod
+RIM-COD-SHA1-38:  2d fe a5 17 44 f9 48 13 d7 1d 7a 81 44 79 20 1e 44 cf 7a 40
+RIM-COD-Size-38: 65744
+RIM-COD-URL-39: WhatsApp-44.cod
+RIM-COD-SHA1-39:  70 95 17 06 42 bf 56 5b 66 db 80 7f 92 04 b8 9d de 36 df bb
+RIM-COD-Size-39: 66676
+RIM-COD-URL-40: WhatsApp-45.cod
+RIM-COD-SHA1-40:  0b 39 1a 30 3c fa 8e 46 16 60 89 82 59 a5 0e cc 46 a1 94 bd
+RIM-COD-Size-40: 66716
+RIM-COD-URL-41: WhatsApp-46.cod
+RIM-COD-SHA1-41:  2a c9 3d e3 3f 73 08 be 54 60 75 08 ed 96 f3 63 14 ab 24 57
+RIM-COD-Size-41: 64312
+RIM-COD-URL-42: WhatsApp-47.cod
+RIM-COD-SHA1-42:  19 c8 56 8b ff 99 3f 9f 04 84 c7 92 fc 0c 76 93 b6 b0 c4 c4
+RIM-COD-Size-42: 68928
+RIM-COD-URL-43: WhatsApp-48.cod
+RIM-COD-SHA1-43:  c4 65 ee 90 26 c6 6f a2 c9 90 eb b3 60 6e e2 55 93 03 6d ec
+RIM-COD-Size-43: 68256
+RIM-COD-URL-44: WhatsApp-49.cod
+RIM-COD-SHA1-44:  13 71 d2 a1 58 2d a6 45 a2 f7 52 22 a0 f8 59 5e 3d 37 3e 9c
+RIM-COD-Size-44: 66708
+RIM-COD-URL-45: WhatsApp-5.cod
+RIM-COD-SHA1-45:  7d ea 35 ba 96 81 26 50 77 26 39 7f 8d 7f 08 e6 74 98 47 d5
+RIM-COD-Size-45: 63636
+RIM-COD-URL-46: WhatsApp-50.cod
+RIM-COD-SHA1-46:  a1 0c 6b e6 0e 7b 43 49 ed 5f 74 84 87 c3 ad 94 ff 45 a7 91
+RIM-COD-Size-46: 68824
+RIM-COD-URL-47: WhatsApp-51.cod
+RIM-COD-SHA1-47:  8e f6 6f 61 b2 b5 b4 ab 81 91 e8 e7 13 40 a0 67 bd 9e 3f 1a
+RIM-COD-Size-47: 69316
+RIM-COD-URL-48: WhatsApp-52.cod
+RIM-COD-SHA1-48:  52 41 b3 0c 4e e8 31 50 36 cd 42 42 ae b6 e2 bc 36 3c d2 cd
+RIM-COD-Size-48: 71524
+RIM-COD-URL-49: WhatsApp-53.cod
+RIM-COD-SHA1-49:  4b 29 70 a5 47 d7 90 25 3f 20 43 dd 7f 18 cf 70 f0 c5 83 01
+RIM-COD-Size-49: 69412
+RIM-COD-URL-50: WhatsApp-54.cod
+RIM-COD-SHA1-50:  6c b4 ec 5e 9e 64 ee 07 f4 f6 0f af b0 86 93 d7 23 cb c0 93
+RIM-COD-Size-50: 65944
+RIM-COD-URL-51: WhatsApp-55.cod
+RIM-COD-SHA1-51:  f5 e1 63 89 d8 7b 44 26 58 a3 24 f4 d5 36 d2 0a af e8 19 3e
+RIM-COD-Size-51: 67532
+RIM-COD-URL-52: WhatsApp-56.cod
+RIM-COD-SHA1-52:  68 28 3a f4 06 a1 20 ef d0 fe 20 57 d8 54 67 81 43 b9 30 f2
+RIM-COD-Size-52: 64516
+RIM-COD-URL-53: WhatsApp-57.cod
+RIM-COD-SHA1-53:  99 91 a7 bc f5 b2 d7 dc 27 57 db 3d ac b0 b0 3d 44 f3 11 7d
+RIM-COD-Size-53: 68328
+RIM-COD-URL-54: WhatsApp-58.cod
+RIM-COD-SHA1-54:  39 e4 29 b4 3b 00 7d 01 67 0a 89 5d 61 19 3d 32 a1 b7 c0 7e
+RIM-COD-Size-54: 68320
+RIM-COD-URL-55: WhatsApp-59.cod
+RIM-COD-SHA1-55:  3e 11 45 e1 fc e8 19 92 d6 91 c0 27 00 31 51 65 79 13 2b 41
+RIM-COD-Size-55: 64968
+RIM-COD-URL-56: WhatsApp-6.cod
+RIM-COD-SHA1-56:  7e 70 4b 6a ec a9 73 58 42 9a a9 dd 5f 44 e6 36 c1 2f 77 0a
+RIM-COD-Size-56: 64072
+RIM-COD-URL-57: WhatsApp-60.cod
+RIM-COD-SHA1-57:  53 28 ff 1e eb b0 31 20 18 5f 93 98 ed ec c8 08 b0 76 06 3a
+RIM-COD-Size-57: 65724
+RIM-COD-URL-58: WhatsApp-61.cod
+RIM-COD-SHA1-58:  29 9a d5 5c e4 0e c7 9f df eb ab 48 e1 33 62 5a 4a d2 30 8a
+RIM-COD-Size-58: 61924
+RIM-COD-URL-59: WhatsApp-62.cod
+RIM-COD-SHA1-59:  eb f7 2e 0a 7b ad 24 66 88 72 36 5b b7 36 12 30 70 e3 ff 18
+RIM-COD-Size-59: 51268
+RIM-COD-URL-60: WhatsApp-63.cod
+RIM-COD-SHA1-60:  9c 91 c9 e4 44 45 b9 15 c8 66 0e cd 4d 61 ae 77 cb ff a6 8a
+RIM-COD-Size-60: 56528
+RIM-COD-URL-61: WhatsApp-64.cod
+RIM-COD-SHA1-61:  52 59 0d fd 62 c2 8d 8b 55 44 56 76 d1 16 c1 5e b1 01 21 2d
+RIM-COD-Size-61: 51268
+RIM-COD-URL-62: WhatsApp-65.cod
+RIM-COD-SHA1-62:  cd 90 2c 24 d8 6e 66 fd 3a 45 4e dd 61 de 9b 62 74 14 bd 4c
+RIM-COD-Size-62: 51268
+RIM-COD-URL-63: WhatsApp-66.cod
+RIM-COD-SHA1-63:  1d a8 07 f1 85 68 e4 a7 ba 15 64 7e 42 4f b0 c3 05 16 bb f4
+RIM-COD-Size-63: 51268
+RIM-COD-URL-64: WhatsApp-67.cod
+RIM-COD-SHA1-64:  aa f0 c9 af a6 7b fc f4 46 9b c8 73 51 0d 18 d4 12 1c 15 bd
+RIM-COD-Size-64: 51268
+RIM-COD-URL-65: WhatsApp-68.cod
+RIM-COD-SHA1-65:  40 4e 06 34 52 5f c9 60 cc 37 02 9f a9 6a 9b 23 e7 42 9e 67
+RIM-COD-Size-65: 51268
+RIM-COD-URL-66: WhatsApp-69.cod
+RIM-COD-SHA1-66:  d7 f0 24 d3 b6 2d 26 4a d3 be 46 68 3a 2d 0d 54 e6 d9 25 84
+RIM-COD-Size-66: 52056
+RIM-COD-URL-67: WhatsApp-7.cod
+RIM-COD-SHA1-67:  c5 90 23 5d 48 ba da 96 e0 50 9f 74 e5 87 f2 53 11 2d e5 c5
+RIM-COD-Size-67: 64500
+RIM-COD-URL-68: WhatsApp-70.cod
+RIM-COD-SHA1-68:  81 5b 6c 5a aa d7 a2 53 a3 af 4c d1 ed 26 19 7e 61 88 9a 60
+RIM-COD-Size-68: 56724
+RIM-COD-URL-69: WhatsApp-71.cod
+RIM-COD-SHA1-69:  b9 c6 a7 d7 19 2d fb a5 2e 97 cc 71 27 67 1d 61 ab 36 b2 79
+RIM-COD-Size-69: 51268
+RIM-COD-URL-70: WhatsApp-72.cod
+RIM-COD-SHA1-70:  24 80 ce cc d4 be b5 70 52 0c b4 bc c7 fc 5f b7 03 6c b2 42
+RIM-COD-Size-70: 51268
+RIM-COD-URL-71: WhatsApp-73.cod
+RIM-COD-SHA1-71:  21 cb ba 06 4c 01 13 58 85 32 49 0e 58 aa 15 44 04 6c 6a 2f
+RIM-COD-Size-71: 51268
+RIM-COD-URL-72: WhatsApp-74.cod
+RIM-COD-SHA1-72:  f3 5c 86 1c c5 c6 14 a1 b0 42 db f5 d6 e0 e1 0b 24 aa aa 9f
+RIM-COD-Size-72: 51268
+RIM-COD-URL-73: WhatsApp-75.cod
+RIM-COD-SHA1-73:  87 63 b5 4f 91 79 91 a7 9f ce 2b 81 2a ae 42 4e 2b ea 78 00
+RIM-COD-Size-73: 56244
+RIM-COD-URL-74: WhatsApp-76.cod
+RIM-COD-SHA1-74:  99 12 75 0d 49 ce f1 1c 44 5e 02 00 82 23 69 70 52 9f 1d 31
+RIM-COD-Size-74: 67304
+RIM-COD-URL-75: WhatsApp-77.cod
+RIM-COD-SHA1-75:  30 ab 2e 67 f3 9c d0 2a d1 9e 45 c8 79 11 09 37 5c 4f b5 61
+RIM-COD-Size-75: 57888
+RIM-COD-URL-76: WhatsApp-78.cod
+RIM-COD-SHA1-76:  ce 91 92 b4 ac fe 1d 86 c7 60 85 9c 25 8d 5b da 34 33 b6 98
+RIM-COD-Size-76: 64436
+RIM-COD-URL-77: WhatsApp-79.cod
+RIM-COD-SHA1-77:  ff 6e e9 72 63 43 b6 56 4a 7d 72 4c 36 1f 72 87 10 21 7f 58
+RIM-COD-Size-77: 85232
+RIM-COD-URL-78: WhatsApp-8.cod
+RIM-COD-SHA1-78:  70 f1 3a 66 55 f3 74 9a 63 b4 d2 f9 64 21 98 b3 29 4a cf 94
+RIM-COD-Size-78: 65828
+RIM-COD-URL-79: WhatsApp-9.cod
+RIM-COD-SHA1-79:  6c 4e 89 90 a7 43 60 00 1c 51 55 2e c8 ad b7 a2 51 45 87 10
+RIM-COD-Size-79: 66236
+Content-Folder-2: /
+Content-Folder-1: /
+Content-Folder: /

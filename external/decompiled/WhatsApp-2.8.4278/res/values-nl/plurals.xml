@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="hours">
+        <item quantity="other">%d uur</item>
+        <item quantity="one">%d uur</item>
+    </plurals>
+    <plurals name="minutes">
+        <item quantity="other">%d minuten</item>
+        <item quantity="one">%d minuut</item>
+    </plurals>
+    <plurals name="notification_new_message_from_multiple_contacts_1">
+        <item quantity="other">%d berichten</item>
+        <item quantity="one">%d bericht</item>
+    </plurals>
+    <plurals name="notification_new_message_from_multiple_contacts_2">
+        <item quantity="other">%1$s van %2$d contactpersonen.</item>
+        <item quantity="one">%1$s van %2$d contactpersonen.</item>
+    </plurals>
+    <plurals name="notification_new_message">
+        <item quantity="other">%d nieuwe berichten.</item>
+        <item quantity="one">%d nieuw bericht.</item>
+    </plurals>
+    <plurals name="service_expire_days">
+        <item quantity="other">Je WhatsApp-dienst verloopt over %d dagen. Nu verlenging kopen?</item>
+        <item quantity="one">Je WhatsApp-dienst verloopt over %d dag. Nu verlenging kopen?</item>
+    </plurals>
+    <plurals name="unread_message_count">
+        <item quantity="other">%d ongelezen berichten</item>
+        <item quantity="one">%d ongelezen bericht</item>
+    </plurals>
+    <plurals name="confirm_sharing_multiple_title">
+        <item quantity="other">%1$d items delen met %2$s?</item>
+        <item quantity="one">%1$d item delen met %2$s?</item>
+    </plurals>
+    <plurals name="group_confirm_sharing_multiple_title">
+        <item quantity="other">%1$d items delen met “%2$s”?</item>
+        <item quantity="one">%1$d item delen met “%2$s”?</item>
+    </plurals>
+    <plurals name="software_about_to_expire">
+        <item quantity="other">Deze versie van WhatsApp zal over %d dagen verlopen. Upgraden naar de nieuwste versie?</item>
+        <item quantity="one">Deze versie van WhatsApp zal over %d dag verlopen. Upgraden naar de nieuwste versie?</item>
+    </plurals>
+    <plurals name="network_usage_message_count">
+        <item quantity="other">%1$d berichten</item>
+        <item quantity="one">%1$d bericht</item>
+    </plurals>
+    <plurals name="network_usage_byte_count_bytes">
+        <item quantity="other">%1$d bytes</item>
+        <item quantity="one">%1$d byte</item>
+    </plurals>
+    <plurals name="error_image_dimensions_too_small">
+        <item quantity="other">Deze afbeelding is te klein. Selecteer een afbeelding met een hoogte en breedte van ten minste %d pixels.</item>
+        <item quantity="one">Deze afbeelding is te klein. Selecteer een afbeelding met een hoogte en breedte van ten minste %d pixel.</item>
+    </plurals>
+</resources>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="notification_new_message_from_multiple_contacts_1">
+        <item quantity="other">%d μηνύματα</item>
+        <item quantity="one">%d μήνυμα</item>
+    </plurals>
+    <plurals name="notification_new_message_from_multiple_contacts_2">
+        <item quantity="other">%1$s από %2$d επαφές.</item>
+        <item quantity="one">%1$s από %2$d επαφή.</item>
+    </plurals>
+    <plurals name="notification_new_message">
+        <item quantity="other">%d νέα μηνύματα.</item>
+        <item quantity="one">%d νέο μήνυμα.</item>
+    </plurals>
+    <plurals name="unread_message_count">
+        <item quantity="other">%d νέα μηνύματα</item>
+        <item quantity="one">%d νέο μήνυμα.</item>
+    </plurals>
+    <plurals name="network_usage_message_count">
+        <item quantity="other">%1$d μηνύματα</item>
+        <item quantity="one">%1$d μήνυμα</item>
+    </plurals>
+</resources>

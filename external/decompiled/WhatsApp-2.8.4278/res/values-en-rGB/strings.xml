@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="initialization_fail_message">"Sorry, WhatsApp was unable to complete initialisation. Please check that you are connected to the Internet and try again.
+
+%s"</string>
+    <string name="initialization_fail_beta_message">"Sorry, WhatsApp was unable to complete initialisation. Please check that you are connected to the Internet and try again.
+
+%s"</string>
+    <string name="settings_notification_light_summary">Choose a colour to blink the notification light when a new message is received.</string>
+    <string name="led_support_green_only">On your device, only the colour Green is supported</string>
+    <string name="error_adding_participant_401">"Not authorised to add this contact.
+"</string>
+</resources>

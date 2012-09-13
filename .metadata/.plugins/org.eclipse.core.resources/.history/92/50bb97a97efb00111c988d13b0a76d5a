@@ -1,0 +1,15 @@
+package com.jaapsuter.niets.test.blackberry;
+
+public class EntryPoint
+{
+	 * Entry point for application
+     * @param args Command line arguments (not used)
+     */ 
+    public static void main(String[] args)
+    {
+        // Create a new instance of the application and make the currently
+        // running thread the application's event dispatch thread.
+        App theApp = new App();
+        theApp.enterEventDispatcher();
+    }    
+}

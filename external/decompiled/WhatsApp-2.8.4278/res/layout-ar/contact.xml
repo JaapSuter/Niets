@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:gravity="right" android:id="@id/contact_name" android:background="#ff808080" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <Button android:id="@id/contact_invite" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <Button android:id="@id/contact_call" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <Button android:id="@id/contact_send_message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Chat with Contact" />
+</LinearLayout>

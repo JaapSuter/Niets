@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.whatsapp.DividerView android:id="@id/date_divider" android:paddingLeft="2.0dip" android:paddingRight="5.0dip" style="@style/DateDivider" />
+    <LinearLayout android:orientation="vertical" android:id="@id/contact_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/conversation_left_row_margin_right" android:layout_below="@id/date_divider" android:layout_alignParentRight="true">
+        <LinearLayout android:layout_gravity="right" android:id="@id/name_in_group" android:paddingBottom="1.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="18.5dip">
+            <com.whatsapp.TextEmojiLabel android:textSize="@dimen/conversation_participant_name_tv" android:textColor="#ff999999" android:gravity="right" android:id="@id/pushname_in_group_tv" android:paddingRight="12.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lines="1" android:singleLine="true" />
+            <TextView android:textSize="@dimen/conversation_participant_name_tv" android:textColor="#ff000000" android:gravity="right" android:id="@id/name_in_group_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lines="1" android:singleLine="true" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/contact_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="1.0dip" android:layout_below="@id/divider" android:layout_alignParentRight="true">
+            <TextView android:textSize="11.0sp" android:textStyle="italic" android:textColor="#ff666666" android:gravity="right" android:layout_gravity="bottom|right|center" android:id="@id/date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignBottom="@id/vcard_btn" />
+            <Button android:ellipsize="end" android:id="@id/vcard_btn" android:clickable="true" android:layout_width="@dimen/conversation_contact_button_width" android:layout_height="wrap_content" android:layout_marginRight="@dimen/conversation_row_margin" android:drawableLeft="@drawable/shared_contact_btn" android:drawablePadding="2.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+</merge>

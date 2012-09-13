@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="notification_new_message_from_multiple_contacts_1">
+        <item quantity="other">%d beskeder</item>
+        <item quantity="one">%d beskeder</item>
+    </plurals>
+    <plurals name="notification_new_message_from_multiple_contacts_2">
+        <item quantity="other">%1$s fra %2$d kontakter.</item>
+        <item quantity="one">%1$s fra %2$d kontakter.</item>
+    </plurals>
+    <plurals name="notification_new_message">
+        <item quantity="other">%d nye beskeder.</item>
+        <item quantity="one">%d ny besked.</item>
+    </plurals>
+    <plurals name="unread_message_count">
+        <item quantity="other">%d beskeder</item>
+        <item quantity="one">%d ulæst meddelelse</item>
+    </plurals>
+    <plurals name="network_usage_message_count">
+        <item quantity="other">%1$d beskeder</item>
+        <item quantity="one">%1$d-besked</item>
+    </plurals>
+</resources>

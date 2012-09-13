@@ -1,0 +1,19 @@
+@ REM COMMAND.COM
+@ ECHO OFF
+
+SET SASL_HOME=@install.dir@
+SET SASL_CP="%SASL_HOME%\lib\test.jar;%SASL_HOME%\lib\cryptix-sasl.jar;%SASL_HOME%\lib\javax-sasl.jar;%SASL_HOME%\lib\cryptix-jce-api.jar;%SASL_HOME%\lib\cryptix-jce-provider.jar;%SASL_HOME%\lib\java-getopt.jar;%SASL_HOME%\lib\log4j.jar"
+
+SET CMD_LINE_ARGS=%*
+PUSHD %SASL_HOME%
+
+@ ECHO "*** Starting the RMI Registry on localhost, default port..."
+START rmiregistry
+
+@ ECHO "*** Exporting the RMI servant..."
+java -showversion -Djava.security.policy=etc/test.policy -Djava.rmi.server.codebase="file:./lib/test.jar file:./lib/javax-sasl.jar file:./lib/cryptix-sasl.jar file:./lib/log4j.jar" -Dlog4j.configuration="file:./log.properties" -Dcryptix.sasl.srp.password.file=etc/tpasswd -Dcryptix.sasl.plain.password.file=etc/tpasswd -cp %SASL_CP% test.HelloImpl %CMD_LINE_ARGS%
+
+SET SASL_CP=
+SET SASL_HOME=
+POPD
+

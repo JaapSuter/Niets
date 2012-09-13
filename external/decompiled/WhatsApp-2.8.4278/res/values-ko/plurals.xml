@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="hours">
+        <item quantity="other">%d 시간</item>
+    </plurals>
+    <plurals name="minutes">
+        <item quantity="other">%d 분</item>
+    </plurals>
+    <plurals name="notification_new_message_from_multiple_contacts_1">
+        <item quantity="other">메시지 %d</item>
+    </plurals>
+    <plurals name="notification_new_message_from_multiple_contacts_2">
+        <item quantity="other">%2$d 연락처로부터 %1$s</item>
+    </plurals>
+    <plurals name="notification_new_message">
+        <item quantity="other">%d개의 새 메시지</item>
+    </plurals>
+    <plurals name="service_expire_days">
+        <item quantity="other">WhatsApp 서비스가 %d일 후 만료됩니다. 유료 서비스를 연장하시겠습니까?</item>
+    </plurals>
+    <plurals name="unread_message_count">
+        <item quantity="other">%d개의 새로운 메세지</item>
+    </plurals>
+    <plurals name="confirm_sharing_multiple_title">
+        <item quantity="other">%2$s님과 %1$d를 공유할까요?</item>
+    </plurals>
+    <plurals name="group_confirm_sharing_multiple_title">
+        <item quantity="other">“%2$s”(와)과 %1$d를 공유할까요?</item>
+    </plurals>
+    <plurals name="software_about_to_expire">
+        <item quantity="other">WhatsApp메신저가 %d일 후 만료 됩니다. 최신 버전으로 업그레이드 하시겠습니까?</item>
+    </plurals>
+    <plurals name="network_usage_message_count">
+        <item quantity="other">%1$d 메시지</item>
+    </plurals>
+    <plurals name="network_usage_byte_count_bytes">
+        <item quantity="other">%1$d 바이트</item>
+    </plurals>
+    <plurals name="error_image_dimensions_too_small">
+        <item quantity="other">너무 작은 사진입니다. 가로 세로 %d 픽셀 이상의 사진을 선택해 주시기 바랍니다.</item>
+    </plurals>
+</resources>

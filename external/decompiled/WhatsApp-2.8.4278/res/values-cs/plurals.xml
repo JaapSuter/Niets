@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="notification_new_message_from_multiple_contacts_1">
+        <item quantity="other">%d zpráv</item>
+        <item quantity="one">%d zpráva</item>
+        <item quantity="few">%d zprávy</item>
+    </plurals>
+    <plurals name="notification_new_message_from_multiple_contacts_2">
+        <item quantity="other">Počet kontaktů: %1$s z celkového počtu %2$d.</item>
+        <item quantity="one">Počet kontaktů: %1$s z celkového počtu %2$d.</item>
+        <item quantity="few">Počet kontaktů: %1$s z celkového počtu %2$d.</item>
+    </plurals>
+    <plurals name="notification_new_message">
+        <item quantity="other">%d nových zpráv.</item>
+        <item quantity="one">%d nová zpráva.</item>
+        <item quantity="few">%d nové zprávy.</item>
+    </plurals>
+    <plurals name="service_expire_days">
+        <item quantity="other">Doba předplatného služeb WhatsApp vyprší za %d dnů. Chcete platnost předplatného prodloužit nyní?</item>
+        <item quantity="one">Doba předplatného služeb WhatsApp vyprší za %d den. Chcete platnost předplatného prodloužit nyní?</item>
+        <item quantity="few">Doba předplatného služeb WhatsApp vyprší za %d dny. Chcete platnost předplatného prodloužit nyní?</item>
+    </plurals>
+    <plurals name="unread_message_count">
+        <item quantity="other">%d nepřečtených zpráv</item>
+        <item quantity="one">%d nepřečtená zpráva</item>
+        <item quantity="few">%d nepřečtené zprávy</item>
+    </plurals>
+    <plurals name="network_usage_message_count">
+        <item quantity="other">%1$d zpráv</item>
+        <item quantity="one">%1$d zpráva</item>
+        <item quantity="few">%1$d zprávy</item>
+    </plurals>
+</resources>

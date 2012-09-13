@@ -1,0 +1,6 @@
+C:\Users\Jaap\Projects\Code\Niets\dotnet\Niets\bin\Debug\Niets.exe.config
+C:\Users\Jaap\Projects\Code\Niets\dotnet\Niets\obj\Debug\Niets.csprojResolveAssemblyReference.cache
+C:\Users\Jaap\Projects\Code\Niets\dotnet\Niets\bin\Debug\Niets.exe
+C:\Users\Jaap\Projects\Code\Niets\dotnet\Niets\bin\Debug\Niets.pdb
+C:\Users\Jaap\Projects\Code\Niets\dotnet\Niets\obj\Debug\Niets.exe
+C:\Users\Jaap\Projects\Code\Niets\dotnet\Niets\obj\Debug\Niets.pdb

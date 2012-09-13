@@ -1,2 +1,1 @@
-Niets
-=====
+Building a third-party WhatsApp client library for J2ME and beyond...

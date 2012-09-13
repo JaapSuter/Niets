@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="minutes">
+        <item quantity="other">%d นาที</item>
+    </plurals>
+    <plurals name="notification_new_message_from_multiple_contacts_1">
+        <item quantity="other">%d ข้อความ</item>
+    </plurals>
+    <plurals name="notification_new_message_from_multiple_contacts_2">
+        <item quantity="other">%1$s จาก %2$d รายชื่อติดต่อ</item>
+    </plurals>
+    <plurals name="notification_new_message">
+        <item quantity="other">%d ข้อความใหม่</item>
+    </plurals>
+    <plurals name="unread_message_count">
+        <item quantity="other">%d ข้อความที่ยังไม่ได้อ่าน</item>
+    </plurals>
+    <plurals name="network_usage_message_count">
+        <item quantity="other">%1$d ข้อความ</item>
+    </plurals>
+</resources>

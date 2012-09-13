@@ -1,0 +1,16 @@
+package com.jaapsuter.niets.test.blackberry;
+
+import net.rim.device.api.ui.UiApplication;
+
+/**
+ * This class extends the UiApplication class, providing a
+ * graphical user interface.
+ */
+public class App extends UiApplication
+{
+    public App()
+    {        
+        // Push a screen onto the UI stack for rendering.
+        pushScreen(new Screen());
+    }    
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center_vertical" android:id="@id/header" style="@style/Header">
+        <LinearLayout android:gravity="right|center" android:id="@id/header_ll" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageButton android:layout_gravity="left|center" android:id="@id/edit_btn" android:background="@drawable/selector_orange_gradient" android:layout_width="@dimen/header_image_btn_width" android:layout_height="@dimen/header_height" android:src="@drawable/button_aperture" android:scaleType="center" />
+            <ImageView android:layout_gravity="top|left|center" android:id="@id/edit_btn_divider" android:background="@drawable/divider" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+            <TextView android:ellipsize="end" android:gravity="right" android:layout_gravity="right|center" android:id="@id/conversation_contact_name" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:text="@string/group_photo" android:scrollHorizontally="true" android:singleLine="true" android:shadowDx="-0.0" style="@style/Text.HeaderCentered" />
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout android:background="@android:color/black" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/header">
+        <com.whatsapp.TouchImageView android:id="@id/picture" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitCenter" />
+        <ProgressBar android:id="@id/progress_bar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+        <TextView android:gravity="right" android:id="@id/message" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+    </RelativeLayout>
+</RelativeLayout>

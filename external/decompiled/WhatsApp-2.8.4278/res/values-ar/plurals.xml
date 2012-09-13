@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="hours">
+        <item quantity="other">%d ساعة</item>
+        <item quantity="zero">%d ساعة</item>
+        <item quantity="one">ساعة %d</item>
+        <item quantity="two">ساعتان %d</item>
+        <item quantity="few">%d ساعات</item>
+        <item quantity="many">%d ساعة</item>
+    </plurals>
+    <plurals name="minutes">
+        <item quantity="other">%d دقيقة</item>
+        <item quantity="zero">%d دقائق</item>
+        <item quantity="one">دقيقة %d</item>
+        <item quantity="two">دقيقتان %d</item>
+        <item quantity="few">%d دقائق</item>
+        <item quantity="many">%d دقيقة</item>
+    </plurals>
+    <plurals name="notification_new_message_from_multiple_contacts_1">
+        <item quantity="other">%d رسالة</item>
+        <item quantity="zero">%d لا توجد رسائل</item>
+        <item quantity="one">رسالة %d</item>
+        <item quantity="two">رسالتان %d</item>
+        <item quantity="few">%d رسائل</item>
+        <item quantity="many">%d رسالة</item>
+    </plurals>
+    <plurals name="notification_new_message_from_multiple_contacts_2">
+        <item quantity="other">%1$s من أصل %2$d جهة اتصال.</item>
+        <item quantity="zero">%1$s من أصل %2$d جهة اتصال.</item>
+        <item quantity="one">%1$s من أصل جهة اتصال %2$d.</item>
+        <item quantity="two">%1$s من أصل جهتي اتصال %2$d.</item>
+        <item quantity="few">%1$s من أصل %2$d جهات اتصال.</item>
+        <item quantity="many">%1$s من أصل %2$d جهة اتصال.</item>
+    </plurals>
+    <plurals name="notification_new_message">
+        <item quantity="other">%d رسالة جديدة.</item>
+        <item quantity="zero">%d لا توجد رسائل جديدة.</item>
+        <item quantity="one">رسالة جديدة %d.</item>
+        <item quantity="two">رسالتان جديدتان %d.</item>
+        <item quantity="few">%d رسائل جديدة.</item>
+        <item quantity="many">%d رسالة جديدة.</item>
+    </plurals>
+    <plurals name="service_expire_days">
+        <item quantity="other">سوف تنتهي خدمة واتساب ضمن %d يوم. هل تود الدفع لتجديد الخدمة؟</item>
+        <item quantity="zero">سوف تنتهي خدمة واتساب في أقل من يوم %d. هل تود الدفع لتجديد الخدمة؟</item>
+        <item quantity="one">سوف تنتهي خدمة واتساب ضمن يوم %d. هل تود الدفع لتجديد الخدمة؟</item>
+        <item quantity="two">سوف تنتهي خدمة واتساب ضمن يومين %d. هل تود الدفع لتجديد الخدمة؟</item>
+        <item quantity="few">سوف تنتهي خدمة واتساب ضمن %d أيام. هل تود الدفع لتجديد الخدمة؟</item>
+        <item quantity="many">سوف تنتهي خدمة واتساب ضمن %d يوماً . هل تود الدفع لتجديد الخدمة؟</item>
+    </plurals>
+    <plurals name="unread_message_count">
+        <item quantity="other">%d رسالة غير مقروءة</item>
+        <item quantity="zero">%d لا توجد رسائل غير مقروءة</item>
+        <item quantity="one">رسالة %d غير مقروءة</item>
+        <item quantity="two">رسالتان %d غير مقروءتين</item>
+        <item quantity="few">%d رسائل غير مقروءة</item>
+        <item quantity="many">%d رسالة غير مقروءة</item>
+    </plurals>
+    <plurals name="confirm_sharing_multiple_title">
+        <item quantity="other">مشاركة %1$d ملف مع %2$s؟</item>
+        <item quantity="zero">لم تشارك أي ملف %1$d مع %2$s؟</item>
+        <item quantity="one">مشاركة ملف %1$d مع %2$s؟</item>
+        <item quantity="two">مشاركة ملفان %1$d مع %2$s؟</item>
+        <item quantity="few">مشاركة %1$d ملفات مع %2$s؟</item>
+        <item quantity="many">مشاركة %1$d ملفاً مع %2$s؟</item>
+    </plurals>
+    <plurals name="group_confirm_sharing_multiple_title">
+        <item quantity="other">مشاركة %1$d ملف مع “%2$s”؟</item>
+        <item quantity="zero">لم تشارك أي ملف %1$d مع “%2$s”؟</item>
+        <item quantity="one">مشاركة ملف %1$d مع “%2$s”؟</item>
+        <item quantity="two">مشاركة ملفان %1$d مع “%2$s”؟</item>
+        <item quantity="few">مشاركة %1$d ملفات مع “%2$s”؟</item>
+        <item quantity="many">مشاركة %1$d ملفاً مع “%2$s”؟</item>
+    </plurals>
+    <plurals name="software_about_to_expire">
+        <item quantity="other">الإصدار الحالي من واتساب سينتهي بعد %d يوم. هل تود الترقية إلى أحدث إصدار؟</item>
+        <item quantity="zero">الإصدار الحالي من واتساب سينتهي بعد %d يوم. هل تود الترقية إلى أحدث إصدار؟</item>
+        <item quantity="one">الإصدار الحالي من واتساب سينتهي بعد يوم %d. هل تود الترقية إلى أحدث إصدار؟</item>
+        <item quantity="two">الإصدار الحالي من واتساب سينتهي بعد يومين %d. هل تود الترقية إلى أحدث إصدار؟</item>
+        <item quantity="few">الإصدار الحالي من واتساب سينتهي بعد %d أيام. هل تود الترقية إلى أحدث إصدار؟</item>
+        <item quantity="many">الإصدار الحالي من واتساب سينتهي بعد %d يوماً. هل تود الترقية إلى أحدث إصدار؟</item>
+    </plurals>
+    <plurals name="network_usage_message_count">
+        <item quantity="other">%1$d رسالة</item>
+        <item quantity="zero">%1$d لا توجد رسائل</item>
+        <item quantity="one">رسالة %1$d</item>
+        <item quantity="two">رسالتان %1$d</item>
+        <item quantity="few">%1$d رسائل</item>
+        <item quantity="many">%1$d رسالة</item>
+    </plurals>
+    <plurals name="network_usage_byte_count_bytes">
+        <item quantity="other">%1$d بايت</item>
+        <item quantity="zero">%1$d بايت</item>
+        <item quantity="one">بايت %1$d</item>
+        <item quantity="two">%1$d بايت</item>
+        <item quantity="few">%1$d بايت</item>
+        <item quantity="many">%1$d بايت</item>
+    </plurals>
+    <plurals name="error_image_dimensions_too_small">
+        <item quantity="other">الصورة صغيرة جداً، الرجاء اختيار صورة لا تقل مقاساتها في الارتفاع والعرض عن %d بكسل.</item>
+        <item quantity="zero">الصورة صغيرة جداً، الرجاء اختيار صورة لا تقل مقاساتها في الارتفاع والعرض عن %d بكسل.</item>
+        <item quantity="one">الصورة صغيرة جداً، الرجاء اختيار صورة لا تقل مقاساتها في الارتفاع والعرض عن %d بكسل.</item>
+        <item quantity="two">الصورة صغيرة جداً، الرجاء اختيار صورة لا تقل مقاساتها في الارتفاع والعرض عن %d بكسل.</item>
+        <item quantity="few">الصورة صغيرة جداً، الرجاء اختيار صورة لا تقل مقاساتها في الارتفاع والعرض عن %d بكسل.</item>
+        <item quantity="many">الصورة صغيرة جداً، الرجاء اختيار صورة لا تقل مقاساتها في الارتفاع والعرض عن %d بكسل.</item>
+    </plurals>
+</resources>
