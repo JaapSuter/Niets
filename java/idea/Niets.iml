@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="J2ME_MODULE" version="4">
+  <component name="J2ME Module Properties">
+    <mobileApplicationType name="MIDP" />
+  </component>
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_3" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../..">
+      <sourceFolder url="file://$MODULE_DIR$/../src/windows" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../src/common" isTestSource="false" />
+    </content>
+    <orderEntry type="jdk" jdkName="Oracle Java(TM) Platform Micro Edition SDK 3.0.5" jdkType="MobileSDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+  <component name="com.intellij.j2meplugin.module.settings.midp.MIDPSettings">
+    <setting name="MIDlet-Jar-Size" module.settings.user.defined.value="22143" />
+    <setting name="MIDlet-Jar-URL" module.settings.user.defined.value="Niets.jar" />
+    <setting name="MIDlet-Name" module.settings.user.defined.value="Niets" />
+    <setting name="MIDlet-Vendor" module.settings.user.defined.value="Jaap Suter" />
+    <setting name="MIDlet-Version" module.settings.user.defined.value="0.0.1018" />
+    <setting name="MicroEdition-Configuration" module.settings.user.defined.value="CDC-1.0,CDC-1.1,CLDC-1.0,CLDC-1.1,CLDC-1.1.1" />
+    <setting name="MicroEdition-Profile" module.settings.user.defined.value="FP-1.0,FP-1.1,MIDP-1.0,MIDP-2.0,MIDP-2.1,PBP-1.0,PBP-1.1,PP-1.0,PP-1.1" />
+    <jarUrl jarUrlName="$MODULE_DIR$/Niets.jar" />
+    <descriptionPath path="$MODULE_DIR$/Niets.jad" useUserDescriptor="false" />
+    <manifest useUserManifest="false" />
+  </component>
+</module>
+

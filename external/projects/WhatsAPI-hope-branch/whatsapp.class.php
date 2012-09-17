@@ -78,6 +78,7 @@ require "decode.php";
 	}
 	
 	function send($data){
+        printhexstr($data, "Send");
 		socket_send( $this->_socket, $data, strlen($data), 0 );
 	}	
 	
@@ -100,6 +101,8 @@ require "decode.php";
 				$buff .= $this->read_soc();
 			}
 		} while ($num_changed_sockets > 0);
+        
+        printhexstr($buff, "Received");
 		return $buff;
 	}
 
@@ -237,14 +240,8 @@ require "decode.php";
 	function Login(){
 		$Data = "WA"."\x01\x01\x00\x19\xf8\x05\x01\xa0\x8a\x84\xfc\x11"."$this->_device-$this->_whatsAppVer-$this->_port".
 				"\x00\x08\xf8\x02\x96\xf8\x01\xf8\x01\x7e\x00\x07\xf8\x05\x0f\x5a\x2a\xbd\xa7";
-        echo "-----Login Send---------\n";
-		printhexstr($Data, "Data");
-        echo "------------------------\n";
 		$this->send($Data);
 		$Buffer = $this->read();
-        echo "-----Login Recv---------\n";
-		printhexstr($Buffer, "Buffer");
-        echo "------------------------\n";
 		$Response = base64_decode(substr( $Buffer, 26 ));
 		$arrResp = explode( ",", $Response );
 		$authData = array();
@@ -254,9 +251,6 @@ require "decode.php";
 		}
 		$ResData = $this -> _authenticate( $authData['nonce'] );
 		$Response = "\x01\x31\xf8\x04\x86\xbd\xa7\xfd\x00\x01\x28".base64_encode($ResData);
-        echo "-----Login Response---------\n";
-		printhexstr($Response, "Response");
-        echo "------------------------\n";
 		$this->send($Response);
 		$rBuffer = $this->read();
 		$this->read();
@@ -291,11 +285,7 @@ require "decode.php";
 		$total_length = hex2str(_hex(strlen($content)));
 		$msg = "\x00$total_length";
 		$msg .= $content;
-        echo "\n";
-        echo "---- MessageReceived----\n";
-		printhexstr($msg, "msg");
-        echo "------------------------\n";
-		$this->send($msg);
+        $this->send($msg);
 	}
 
 	public function Message($msgid,$to,$txt){
@@ -319,10 +309,6 @@ require "decode.php";
 		$msg ="";
 		$msg .= "$total_length";
 		$msg .= $content;
-		echo "\n";
-        echo "----Message-------------\n";
-		printhexstr($msg, "msg");
-        echo "------------------------\n";
 		$stream = $this->send($msg);
 		$this->read();
 	}

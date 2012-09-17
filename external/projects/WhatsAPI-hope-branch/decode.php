@@ -23,7 +23,7 @@ function printhexstr($data, $name)
 {
     $data = str2hex($data);
     $len = strlen($data);
-    print("Len: $len - $name\n");
+    print("$name, length: $len\n");
     print($data . "\n");
     for ($i = 0; $i < $len; $i += 2)
     {

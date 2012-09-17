@@ -1,0 +1,1 @@
+java.exe -classpath %~dp0\bin\ net.rim.tools.compiler.Compiler %1

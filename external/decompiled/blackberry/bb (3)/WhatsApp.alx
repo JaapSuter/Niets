@@ -1,0 +1,60 @@
+<loader version="1.0">
+<application id="WhatsApp">
+<name>WhatsApp</name> 
+<description>This software ota downloaded by bbota.cn</description>
+<version>2.7.3204</version>
+<vendor>WhatsApp</vendor>
+<copyright>Copyright (c) 2012 WhatsApp</copyright>
+<fileset Java="1.25">
+<directory />
+<files>
+WhatsApp.cod
+WhatsApp-1.cod
+WhatsApp-2.cod
+WhatsApp-3.cod
+WhatsApp-4.cod
+WhatsApp-5.cod
+WhatsApp-6.cod
+WhatsApp-7.cod
+WhatsApp-8.cod
+WhatsApp-9.cod
+WhatsApp-10.cod
+WhatsApp-11.cod
+WhatsApp-12.cod
+WhatsApp-13.cod
+WhatsApp-14.cod
+WhatsApp-15.cod
+WhatsApp-16.cod
+WhatsApp-17.cod
+WhatsApp-18.cod
+WhatsApp-19.cod
+WhatsApp-20.cod
+WhatsApp-21.cod
+WhatsApp-22.cod
+WhatsApp-23.cod
+WhatsApp-24.cod
+WhatsApp-25.cod
+WhatsApp-26.cod
+WhatsApp-27.cod
+WhatsApp-28.cod
+WhatsApp-29.cod
+WhatsApp-30.cod
+WhatsApp-31.cod
+WhatsApp-32.cod
+WhatsApp-33.cod
+WhatsApp-34.cod
+WhatsApp-35.cod
+WhatsApp-36.cod
+WhatsApp-37.cod
+WhatsApp-38.cod
+WhatsApp-39.cod
+WhatsApp-40.cod
+WhatsApp-41.cod
+WhatsApp-42.cod
+WhatsApp-43.cod
+WhatsApp-44.cod
+WhatsApp-45.cod
+</files>
+</fileset>
+</application>
+</loader>

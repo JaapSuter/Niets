@@ -1,0 +1,38 @@
+package com.jaapsuter.niets;
+
+import java.io.*;
+import javax.microedition.io.*;
+
+public class TcpConnection
+{
+    private OutputStream _out;
+    private InputStream _in;
+    private StreamConnection _conn;
+
+    public TcpConnection(String hostname, int port) throws IOException
+    {
+        // deviceside=true;
+        String url = "socket://" + hostname + ":" + Integer.toString(port) + ";interface=wifi";                                    
+        _conn = (StreamConnection)Connector.open(url);
+        
+        _out = _conn.openOutputStream();
+        _in = _conn.openInputStream();
+    }
+
+    public OutputStream getOutputStream() { return _out; }
+    public InputStream getInputStream() { return _in; }
+    
+    public void disconnect()
+    {              
+        try { _in.close(); }
+        catch(IOException ioe) {}
+        finally { _in = null; }
+        try { _out.close(); }
+        catch(IOException ioe) {}
+        finally { _out = null; }
+        try { _conn.close(); }
+        catch(IOException ioe) {}
+        finally { _conn = null; }
+        
+    }
+}
