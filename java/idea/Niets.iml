@@ -13,7 +13,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="com.intellij.j2meplugin.module.settings.midp.MIDPSettings">
-    <setting name="MIDlet-Jar-Size" module.settings.user.defined.value="22143" />
+    <setting name="MIDlet-Jar-Size" module.settings.user.defined.value="32044" />
     <setting name="MIDlet-Jar-URL" module.settings.user.defined.value="Niets.jar" />
     <setting name="MIDlet-Name" module.settings.user.defined.value="Niets" />
     <setting name="MIDlet-Vendor" module.settings.user.defined.value="Jaap Suter" />

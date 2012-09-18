@@ -25,7 +25,6 @@ Exported=0
 [Files
 ..\src\blackberry\com\jaapsuter\niets\App.java
 ..\src\blackberry\com\jaapsuter\niets\EntryPoint.java
-..\src\blackberry\com\jaapsuter\niets\FixedTextField.java
 ..\src\blackberry\com\jaapsuter\niets\Screen.java
 ..\src\blackberry\com\jaapsuter\niets\TcpConnection.java
 ..\src\common\com\jaapsuter\niets\ArrayUtil.java
@@ -40,12 +39,6 @@ Exported=0
 ..\src\common\com\jaapsuter\niets\Niets.java
 ..\src\common\com\jaapsuter\niets\Stanza.java
 ..\src\common\com\jaapsuter\niets\StringUtil.java
-..\src\common\com\jaapsuter\niets\xmpp\ByteArrayInputStreamExt.java
-..\src\common\com\jaapsuter\niets\xmpp\ByteArrayOutputStreamExt.java
-..\src\common\com\jaapsuter\niets\xmpp\Decoder.java
-..\src\common\com\jaapsuter\niets\xmpp\Element.java
-..\src\common\com\jaapsuter\niets\xmpp\Symbols.java
-..\src\common\com\jaapsuter\niets\xmpp\Tags.java
 res\img\background.png
 res\img\focus.png
 res\img\icon.png
@@ -61,7 +54,6 @@ res\img\icon.png
 [Imports
 ]
 Listing=0
-Options=-quiet
 OutputFileName=bin/niets
 [PackageProtection
 ]

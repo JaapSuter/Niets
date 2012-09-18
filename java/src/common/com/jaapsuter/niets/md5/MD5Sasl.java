@@ -123,7 +123,7 @@ public class MD5Sasl {
         return StringUtil.getBytesUTF8(new StringBuffer("AUTHENTICATE:xmpp/").append(realm));
     }
 
-    public static void Test()
+    public static void test()
     {
         Challenge challenge = new Challenge() {{
             nonce = "392616736";

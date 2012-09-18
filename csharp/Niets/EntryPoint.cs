@@ -14,18 +14,22 @@ namespace Niets
 {
     class EntryPoint
     {
+        private static void Delog(string hex)
+        {
+            var decoded = FunXmpp.Decode(Xmpp.Unhexlify(hex).Select(c => (byte)c).ToArray());            
+            Console.WriteLine(decoded);
+        }
+
         private static void Main(string[] args)
         {
             FunXmppTest.Run();
 
             TestSaslMD5();
 
-            var cod = "f80c5d38fafc0b31363034333133353232378a43fc0c313334373837343539382d32a21b9dfc0a313334373837353833308805f801f8037fbdad";
-                cod = "f80774388a942bbdb6"; 
-                cod = "f80b99bda79409523723fc0a3133343638343030333530fc0a31333738333736303335";                
-            var decoded = FunXmpp.Decode(Xmpp.Unhexlify(cod).Select(c => (byte)c).ToArray());
-            
-            Console.WriteLine(decoded);
+            Delog("f80c5d38fafc0b31363034333133353232378a43fc0c313334373837343539382d32a21b9dfc0a313334373837353833308805f801f8037fbdad");
+            Delog("f80774388a942bbdb6");
+            Delog("f80b99bda79409523723fc0a3133343638343030333530fc0a31333738333736303335");
+            Delog("f80c5d38fafc0b31363034353634363531318a43fc0c313334373932363534352d31a21b9dfc0a3133343739323635333688fc0133f805f80565bdae61fc0f4a6161702042422039333030204857f80383bdadf80216fc054767686879f80825bdab388a92fc14323031322d30392d31385430303a30323a31365a66f805babd4e92fc1132303132303931385430303a30323a3136");
             
             using (var tc = new TcpClient())
             {
@@ -83,7 +87,9 @@ namespace Niets
 
                                 data = FunXmpp.Encode(String.Format("<response xmlns='urn:ietf:params:xml:ns:xmpp-sasl'>{0}</response>", challengee), prefixLength: true);
                                 ns.Write(data, 0, data.Length);
-
+                                                
+                                var deviceMac = "30:69:4B:06:21:C5";
+                                var apMac = "00:25:9C:05:C2:E0";                                             
                                 var id = "1347906999-1";
                                 var dst = "16043135227";
                                 var message = "Foobarfoobar";

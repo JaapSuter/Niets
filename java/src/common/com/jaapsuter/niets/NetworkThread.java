@@ -2,6 +2,7 @@ package com.jaapsuter.niets;
 
 import com.jaapsuter.niets.md5.MD5;
 import com.jaapsuter.niets.md5.MD5Sasl;
+import com.jaapsuter.niets.xmpp.Decoder;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -31,7 +32,7 @@ class NetworkThread extends Thread
     }
 
     private void send(byte[] bytes) throws IOException {
-        _handler.log("> " + StringUtil.byteArrayToHexString(bytes));
+        _handler.log("send:" + Decoder.decode(bytes).toString());
         writeBigEndian16(_out, bytes.length);
         _out.write(bytes);
         _out.flush();
@@ -44,10 +45,10 @@ class NetworkThread extends Thread
 
     private byte[] receive() throws IOException {
         int size = readBigEndian16(_in);
-        byte[] buffer = new byte[size];
-        _in.read(buffer);
-        _handler.log("< " + StringUtil.byteArrayToHexString(buffer));
-        return buffer;
+        byte[] bytes = new byte[size];
+        _in.read(bytes);
+        _handler.log("recv:" + Decoder.decode(bytes).toString());
+        return bytes;
     }
 
     private static int readBigEndian16(InputStream input) throws IOException {
@@ -88,10 +89,10 @@ class NetworkThread extends Thread
     {        
         try
         {
-            _handler.log("Opening Connection...");
+            _handler.log("stat:@connecting");
             
             final String hostname = "bin-short.whatsapp.net";
-            final int port = 5222;
+            final int port = 443; // 5222;
         
             _tcpConn = new TcpConnection(hostname, port);
             _out = _tcpConn.getOutputStream();
@@ -102,13 +103,14 @@ class NetworkThread extends Thread
             send("F80296F801F8017E"); // 0008
             send("F8050FBDA75A2A"); // 0007
 
-            final String username = "61416905612"; // "16043135227"; // "16045646511";
+            final String username = "16043135227"; // "16045646511"; // "61416905612"
             final String imei = "603938931484000"; // "603938931484000";
-            final String password = StringUtil.byteArrayToHexString(new MD5(new StringBuffer(imei).reverse().toString()).doFinal()); // "3a65f5bd7256642f90efe085190c038a"; 
+            final String password = "3a65f5bd7256642f90efe085190c038a"; // StringUtil.byteArrayToHexString(new MD5(new StringBuffer(imei).reverse().toString()).doFinal()); // "3a65f5bd7256642f90efe085190c038a";
             final String realm = "s.whatsapp.net";
 
             receive();
             receive();
+            _handler.log("stat:@authorizing");
             byte[] recv = receive();
 
             int skipToBase64 = 7;
@@ -125,10 +127,7 @@ class NetworkThread extends Thread
             send(baOut.toByteArray());
 
             receive();
-            receive();
-            receive();
-
-            _handler.log("Connected...");
+            _handler.log("stat:@authorized");
 
             String msgId = StringUtil.zeroPad(Long.toString(System.currentTimeMillis()), 10) + "-1";
 
@@ -142,13 +141,12 @@ class NetworkThread extends Thread
             writeString(baOut, _msg);
             send(baOut.toByteArray());
 
-            _handler.log("Message sent...");
+            _handler.log("stat:@sending");
             
             receive();
             receive();
-            receive();
             
-            _handler.log("Message possibly received...");           
+            _handler.log("stat:@receivedish");
             
 
             final long sleepInMs = 2237;

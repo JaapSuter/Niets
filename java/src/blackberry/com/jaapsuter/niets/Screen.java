@@ -20,18 +20,17 @@ import java.lang.String;
 
 public final class Screen extends MainScreen
 {
-    private BasicEditField          _phoneNumField; 
-    private BasicEditField          _messageField; 
-    private ButtonField             _sendButton; 
-    private StringBuffer            _statusGather;
-    private RichTextField           _statusField;
-
+    private BasicEditField  _phoneNumField; 
+    private BasicEditField  _messageField; 
+    private ButtonField     _sendButton; 
+    private StringBuffer    _statusGather;
+    private TextField       _statusTextField;
+    
     public Screen()
     {
-        setBackground(BackgroundFactory.createBitmapBackground(Bitmap.getBitmapResource("background.png"), 0, 0, Background.REPEAT_BOTH));
-        
+        setBackground(BackgroundFactory.createBitmapBackground(Bitmap.getBitmapResource("background.png"), 0, 0, Background.REPEAT_BOTH));        
     
-        setBanner(new LabelField("Niets"));        
+        setBanner(new LabelField("Niets and more..."));        
         setTitle("Send a Message");        
                 
         _phoneNumField = new BasicEditField("To: ", "16043135227");
@@ -40,7 +39,7 @@ public final class Screen extends MainScreen
         add(_phoneNumField);
         
         add(new LabelField("Message:"));
-        _messageField = new BasicEditField(Field.USE_ALL_HEIGHT);
+        _messageField = new BasicEditField();
         _messageField.setText("...your message here.");
         _messageField.setBackground(BackgroundFactory.createSolidBackground(0x00fefdff));
         _messageField.setBorder(BorderFactory.createRoundedBorder(new XYEdges(5, 5, 5, 5)));        
@@ -49,14 +48,10 @@ public final class Screen extends MainScreen
         _sendButton = new ButtonField("Send");
         add(_sendButton);
         
-        _statusField = new RichTextField(Field.NON_FOCUSABLE);
-        _statusField.setBackground(BackgroundFactory.createSolidBackground(0xdddddd));
-        _statusField.setBorder(BorderFactory.createRoundedBorder(new XYEdges(5, 5, 5, 5)));
-        
-        setStatus(new VerticalFieldManager() {{
-            add(new LabelField("Status"));
-            add(_statusField);
-        }});        
+        _statusTextField = new TextField();
+        _statusTextField.setBackground(BackgroundFactory.createSolidBackground(0xdddddd));
+        _statusTextField.setBorder(BorderFactory.createRoundedBorder(new XYEdges(5, 5, 5, 5)));
+        add(_statusTextField);        
         
         _statusGather = new StringBuffer();
         
@@ -72,7 +67,7 @@ public final class Screen extends MainScreen
                             {
                                 _statusGather.append(str);
                                 _statusGather.append('\n');
-                                _statusField.setText(_statusGather.toString());
+                                _statusTextField.setText(_statusGather.toString());
                             }
                         });
                     }

@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 MIDlet-Version: 0.0.1018
-MIDlet-Jar-Size: 70982
+MIDlet-Jar-Size: 85849
 MicroEdition-Configuration: CLDC-1.1
 MIDlet-Jar-URL: Niets.jar
 RIM-MIDlet-Icon-1-1: res/img/focus.png,focused
@@ -8,11 +8,11 @@ RIM-COD-Module-Dependencies: net_rim_cldc
 RIM-MIDlet-Flags-1: 1
 RIM-COD-Module-Name: niets
 MIDlet-Name: Niets
-RIM-COD-Size: 46624
-RIM-COD-Creation-Time: 1347924463
+RIM-COD-Size: 54080
+RIM-COD-Creation-Time: 1347998672
 MIDlet-1: Niets,res/img/icon.png,
 RIM-COD-URL: niets.cod
-RIM-COD-SHA1: 90 fc 73 b1 32 f4 bf 6f 71 3b a5 26 bc b7 a9 81 be 05 7a a6
+RIM-COD-SHA1: 21 9c 31 24 cb 42 20 6c 96 7f 92 db 6d 9f 7b 9c 05 ed 33 3c
 MicroEdition-Profile: MIDP-2.0
 MIDlet-Vendor: Jaap Suter
 RIM-MIDlet-Icon-Count-1: 1
