@@ -10,11 +10,20 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Niets.iml" afterPath="$PROJECT_DIR$/Niets.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Niets.jad" afterPath="$PROJECT_DIR$/Niets.jad" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/common/com/jaapsuter/niets/ArrayUtil.java" afterPath="$PROJECT_DIR$/../src/common/com/jaapsuter/niets/ArrayUtil.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/common/com/jaapsuter/niets/Assert.java" afterPath="$PROJECT_DIR$/../src/common/com/jaapsuter/niets/Assert.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/common/com/jaapsuter/niets/Base64.java" afterPath="$PROJECT_DIR$/../src/common/com/jaapsuter/niets/Base64.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/common/com/jaapsuter/niets/HashtableUtil.java" afterPath="$PROJECT_DIR$/../src/common/com/jaapsuter/niets/HashtableUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/common/com/jaapsuter/niets/NetworkEventHandler.java" afterPath="$PROJECT_DIR$/../src/common/com/jaapsuter/niets/NetworkEventHandler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/common/com/jaapsuter/niets/NetworkThread.java" afterPath="$PROJECT_DIR$/../src/common/com/jaapsuter/niets/NetworkThread.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/common/com/jaapsuter/niets/Niets.java" afterPath="$PROJECT_DIR$/../src/common/com/jaapsuter/niets/Niets.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/common/com/jaapsuter/niets/Stanza.java" afterPath="$PROJECT_DIR$/../src/common/com/jaapsuter/niets/Stanza.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/common/com/jaapsuter/niets/StringUtil.java" afterPath="$PROJECT_DIR$/../src/common/com/jaapsuter/niets/StringUtil.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/common/com/jaapsuter/niets/md5/MD5Sasl.java" afterPath="$PROJECT_DIR$/../src/common/com/jaapsuter/niets/md5/MD5Sasl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/common/com/jaapsuter/niets/xmpp/ByteArrayInputStreamExt.java" afterPath="$PROJECT_DIR$/../src/common/com/jaapsuter/niets/xmpp/ByteArrayInputStreamExt.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/common/com/jaapsuter/niets/xmpp/ByteArrayOutputStreamExt.java" afterPath="$PROJECT_DIR$/../src/common/com/jaapsuter/niets/xmpp/ByteArrayOutputStreamExt.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/common/com/jaapsuter/niets/xmpp/Tags.java" afterPath="$PROJECT_DIR$/../src/common/com/jaapsuter/niets/xmpp/Tags.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/windows/com.jaapsuter.niets/EntryPoint.java" afterPath="$PROJECT_DIR$/../src/windows/com.jaapsuter.niets/EntryPoint.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/windows/com.jaapsuter.niets/TcpConnection.java" afterPath="$PROJECT_DIR$/../src/windows/com.jaapsuter.niets/TcpConnection.java" />
     </list>
     <ignored path="idea.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,7 +42,7 @@
   </component>
   <component name="DebuggerManager">
     <line_breakpoints>
-      <breakpoint url="file://$PROJECT_DIR$/../src/common/com/jaapsuter/niets/Assert.java" line="25" class="com.jaapsuter.niets.Assert" package="com.jaapsuter.niets">
+      <breakpoint url="file://$PROJECT_DIR$/../src/common/com/jaapsuter/niets/Assert.java" line="29" class="com.jaapsuter.niets.Assert" package="com.jaapsuter.niets">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -103,100 +112,7 @@
     <favorites_list name="idea" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="Decoder.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../src/common/com/jaapsuter/niets/xmpp/Decoder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="21" selection-start="2500" selection-end="2500" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="URLClassLoader.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://C:/Java_ME_platform_SDK_3.0.5/lib/cdc_1.0.jar!/java/net/URLClassLoader.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#0#1597#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Assert.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../src/common/com/jaapsuter/niets/Assert.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="0" selection-start="824" selection-end="824" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Element.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../src/common/com/jaapsuter/niets/xmpp/Element.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="31" selection-start="872" selection-end="872" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EntryPoint.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../src/windows/com.jaapsuter.niets/EntryPoint.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="67" selection-start="659" selection-end="659" vertical-scroll-proportion="0.61433446">
-              <folding>
-                <element signature="e#286#436#0" expanded="true" />
-                <element signature="e#421#422#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Object.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://C:/Java_ME_platform_SDK_3.0.5/lib/cdc_1.0.jar!/java/lang/Object.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="22" selection-start="798" selection-end="798" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NetworkThread.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../src/common/com/jaapsuter/niets/NetworkThread.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="104" column="72" selection-start="3133" selection-end="3133" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TcpConnection.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../src/windows/com.jaapsuter.niets/TcpConnection.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="21" selection-start="354" selection-end="354" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Niets.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../src/common/com/jaapsuter/niets/Niets.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="14" selection-start="166" selection-end="166" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -209,22 +125,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/../src/common/com/jaapsuter/niets/md5/MD5.java" />
-        <option value="$PROJECT_DIR$/../src/windows/com.jaapsuter.niets/TcpConnection.java" />
-        <option value="C:/Program Files (x86)/Research In Motion/BlackBerry JDE 5.0.0/bin/sigtool.bat" />
-        <option value="$PROJECT_DIR$/../src/common/com/jaapsuter/niets/Assert.java" />
-        <option value="$PROJECT_DIR$/../src/common/com/jaapsuter/niets/ByteArrayInputStreamExt.java" />
-        <option value="$PROJECT_DIR$/../src/common/com/jaapsuter/niets/ByteArrayOutputStreamExt.java" />
-        <option value="$PROJECT_DIR$/../src/common/com/jaapsuter/niets/xmpp/Tag.java" />
-        <option value="$PROJECT_DIR$/../src/common/com/jaapsuter/niets/md5/MD5Sasl.java" />
-        <option value="$PROJECT_DIR$/../src/common/com/jaapsuter/niets/xmpp/ByteArrayInputStreamExt.java" />
-        <option value="$PROJECT_DIR$/../src/common/com/jaapsuter/niets/xmpp/Tags.java" />
-        <option value="$PROJECT_DIR$/../src/common/com/jaapsuter/niets/Niets.java" />
-        <option value="$PROJECT_DIR$/../src/common/com/jaapsuter/niets/xmpp/Symbols.java" />
-        <option value="$PROJECT_DIR$/../src/common/com/jaapsuter/niets/xmpp/Decoder.java" />
         <option value="$PROJECT_DIR$/../src/common/com/jaapsuter/niets/xmpp/Element.java" />
-        <option value="$PROJECT_DIR$/../src/common/com/jaapsuter/niets/NetworkThread.java" />
         <option value="$PROJECT_DIR$/../src/windows/com.jaapsuter.niets/EntryPoint.java" />
+        <option value="$PROJECT_DIR$/../src/common/com/jaapsuter/niets/md5/MD5Sasl.java" />
+        <option value="$PROJECT_DIR$/../src/common/com/jaapsuter/niets/xmpp/ByteArrayOutputStreamExt.java" />
+        <option value="$PROJECT_DIR$/../src/common/com/jaapsuter/niets/xmpp/ByteArrayInputStreamExt.java" />
+        <option value="$PROJECT_DIR$/../src/common/com/jaapsuter/niets/StringUtil.java" />
+        <option value="$PROJECT_DIR$/../src/common/com/jaapsuter/niets/Stanza.java" />
+        <option value="$PROJECT_DIR$/../src/common/com/jaapsuter/niets/Niets.java" />
+        <option value="$PROJECT_DIR$/../src/common/com/jaapsuter/niets/NetworkThread.java" />
+        <option value="$PROJECT_DIR$/../src/common/com/jaapsuter/niets/NetworkEventHandler.java" />
+        <option value="$PROJECT_DIR$/../src/common/com/jaapsuter/niets/HashtableUtil.java" />
+        <option value="$PROJECT_DIR$/../src/common/com/jaapsuter/niets/Base64.java" />
+        <option value="$PROJECT_DIR$/../src/common/com/jaapsuter/niets/Assert.java" />
+        <option value="$PROJECT_DIR$/../src/common/com/jaapsuter/niets/ArrayUtil.java" />
+        <option value="$PROJECT_DIR$/../src/common/com/jaapsuter/niets/xmpp/Tags.java" />
+        <option value="$PROJECT_DIR$/../src/windows/com.jaapsuter.niets/TcpConnection.java" />
       </list>
     </option>
   </component>
@@ -611,7 +527,7 @@
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947975" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -619,8 +535,8 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947975" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26493663" sideWeight="0.7063584" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29364163" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26493663" sideWeight="0.7063584" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29364163" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26493663" sideWeight="0.20578034" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947975" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -689,97 +605,13 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../src/common/com/jaapsuter/niets/xmpp/Symbols.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="170" selection-end="170" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../src/common/com/jaapsuter/niets/StringUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="0" selection-start="917" selection-end="917" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../src/common/com/jaapsuter/niets/xmpp/ByteArrayInputStreamExt.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="305" selection-end="305" vertical-scroll-proportion="0.0">
+        <state line="3" column="0" selection-start="179" selection-end="179" vertical-scroll-proportion="0.07679181">
           <folding>
+            <element signature="e#0#1117#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Java_ME_platform_SDK_3.0.5/lib/cdc_1.0.jar!/java/security/PrivilegedActionException.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="11" selection-start="223" selection-end="223" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Java_ME_platform_SDK_3.0.5/lib/cdc_1.0.jar!/java/lang/ClassLoader.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="27" selection-start="2503" selection-end="2503" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Java_ME_platform_SDK_3.0.5/lib/cdc_1.0.jar!/java/net/URLClassLoader.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#1597#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../src/common/com/jaapsuter/niets/Assert.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="0" selection-start="824" selection-end="824" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../src/common/com/jaapsuter/niets/xmpp/Element.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="31" selection-start="872" selection-end="872" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../src/common/com/jaapsuter/niets/Niets.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="14" selection-start="166" selection-end="166" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Java_ME_platform_SDK_3.0.5/lib/cdc_1.0.jar!/java/lang/Object.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="22" selection-start="798" selection-end="798" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Java_ME_platform_SDK_3.0.5/lib/fp_1.0.jar!/java/net/Socket.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="47" selection-start="1687" selection-end="1702" vertical-scroll-proportion="0.6501767">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../src/windows/com.jaapsuter.niets/TcpConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="21" selection-start="354" selection-end="354" vertical-scroll-proportion="0.0">
-          <folding />
         </state>
       </provider>
     </entry>
@@ -792,26 +624,129 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../external/projects/whatspoke/config.py">
+    <entry file="file://$PROJECT_DIR$/../src/common/com/jaapsuter/niets/xmpp/Element.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="50" selection-start="120" selection-end="152" vertical-scroll-proportion="0.0795053">
-          <folding />
+        <state line="33" column="31" selection-start="872" selection-end="872" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../src/common/com/jaapsuter/niets/xmpp/Symbols.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="19" selection-start="119" selection-end="119" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../src/common/com/jaapsuter/niets/StringUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="180" selection-end="180" vertical-scroll-proportion="0.10600707">
+          <folding>
+            <element signature="e#0#4829#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../src/common/com/jaapsuter/niets/Stanza.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="180" selection-end="180" vertical-scroll-proportion="0.102389075">
+          <folding>
+            <element signature="e#0#248#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../src/common/com/jaapsuter/niets/Niets.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#213#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../src/common/com/jaapsuter/niets/NetworkThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="104" column="72" selection-start="3133" selection-end="3133" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="4" column="0" selection-start="180" selection-end="180" vertical-scroll-proportion="0.10471204">
+          <folding>
+            <element signature="e#0#5664#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../src/common/com/jaapsuter/niets/NetworkEventHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="180" selection-end="180" vertical-scroll-proportion="0.102389075">
+          <folding>
+            <element signature="e#0#276#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../src/common/com/jaapsuter/niets/HashtableUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="180" selection-end="180" vertical-scroll-proportion="0.102389075">
+          <folding>
+            <element signature="e#0#403#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../src/common/com/jaapsuter/niets/Base64.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="180" selection-end="180" vertical-scroll-proportion="0.102389075">
+          <folding>
+            <element signature="e#0#2475#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../src/common/com/jaapsuter/niets/Assert.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="180" selection-end="180" vertical-scroll-proportion="0.102389075">
+          <folding>
+            <element signature="e#0#1086#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../src/common/com/jaapsuter/niets/ArrayUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="180" selection-end="180" vertical-scroll-proportion="0.102389075">
+          <folding>
+            <element signature="e#0#499#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../src/common/com/jaapsuter/niets/xmpp/Tags.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="180" selection-end="180" vertical-scroll-proportion="0.102389075">
+          <folding>
+            <element signature="e#0#800#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../src/windows/com.jaapsuter.niets/TcpConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="180" selection-end="180" vertical-scroll-proportion="0.102389075">
+          <folding>
+            <element signature="e#0#1092#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../src/windows/com.jaapsuter.niets/EntryPoint.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="67" selection-start="659" selection-end="659" vertical-scroll-proportion="0.61433446">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#286#436#0" expanded="true" />
-            <element signature="e#421#422#0" expanded="true" />
+            <element signature="e#0#846#0" expanded="true" />
           </folding>
         </state>
       </provider>
