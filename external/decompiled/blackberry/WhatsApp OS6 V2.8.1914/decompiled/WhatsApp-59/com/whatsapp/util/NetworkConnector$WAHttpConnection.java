@@ -15,7 +15,7 @@ implements javax.microedition.io.HttpConnection
 {
 
 	// @@@@@@@@@@@@@ Fields 
-	private final javax.microedition.io.HttpConnection /*javax.microedition.io.HttpConnection*/  field_58208 ; // ofs = 58208 addr = 0)
+	private final javax.microedition.io.HttpConnection /*javax.microedition.io.HttpRequest*/  field_58208 ; // ofs = 58208 addr = 0)
 	private final com.whatsapp.util.NetworkConnector /*module:WhatsApp-58.class#3*/  field_58212 ; // ofs = 58212 addr = 0)
 
 	// @@@@@@@@@@@@@ Static routines 

@@ -28,13 +28,13 @@ public class TcpConnection
     
     public void disconnect()
     {              
-        try { _in.close(); }
+        try { if (_in != null) _in.close(); }
         catch(IOException ioe) {}
         finally { _in = null; }
-        try { _out.close(); }
+        try { if (_out != null) _out.close(); }
         catch(IOException ioe) {}
         finally { _out = null; }
-        try { _conn.close(); }
+        try { if (_conn != null) _conn.close(); }
         catch(IOException ioe) {}
         finally { _conn = null; }
         

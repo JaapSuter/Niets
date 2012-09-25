@@ -12,6 +12,11 @@ public final class Assert {
             Throw(message);
     }
 
+    public static void Fail(Exception e)
+    {
+        Throw(e.getMessage());
+    }
+
     public static void Equal(Object lhs, Object rhs)
     {
         if (lhs == null && rhs == null)

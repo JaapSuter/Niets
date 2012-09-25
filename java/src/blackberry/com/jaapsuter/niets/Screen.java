@@ -33,35 +33,24 @@ public final class Screen extends MainScreen
     {
         setBackground(BackgroundFactory.createBitmapBackground(Bitmap.getBitmapResource("background.png"), 0, 0, Background.REPEAT_BOTH));        
     
-        setBanner(new LabelField("Niets and more..."));        
+        setBanner(new LabelField("Niets..."));        
         setTitle("Send a Message");        
                 
         _phoneNumField = new BasicEditField("To: ", "16043135227");
         _phoneNumField.setBorder(BorderFactory.createRoundedBorder(new XYEdges(5, 5, 5, 5)));
         _phoneNumField.setBackground(BackgroundFactory.createSolidBackground(0x00eeeeee));
-        add(_phoneNumField);
         
-        add(new LabelField("Message:"));
         _messageField = new BasicEditField();
         _messageField.setText("...your message here.");
         _messageField.setBackground(BackgroundFactory.createSolidBackground(0x00fefdff));
         _messageField.setBorder(BorderFactory.createRoundedBorder(new XYEdges(5, 5, 5, 5)));        
-        add(_messageField);
                 
         _sendButton = new ButtonField("Send");
-        add(_sendButton);
-        
-        _statusTextField = new TextField();
-        _statusTextField.setBackground(BackgroundFactory.createSolidBackground(0xdddddd));
-        _statusTextField.setBorder(BorderFactory.createRoundedBorder(new XYEdges(5, 5, 5, 5)));
-        add(_statusTextField);        
-        
-        _statusGather = new StringBuffer();
-        
         _sendButton.setChangeListener(new FieldChangeListener() {
             public void fieldChanged(Field field, int context) {
                 final String dst = _phoneNumField.getText();
                 final String msg = _messageField.getText();
+                
                 new NetworkThread(dst, msg, new NetworkEventHandler() {
                     public void log(final String str) {
                         UiApplication.getUiApplication().invokeLater(new Runnable()
@@ -78,16 +67,18 @@ public final class Screen extends MainScreen
             }
         });
         
-        // String phoneNum = Phone.getDevicePhoneNumber(false);
-        // String ownerName = OwnerInfo.getOwnerName();
-        // String imei = StringUtil.byteArrayToString(GPRSInfo.getIMEI());
         
-        // try {
-        //     Stanza s = (Stanza)Class.forName("com.jaapsuter.niets.Stanza").newInstance();
-        // }
-        // catch (InstantiationException ie) {}
-        // catch (IllegalAccessException iae) {}
-        // catch (ClassNotFoundException cnfe) {}
+        _statusTextField = new TextField();
+        _statusTextField.setBackground(BackgroundFactory.createSolidBackground(0xdddddd));
+        _statusTextField.setBorder(BorderFactory.createRoundedBorder(new XYEdges(5, 5, 5, 5)));
+        
+        _statusGather = new StringBuffer();        
+        
+        add(_phoneNumField);        
+        add(new LabelField("Message:"));
+        add(_messageField);        
+        add(_sendButton);        
+        add(_statusTextField);                
     }
     
     protected void makeMenu(Menu menu, int instance) { 

@@ -658,7 +658,7 @@ Label358:
 	invokestatic_lib module:WhatsApp-10.class#29.routine_5442(  ) // class#29
 	invokespecial_lib .routine_7832 // pc=4
 	astore 22
-	new_lib javax.microedition.io.HttpConnection//javax.microedition.io.HttpConnection javax.microedition.io.HttpConnection javax.microedition.io.HttpConnection
+	new_lib javax.microedition.io.HttpConnection//javax.microedition.io.HttpRequest javax.microedition.io.HttpRequest javax.microedition.io.HttpRequest
 	dup 
 	aload 22
 	invokespecial_lib java.io.InputStreamReader.<init> // pc=2

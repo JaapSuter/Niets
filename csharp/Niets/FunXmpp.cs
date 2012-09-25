@@ -11,6 +11,12 @@ using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Linq;
 
+/*
+    https://sro.whatsapp.net/client/iphone/iq.php?cd=1&cc=1&me=$yournumber&u[]=$friend1&u[]=$friend2&u[]=$friend3&u[]=$friend4
+    https://sro.whatsapp.net/client/iphone/iq.php?cd=1&cc=1&me=4000000000&u=6045646511
+    https://sro.whatsapp.net/client/iphone/iq.php?cd=1&cc=1&me=4000000000&u[0]=16045646511&u[1]=31575553223&u[2]=16043135227&u[3]=6045646511
+ */
+
 namespace Niets
 {
     class FunXmpp

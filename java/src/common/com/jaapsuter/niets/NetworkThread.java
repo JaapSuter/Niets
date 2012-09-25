@@ -90,7 +90,22 @@ class NetworkThread extends Thread
     }
   
     public void run()
-    {        
+    {
+        Niets.run();
+                
+        /*               
+        
+        String
+        url = "https://github.com/";
+        url = "http://www.amazon.com";
+        url = "https://sro.whatsapp.net/client/iphone/iq.php?cd=1&cc=1&me=4000000000&u[0]=16045646511&u[1]=31575553223&u[2]=16043135227&u[3]=6045646511";        
+
+        String str = HttpRequest.get(url);
+        _handler.log(str);
+
+        if (str != null)
+            return;
+
         try
         {
             _handler.log("stat:@connecting");
@@ -163,6 +178,7 @@ class NetworkThread extends Thread
             _tcpConn.disconnect();
             _tcpConn = null;
         }
+        */
     }
 }
 

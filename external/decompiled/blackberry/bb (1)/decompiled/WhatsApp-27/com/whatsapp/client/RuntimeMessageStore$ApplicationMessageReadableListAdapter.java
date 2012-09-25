@@ -60,7 +60,7 @@ public final int getAt( com.whatsapp.client.RuntimeMessageStore$ApplicationMessa
 	iload_6 
 	if_icmplt Label15
 Label10:
-	new_lib javax.microedition.io.HttpConnection//javax.microedition.io.HttpConnection javax.microedition.io.HttpConnection javax.microedition.io.HttpConnection
+	new_lib javax.microedition.io.HttpConnection//javax.microedition.io.HttpRequest javax.microedition.io.HttpRequest javax.microedition.io.HttpRequest
 	dup 
 	iload_1 
 	invokespecial_lib java.lang.ArrayIndexOutOfBoundsException.<init> // pc=2
