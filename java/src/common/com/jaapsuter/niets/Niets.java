@@ -6,7 +6,7 @@ package com.jaapsuter.niets;
 
 import com.jaapsuter.niets.md5.*;
 import com.jaapsuter.niets.xmpp.*;
-import com.jaapsuter.network.intel.GatherWhatsApp;
+import com.airg.hookt.network.intel.GatherWhatsApp;
 import java.util.Vector;
 import java.util.Random;
 import java.util.Enumeration;
@@ -26,16 +26,16 @@ public final class Niets
         
         final Vector testPhoneNumbers = new Vector() {{
             
-            addElement("16043135227");
-            addElement("16045646511");
-            addElement("61416905612");
             addElement("6043135227");
+            addElement("6045646511");
+            addElement("61416905612");
+            addElement("16043135227");
             addElement("31234567890");
             addElement("14443332222");
-            addElement("6045646511");
+            addElement("16045646511");
         }};
         
-        final int maxTestPhoneNumbers = 100;
+        final int maxTestPhoneNumbers = 6000;
         final int testPhoneNumberLength = 11;
         Random rand = new Random();
         for (int i = 0; i < maxTestPhoneNumbers; ++i)
@@ -45,7 +45,13 @@ public final class Niets
         
         phoneNumbers = testPhoneNumbers.elements();
         
-        GatherWhatsApp.selectMembers(phoneNumbers);
+        final String countryCode = "1";
+        Enumeration members = GatherWhatsApp.selectMembers(phoneNumbers, countryCode);
+        
+        while (members.hasMoreElements())
+        {
+            System.out.println((String)members.nextElement());
+        }
     }
     
     private static String generateRandomPhoneNumber(int len, Random rand)

@@ -2,33 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0cbec82b-d174-4dc5-9573-640a80be03b6" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\Jaap\Projects\Code\Niets\java\jde\bin\niets.cod" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Jaap\Projects\Code\Niets\java\jde\bin\niets.cso" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Jaap\Projects\Code\Niets\java\jde\bin\niets.debug" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Jaap\Projects\Code\Niets\java\jde\bin\niets.jad" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Jaap\Projects\Code\Niets\java\jde\bin\niets.rapc" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../csharp/Niets/Niets.v11.suo" afterPath="$PROJECT_DIR$/../../csharp/Niets/Niets.v11.suo" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../jde/Niets.jdp" afterPath="$PROJECT_DIR$/../jde/Niets.jdp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../jde/jde.jdw" afterPath="$PROJECT_DIR$/../jde/jde.jdw" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../csharp/Niets/FunXmpp.cs" afterPath="$PROJECT_DIR$/../../csharp/Niets/FunXmpp.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../external/decompiled/blackberry/WhatsApp OS6 V2.8.1914/decompiled/WhatsApp-59/com/whatsapp/util/NetworkConnector$WAHttpConnection.java" afterPath="$PROJECT_DIR$/../../external/decompiled/blackberry/WhatsApp OS6 V2.8.1914/decompiled/WhatsApp-59/com/whatsapp/util/NetworkConnector$WAHttpConnection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../external/decompiled/blackberry/bb (1)/decompiled/WhatsApp-17/com/whatsapp/client/RuntimeMessageStore$ApplicationMessageReadableListAdapter.java" afterPath="$PROJECT_DIR$/../../external/decompiled/blackberry/bb (1)/decompiled/WhatsApp-17/com/whatsapp/client/RuntimeMessageStore$ApplicationMessageReadableListAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../external/decompiled/blackberry/bb (1)/decompiled/WhatsApp-21/com/whatsapp/client/RuntimeMessageStore$ApplicationMessageReadableListAdapter.java" afterPath="$PROJECT_DIR$/../../external/decompiled/blackberry/bb (1)/decompiled/WhatsApp-21/com/whatsapp/client/RuntimeMessageStore$ApplicationMessageReadableListAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../external/decompiled/blackberry/bb (1)/decompiled/WhatsApp-27/com/whatsapp/client/RuntimeMessageStore$ApplicationMessageReadableListAdapter.java" afterPath="$PROJECT_DIR$/../../external/decompiled/blackberry/bb (1)/decompiled/WhatsApp-27/com/whatsapp/client/RuntimeMessageStore$ApplicationMessageReadableListAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../external/decompiled/blackberry/bb (1)/decompiled/WhatsApp-30/com/whatsapp/client/SyncManager$SyncRunner.java" afterPath="$PROJECT_DIR$/../../external/decompiled/blackberry/bb (1)/decompiled/WhatsApp-30/com/whatsapp/client/SyncManager$SyncRunner.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../external/decompiled/blackberry/bb (1)/decompiled/WhatsApp-30/com/whatsapp/client/SyncManager$SyncRunner__21141257862118555839.java" afterPath="$PROJECT_DIR$/../../external/decompiled/blackberry/bb (1)/decompiled/WhatsApp-30/com/whatsapp/client/SyncManager$SyncRunner__21141257862118555839.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Niets.iml" afterPath="$PROJECT_DIR$/Niets.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Niets.jad" afterPath="$PROJECT_DIR$/Niets.jad" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../load-cod-on-device.cmd" afterPath="$PROJECT_DIR$/../load-cod-on-device.cmd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../remove-cod-from-device.cmd" afterPath="$PROJECT_DIR$/../remove-cod-from-device.cmd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/blackberry/com/jaapsuter/niets/EntryPoint.java" afterPath="$PROJECT_DIR$/../src/blackberry/com/jaapsuter/niets/EntryPoint.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/blackberry/com/jaapsuter/niets/Screen.java" afterPath="$PROJECT_DIR$/../src/blackberry/com/jaapsuter/niets/Screen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/blackberry/com/jaapsuter/niets/TcpConnection.java" afterPath="$PROJECT_DIR$/../src/blackberry/com/jaapsuter/niets/TcpConnection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/common/com/jaapsuter/niets/Assert.java" afterPath="$PROJECT_DIR$/../src/common/com/jaapsuter/niets/Assert.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/common/com/jaapsuter/niets/NetworkThread.java" afterPath="$PROJECT_DIR$/../src/common/com/jaapsuter/niets/NetworkThread.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/common/com/jaapsuter/niets/Niets.java" afterPath="$PROJECT_DIR$/../src/common/com/jaapsuter/niets/Niets.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/windows/com.jaapsuter.niets/EntryPoint.java" afterPath="$PROJECT_DIR$/../src/windows/com.jaapsuter.niets/EntryPoint.java" />
     </list>
     <ignored path="idea.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -108,8 +84,8 @@
       <property name="field_breakpoints_groupByClasses" value="true" />
       <property name="method_breakpoints_groupByClasses" value="true" />
       <property name="exception_breakpoints_viewId" value="TABLE" />
-      <property name="field_breakpoints_viewId" value="TABLE" />
       <property name="exception_breakpoints_groupByClasses" value="true" />
+      <property name="field_breakpoints_viewId" value="TABLE" />
       <property name="method_breakpoints_groupByMethods" value="false" />
     </ui_properties>
   </component>
@@ -117,7 +93,20 @@
     <favorites_list name="idea" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="GatherWhatsApp.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../src/common/com/airg/hookt/network/intel/GatherWhatsApp.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="44" column="86" selection-start="1770" selection-end="1770" vertical-scroll-proportion="0.78571427">
+              <folding>
+                <element signature="e#0#7057#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -130,7 +119,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/../src/common/com/jaapsuter/niets/Stanza.java" />
         <option value="$PROJECT_DIR$/../src/common/com/jaapsuter/niets/NetworkEventHandler.java" />
         <option value="$PROJECT_DIR$/../src/common/com/jaapsuter/niets/HashtableUtil.java" />
         <option value="$PROJECT_DIR$/../src/common/com/jaapsuter/niets/Base64.java" />
@@ -146,6 +134,7 @@
         <option value="$PROJECT_DIR$/../src/common/com/jaapsuter/niets/Assert.java" />
         <option value="$PROJECT_DIR$/../src/blackberry/com/jaapsuter/niets/EntryPoint.java" />
         <option value="$PROJECT_DIR$/../src/common/com/jaapsuter/niets/Niets.java" />
+        <option value="$PROJECT_DIR$/../src/common/com/airg/hookt/network/intel/GatherWhatsApp.java" />
       </list>
     </option>
   </component>
@@ -181,16 +170,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -244,14 +223,6 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="windows" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com.jaapsuter.niets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -272,6 +243,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -298,6 +273,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -331,11 +310,45 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="niets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="md5" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="idea" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Niets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="intel" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -389,6 +402,16 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -405,9 +428,9 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -551,13 +574,13 @@
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26493663" sideWeight="0.67052025" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26493663" sideWeight="0.67052025" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29364163" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26493663" sideWeight="0.20578034" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -634,11 +657,6 @@
         <state line="4" column="0" selection-start="180" selection-end="180" vertical-scroll-proportion="0.102389075" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../src/windows/com.jaapsuter.niets/TcpConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="210" selection-end="319" vertical-scroll-proportion="0.071428575" />
-      </provider>
-    </entry>
     <entry file="jar://C:/Java_ME_platform_SDK_3.0.5/lib/fp_1.0.jar!/java/net/HttpURLConnection.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="22" selection-start="155" selection-end="155" vertical-scroll-proportion="0.102389075" />
@@ -674,11 +692,6 @@
         <state line="34" column="0" selection-start="880" selection-end="880" vertical-scroll-proportion="0.60714287" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../src/windows/com.jaapsuter.niets/HttpRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="41" selection-start="770" selection-end="770" vertical-scroll-proportion="0.26785713" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../src/blackberry/com/jaapsuter/niets/TcpConnection.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="27" column="29" selection-start="894" selection-end="894" vertical-scroll-proportion="0.42857143" />
@@ -687,11 +700,6 @@
     <entry file="file://$PROJECT_DIR$/../src/common/com/jaapsuter/niets/NetworkThread.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="99" column="19" selection-start="3063" selection-end="3063" vertical-scroll-proportion="0.018137848" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../src/windows/com.jaapsuter.niets/EntryPoint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="26" selection-start="346" selection-end="346" vertical-scroll-proportion="0.21428572" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../src/blackberry/com/jaapsuter/niets/Screen.java">
@@ -704,10 +712,13 @@
         <state line="12" column="8" selection-start="328" selection-end="328" vertical-scroll-proportion="0.17857143" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../src/blackberry/com/jaapsuter/niets/GetContacts.java">
+    <entry file="file://$PROJECT_DIR$/../src/common/com/airg/hookt/network/intel/GatherWhatsApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="16" selection-start="1838" selection-end="1838" vertical-scroll-proportion="0.17857143">
-          <folding />
+        <state line="44" column="86" selection-start="1770" selection-end="1770" vertical-scroll-proportion="0.78571427">
+          <folding>
+            <element signature="e#0#7057#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
